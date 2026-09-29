@@ -118,3 +118,15 @@ key = "KV cache"
 zh = "KV 缓存"
 en = "KV cache"
 note = "自回归生成时缓存已算过的键值对，避免每步重算整个前缀"
+
+[[term]]
+key = "operator"
+zh = "算子"
+en = "operator"
+note = "对张量做一次基本运算的东西，例如矩阵乘、卷积、softmax；它是计算图里的计算节点"
+
+[[term]]
+key = "tensor"
+zh = "张量"
+en = "tensor"
+note = "多维数组，是算子吃进去、吐出来的东西；计算图里的边就是张量"
