@@ -295,7 +295,24 @@ def check_body(rel: str, body: str, rep: Report, glossary_index: dict[str, tuple
             )
 
     # 原文转载探测 + 术语漂移
-    for para in iter_paragraphs(body):
+    # ★ 2026-09-29（附录六十）：漂移判据跳过**尾巴小节**（溯源/脉络回顾/读完应该能回答）——
+    #   那里是给核对者看的笔记，打术语标记没有意义；实测剩下的警告全是这一类的假阳性。
+    _tail_at = len(body)
+    for _h in ("## 溯源", "## 脉络回顾", "## 读完应该能回答"):
+        _i = body.find(_h)
+        if _i >= 0:
+            _tail_at = min(_tail_at, _i)
+    # ★ 2026-09-29：front matter 也跳过 —— 那里有 `source_title`，
+    #   而它就是源材料的逐字标题（当然含术语原词）。元数据不是正文。
+    if body.startswith("+++"):
+        _fm_end = body.find("+++", 3)
+        if _fm_end > 0:
+            body_head = body[_fm_end + 3:_tail_at]
+        else:
+            body_head = body[:_tail_at]
+    else:
+        body_head = body[:_tail_at]
+    for para in iter_paragraphs(body_head):
         suspect = verbatim_suspect(para)
         if suspect:
             rep.error(
@@ -307,7 +324,14 @@ def check_body(rel: str, body: str, rep: Report, glossary_index: dict[str, tuple
         # ★ 必须先把 [[term:...]] 标记自身剥掉再找 —— 否则当 glossary 里有 en = "term"
         #   （Raft 的「任期」）这种词时，每个标记里的字面 "term" 都会误报；
         #   同理 en = "log" 会命中 [[term:write-ahead-log]] 的 key 文本。
-        low = TERM_RE.sub(" ", para).lower()
+        # ★ 出处行（源材料的标题）不算漂移，反引号里的代码/标识符也不算
+        # ★ 段落里**任意一行**是出处行 ⇒ 整段跳过（2026-09-29）：
+        #   实测有一段多行 blockquote 以 `> 来源课程：…` 开头，而 `> 对应内容：…` 在第二行。
+        _attr_re = re.compile(r"^\s*(?:>\s*)?(?:-\s*|\*\s*)?(?:来源课程|对应内容|对应)[:：]")
+        if any(_attr_re.match(_l) for _l in para.split("\n")):
+            continue
+        low = TERM_RE.sub(" ", para)
+        low = re.sub(r"`[^`]*`", " ", low).lower()
         for key, (en, _zh) in glossary_index.items():
             if key in used:
                 continue
