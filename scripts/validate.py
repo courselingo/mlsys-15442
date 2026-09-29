@@ -331,7 +331,19 @@ def check_body(rel: str, body: str, rep: Report, glossary_index: dict[str, tuple
         if any(_attr_re.match(_l) for _l in para.split("\n")):
             continue
         low = TERM_RE.sub(" ", para)
-        low = re.sub(r"`[^`]*`", " ", low).lower()
+        low = re.sub(r"`[^`]*`", " ", low)
+        # ★ 还要剥掉 markdown 链接/图片的**目标**（2026-09-29 修，附录七十六）。
+        #   起因：第 7 讲报了两条 `radix` 漂移，而正文里全是中文「基数排序」——
+        #   实测命中的是两张图的**文件名**：`](figures/radix-sort-example.svg)`、
+        #   `](figures/radix-sort-cost.svg)`。⇒ **文件名不是散文**，而
+        #   `en = "radix"` 的正则会在 `radix-sort-example` 里匹配到开头的 `radix`
+        #   （词边界 `[A-Za-z0-9]` **不含连字符与点**，所以 `radix-` 之后通过检查）。
+        #   ★ 而同课还有 `en = "radix sort"`（基数排序）—— 两个是**不同概念**，
+        #     所以「给第 7 讲补一个 [[term:radix]] 标记」是错的修法（那会把
+        #     「基数排序」标成「进位制基数」）。**要修的是判据，不是内容。**
+        low = re.sub(r"\]\([^)]*\)", " ", low)
+        low = re.sub(r"!\[[^\]]*\]", " ", low)
+        low = low.lower()
         for key, (en, _zh) in glossary_index.items():
             if key in used:
                 continue
