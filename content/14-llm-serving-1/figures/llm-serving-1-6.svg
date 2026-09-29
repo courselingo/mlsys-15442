@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 796 312.0" width="796" height="312.0"
+     role="img" aria-labelledby="fig-llm-serving-1-6-title fig-llm-serving-1-6-desc">
+  <title id="fig-llm-serving-1-6-title">逐步看一遍：请求进进出出</title>
+  <desc id="fig-llm-serving-1-6-desc">课件用 R1 到 R5 五个请求演示了几轮迭代：有的请求这一轮结束，有的下一轮才进来，而每一轮被解码的请求集合都不一样。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="796" height="312.0" fill="#ffffff"/>
+
+  <text x="400.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">逐步看一遍：请求进进出出</text>
+  <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">每一轮的成员都不一样</text>
+  <rect x="25" y="138" width="340" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="195.0" y="167.7" font-size="15" fill="#1e40af" text-anchor="middle">请求池在 CPU 侧</text>
+  <text x="195.0" y="185.7" font-size="12" fill="#1e40af" text-anchor="middle">执行引擎在 GPU 侧</text>
+  <rect x="393" y="138" width="340" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.0" y="167.7" font-size="15" fill="#b45309" text-anchor="middle">每一轮做两件事</text>
+  <text x="563.0" y="185.7" font-size="12" fill="#b45309" text-anchor="middle">解码当前成员，收下新请求</text>
+  <rect x="25" y="234" width="750" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="400.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">课件的演示里，R2 在某一轮完成，R4 与 R5 在下一轮加入</text>
+  <text x="400.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">而整个过程中 GPU 没有停下来等谁</text>
+</svg>

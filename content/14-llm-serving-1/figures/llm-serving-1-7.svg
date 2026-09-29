@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 806 312.0" width="806" height="312.0"
+     role="img" aria-labelledby="fig-llm-serving-1-7-title fig-llm-serving-1-7-desc">
+  <title id="fig-llm-serving-1-7-title">KV 缓存会随着解码一直长</title>
+  <desc id="fig-llm-serving-1-7-desc">每生成一个 token，它对应的键与值就要被存下来，供后面所有步取用；于是缓存的大小随序列长度增长，直到请求结束才释放。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="806" height="312.0" fill="#ffffff"/>
+
+  <text x="405.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">KV 缓存会随着解码一直长</text>
+  <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">每多一个 token，KV 缓存就多一份</text>
+  <rect x="25" y="138" width="340" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="195.0" y="167.7" font-size="15" fill="#1e40af" text-anchor="middle">为什么必须留着</text>
+  <text x="195.0" y="185.7" font-size="12" fill="#1e40af" text-anchor="middle">后面每一步都要读全部前缀</text>
+  <rect x="393" y="138" width="340" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="563.0" y="167.7" font-size="15" fill="#9d174d" text-anchor="middle">为什么会长</text>
+  <text x="563.0" y="185.7" font-size="12" fill="#9d174d" text-anchor="middle">输出长度事先不知道</text>
+  <rect x="25" y="234" width="760" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="405.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">于是缓存的峰值占用取决于最长的那个请求</text>
+  <text x="405.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">而请求什么时候结束，事先也不知道</text>
+</svg>

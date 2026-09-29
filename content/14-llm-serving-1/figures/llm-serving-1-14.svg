@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 876 312.0" width="876" height="312.0"
+     role="img" aria-labelledby="fig-llm-serving-1-14-title fig-llm-serving-1-14-desc">
+  <title id="fig-llm-serving-1-14-title">别忘了 CPU 这一侧的开销</title>
+  <desc id="fig-llm-serving-1-14-desc">课件指出一个没优化好的推理引擎可能有一半以上的时间花在 CPU 调度上；做法是让调度器与模型执行重叠起来。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="876" height="312.0" fill="#ffffff"/>
+
+  <text x="440.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">别忘了 CPU 这一侧的开销</text>
+  <rect x="25" y="70" width="712" height="42" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#9d174d" text-anchor="middle">未优化的引擎可能一半以上时间花在 CPU 调度</text>
+  <rect x="25" y="138" width="340" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="195.0" y="167.7" font-size="15" fill="#1e40af" text-anchor="middle">调度器每轮要做五件事</text>
+  <text x="195.0" y="185.7" font-size="12" fill="#1e40af" text-anchor="middle">收消息、处理结果、查停止条件、前缀匹配、分配内存</text>
+  <rect x="393" y="138" width="340" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.0" y="167.7" font-size="15" fill="#b45309" text-anchor="middle">解法</text>
+  <text x="563.0" y="185.7" font-size="12" fill="#b45309" text-anchor="middle">让调度与模型执行重叠</text>
+  <rect x="25" y="234" width="830" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="440.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">重叠的代价由一条技巧抵消</text>
+  <text x="440.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">延迟一次停止条件检查，代价是多算一个没用的 token</text>
+</svg>

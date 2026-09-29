@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 856 312.0" width="856" height="312.0"
+     role="img" aria-labelledby="fig-llm-serving-1-12-title fig-llm-serving-1-12-desc">
+  <title id="fig-llm-serving-1-12-title">分页之后的两个碎片改善</title>
+  <desc id="fig-llm-serving-1-12-desc">内部碎片只剩最后一个块，浪费的 token 数小于一个块大小；外部碎片则完全消失，因为块可以放在任何位置。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="856" height="312.0" fill="#ffffff"/>
+
+  <text x="430.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">分页之后的两个碎片改善</text>
+  <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">分页之后，两种碎片各被压到什么程度</text>
+  <rect x="25" y="138" width="340" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="195.0" y="167.7" font-size="15" fill="#166534" text-anchor="middle">内部碎片</text>
+  <text x="195.0" y="185.7" font-size="12" fill="#166534" text-anchor="middle">只剩最后一个块，浪费小于一个块</text>
+  <rect x="393" y="138" width="340" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.0" y="167.7" font-size="15" fill="#166534" text-anchor="middle">外部碎片</text>
+  <text x="563.0" y="185.7" font-size="12" fill="#166534" text-anchor="middle">没有了，因为块可以任意拼接</text>
+  <rect x="25" y="234" width="810" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="430.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">课件给的结论是「每个请求浪费的 token 数小于块大小」</text>
+  <text x="430.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">这把浪费从「按最大长度」变成了「按块粒度」</text>
+</svg>

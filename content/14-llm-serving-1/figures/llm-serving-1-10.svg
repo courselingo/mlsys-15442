@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 836 312.0" width="836" height="312.0"
+     role="img" aria-labelledby="fig-llm-serving-1-10-title fig-llm-serving-1-10-desc">
+  <title id="fig-llm-serving-1-10-title">PagedAttention：把操作系统的分页搬过来</title>
+  <desc id="fig-llm-serving-1-10-desc">课件的定义是给 KV 缓存做应用层的分页与虚拟化：不再要求每个请求占一整块连续内存，而是给它若干个固定大小的块。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="836" height="312.0" fill="#ffffff"/>
+
+  <text x="420.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">PagedAttention：把操作系统的分页搬过来</text>
+  <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">PagedAttention = 给 KV 缓存做应用层分页与虚拟化</text>
+  <rect x="25" y="138" width="340" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="195.0" y="167.7" font-size="15" fill="#1e40af" text-anchor="middle">从操作系统借来的想法</text>
+  <text x="195.0" y="185.7" font-size="12" fill="#1e40af" text-anchor="middle">逻辑连续，物理可以不连续</text>
+  <rect x="393" y="138" width="340" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.0" y="167.7" font-size="15" fill="#b45309" text-anchor="middle">落到 LLM 上</text>
+  <text x="563.0" y="185.7" font-size="12" fill="#b45309" text-anchor="middle">按固定大小的块分配与回收</text>
+  <rect x="25" y="234" width="790" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="420.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">块是固定大小、连续的，按从左到右存放 KV 状态</text>
+  <text x="420.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">这一句是课件对块的定义</text>
+</svg>

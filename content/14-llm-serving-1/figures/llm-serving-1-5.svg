@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 786 312.0" width="786" height="312.0"
+     role="img" aria-labelledby="fig-llm-serving-1-5-title fig-llm-serving-1-5-desc">
+  <title id="fig-llm-serving-1-5-title">连续批处理：每一次迭代都重新组队</title>
+  <desc id="fig-llm-serving-1-5-desc">做法是不再等整批结束，而是每一步都重新决定这一轮算哪些请求；完成的下车，新来的上车。课件给的收益是 GPU 利用率更高、新请求可以立刻开始。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="786" height="312.0" fill="#ffffff"/>
+
+  <text x="395.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">连续批处理：每一次迭代都重新组队</text>
+  <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">连续批处理：每一步都重新组队</text>
+  <rect x="25" y="138" width="340" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="195.0" y="167.7" font-size="15" fill="#1e40af" text-anchor="middle">做法</text>
+  <text x="195.0" y="185.7" font-size="12" fill="#1e40af" text-anchor="middle">完成的移出，新到的补进</text>
+  <rect x="393" y="138" width="340" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.0" y="167.7" font-size="15" fill="#166534" text-anchor="middle">收益</text>
+  <text x="563.0" y="185.7" font-size="12" fill="#166534" text-anchor="middle">利用率更高，新请求不必等</text>
+  <rect x="25" y="234" width="740" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="395.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">课件引的是 Orca 这份工作</text>
+  <text x="395.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">它的出发点就是「早完成的请求不该拖住别人」</text>
+</svg>

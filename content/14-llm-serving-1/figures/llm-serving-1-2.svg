@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 758 312.0" width="758" height="312.0"
+     role="img" aria-labelledby="fig-llm-serving-1-2-title fig-llm-serving-1-2-desc">
+  <title id="fig-llm-serving-1-2-title">生成式推理的两个阶段</title>
+  <desc id="fig-llm-serving-1-2-desc">预填充阶段是第一次迭代，一次把全部输入 token 处理完；解码阶段是之后每一次迭代，每一步只生成一个 token。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="758" height="312.0" fill="#ffffff"/>
+
+  <text x="381.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">生成式推理的两个阶段</text>
+  <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">自回归解码：一次一个 token</text>
+  <rect x="25" y="138" width="340" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="195.0" y="167.7" font-size="15" fill="#1e40af" text-anchor="middle">预填充阶段</text>
+  <text x="195.0" y="185.7" font-size="12" fill="#1e40af" text-anchor="middle">第一次迭代，处理全部输入</text>
+  <rect x="393" y="138" width="340" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.0" y="167.7" font-size="15" fill="#b45309" text-anchor="middle">解码阶段</text>
+  <text x="563.0" y="185.7" font-size="12" fill="#b45309" text-anchor="middle">之后每次迭代只生成一个</text>
+  <rect x="25" y="234" width="710" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">两个阶段的形状完全不同</text>
+  <text x="380.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">预填充是规整的大批计算，解码是长尾的一小步一小步</text>
+</svg>
