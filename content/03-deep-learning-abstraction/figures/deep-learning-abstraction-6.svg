@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 702 218.0" width="702" height="218.0"
      role="img" aria-labelledby="fig-deep-learning-abstraction-6-title fig-deep-learning-abstraction-6-desc">
   <title id="fig-deep-learning-abstraction-6-title">循环网络：每一步都带一个内部状态</title>
-  <desc id="fig-deep-learning-abstraction-6-desc">同一套权重被反复使用，每一步读入当前输入和上一步传下来的状态；所以输入与输出的个数都可以是任意的。</desc>
+  <desc id="fig-deep-learning-abstraction-6-desc">同一套权重被反复使用：每个单元读入本步输入与上一步的状态，算出一个新状态；横向箭头表示状态被传给下一步。</desc>
 
   <defs>
     <style>
@@ -16,24 +16,24 @@
   <rect x="2" y="13.0" width="702" height="218.0" fill="#ffffff"/>
 
   <text x="353.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">循环网络：每一步都带一个内部状态</text>
-  <rect x="25" y="70" width="200" height="42" fill="#fce7f3" stroke="#ec4899"/>
-  <text x="125.0" y="95.9" font-size="14" fill="#9d174d" text-anchor="middle">状态</text>
-  <rect x="253" y="70" width="200" height="42" fill="#fce7f3" stroke="#ec4899"/>
-  <text x="353.0" y="95.9" font-size="14" fill="#9d174d" text-anchor="middle">状态</text>
-  <rect x="481" y="70" width="200" height="42" fill="#fce7f3" stroke="#ec4899"/>
-  <text x="581.0" y="95.9" font-size="14" fill="#9d174d" text-anchor="middle">状态</text>
-  <rect x="25" y="140" width="200" height="68" fill="#dbeafe" stroke="#3b82f6"/>
-  <text x="125.0" y="169.7" font-size="15" fill="#1e40af" text-anchor="middle">RNN 单元</text>
-  <text x="125.0" y="187.7" font-size="12" fill="#1e40af" text-anchor="middle">同一套权重</text>
-  <rect x="253" y="140" width="200" height="68" fill="#dbeafe" stroke="#3b82f6"/>
-  <text x="353.0" y="169.7" font-size="15" fill="#1e40af" text-anchor="middle">RNN 单元</text>
-  <text x="353.0" y="187.7" font-size="12" fill="#1e40af" text-anchor="middle">同一套权重</text>
-  <rect x="481" y="140" width="200" height="68" fill="#dbeafe" stroke="#3b82f6"/>
-  <text x="581.0" y="169.7" font-size="15" fill="#1e40af" text-anchor="middle">RNN 单元</text>
-  <text x="581.0" y="187.7" font-size="12" fill="#1e40af" text-anchor="middle">同一套权重</text>
-  <path d="M125,117 L125,129" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M353,117 L353,129" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M581,117 L581,129" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M230,174 L242,174" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M458,174 L470,174" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="25" y="70" width="200" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="125.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">RNN 单元</text>
+  <text x="125.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">同一套权重</text>
+  <rect x="253" y="70" width="200" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="353.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">RNN 单元</text>
+  <text x="353.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">同一套权重</text>
+  <rect x="481" y="70" width="200" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="581.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">RNN 单元</text>
+  <text x="581.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">同一套权重</text>
+  <rect x="25" y="166" width="200" height="42" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="125.0" y="191.9" font-size="14" fill="#9d174d" text-anchor="middle">状态 0</text>
+  <rect x="253" y="166" width="200" height="42" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="353.0" y="191.9" font-size="14" fill="#9d174d" text-anchor="middle">状态 1</text>
+  <rect x="481" y="166" width="200" height="42" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="581.0" y="191.9" font-size="14" fill="#9d174d" text-anchor="middle">状态 2</text>
+  <path d="M125,143 L125,155" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M353,143 L353,155" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M581,143 L581,155" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M230,200 L242,200" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M458,200 L470,200" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
 </svg>

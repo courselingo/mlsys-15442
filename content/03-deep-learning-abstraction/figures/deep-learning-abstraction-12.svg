@@ -24,6 +24,6 @@
   <text x="195.0" y="213.7" font-size="12" fill="#b45309" text-anchor="middle">谁的结果被谁用到</text>
   <rect x="393" y="70" width="340" height="138" fill="#f3e8ff" stroke="#a855f7"/>
   <text x="563.0" y="125.7" font-size="15" fill="#6b21a8" text-anchor="middle">a * b + 3</text>
-  <text x="563.0" y="143.7" font-size="12" fill="#6b21a8" text-anchor="middle">三个节点：两次输入</text>
-  <text x="563.0" y="161.7" font-size="12" fill="#6b21a8" text-anchor="middle">一次乘法，一次加法</text>
+  <text x="563.0" y="143.7" font-size="12" fill="#6b21a8" text-anchor="middle">输入 a 与 b 各一个节点</text>
+  <text x="563.0" y="161.7" font-size="12" fill="#6b21a8" text-anchor="middle">一次乘法，再加一个常量</text>
 </svg>

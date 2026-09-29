@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 696 340.0" width="696" height="340.0"
      role="img" aria-labelledby="fig-deep-learning-abstraction-10-title fig-deep-learning-abstraction-10-desc">
-  <title id="fig-deep-learning-abstraction-10-title">混合专家：让每个专家只管一部分样本</title>
-  <desc id="fig-deep-learning-abstraction-10-desc">课件给的关键想法是让每个专家专注预测一部分情况；路由器每次只挑一两个专家，于是参数量上去了，每次的计算量没有同比上去。</desc>
+  <title id="fig-deep-learning-abstraction-10-title">混合专家：路由器把每个输入分给少数几个专家</title>
+  <desc id="fig-deep-learning-abstraction-10-desc">输入先进路由器，路由器每次都只挑一两个专家，被挑中的专家各自算一遍；于是参数量可以远大于单次计算要用的参数量。</desc>
 
   <defs>
     <style>
@@ -15,26 +15,24 @@
 
   <rect x="2" y="13.0" width="696" height="340.0" fill="#ffffff"/>
 
-  <text x="350.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">混合专家：让每个专家只管一部分样本</text>
+  <text x="350.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">混合专家：路由器把每个输入分给少数几个专家</text>
   <rect x="25" y="70" width="650" height="68" fill="#dbeafe" stroke="#3b82f6"/>
-  <text x="350.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">一排专家</text>
-  <text x="350.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">每个专家只对一部分情况负责</text>
-  <rect x="25" y="166" width="198" height="68" fill="#fef3c7" stroke="#f59e0b"/>
-  <text x="124.0" y="195.7" font-size="15" fill="#b45309" text-anchor="middle">专家 1</text>
-  <text x="124.0" y="213.7" font-size="12" fill="#b45309" text-anchor="middle">只管一部分样本</text>
-  <rect x="251" y="166" width="198" height="68" fill="#fef3c7" stroke="#f59e0b"/>
-  <text x="350.0" y="195.7" font-size="15" fill="#b45309" text-anchor="middle">专家 2</text>
-  <text x="350.0" y="213.7" font-size="12" fill="#b45309" text-anchor="middle">只管一部分样本</text>
-  <rect x="477" y="166" width="198" height="68" fill="#fef3c7" stroke="#f59e0b"/>
-  <text x="576.0" y="195.7" font-size="15" fill="#b45309" text-anchor="middle">专家 3</text>
-  <text x="576.0" y="213.7" font-size="12" fill="#b45309" text-anchor="middle">只管一部分样本</text>
-  <rect x="25" y="262" width="650" height="68" fill="#d1fae5" stroke="#22c55e"/>
-  <text x="350.0" y="291.7" font-size="15" fill="#166534" text-anchor="middle">路由器每次只挑一两个</text>
-  <text x="350.0" y="309.7" font-size="12" fill="#166534" text-anchor="middle">参数量大很多，单次计算量只大一点</text>
-  <path d="M124,143 L124,155" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M124,239 L124,251" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="350.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">输入</text>
+  <text x="350.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">一个 token 或一小批样本</text>
+  <rect x="25" y="166" width="650" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="350.0" y="195.7" font-size="15" fill="#b45309" text-anchor="middle">路由器</text>
+  <text x="350.0" y="213.7" font-size="12" fill="#b45309" text-anchor="middle">每次都只挑一两个专家</text>
+  <rect x="25" y="262" width="198" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="124.0" y="291.7" font-size="15" fill="#166534" text-anchor="middle">专家 1</text>
+  <text x="124.0" y="309.7" font-size="12" fill="#166534" text-anchor="middle">只管一部分样本</text>
+  <rect x="251" y="262" width="198" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="350.0" y="291.7" font-size="15" fill="#166534" text-anchor="middle">专家 2</text>
+  <text x="350.0" y="309.7" font-size="12" fill="#166534" text-anchor="middle">只管一部分样本</text>
+  <rect x="477" y="262" width="198" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="576.0" y="291.7" font-size="15" fill="#166534" text-anchor="middle">专家 3</text>
+  <text x="576.0" y="309.7" font-size="12" fill="#166534" text-anchor="middle">只管一部分样本</text>
   <path d="M350,143 L350,155" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M124,239 L124,251" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
   <path d="M350,239 L350,251" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M576,143 L576,155" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
   <path d="M576,239 L576,251" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
 </svg>

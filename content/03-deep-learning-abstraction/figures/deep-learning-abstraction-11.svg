@@ -21,7 +21,7 @@
   <rect x="25" y="137" width="340" height="42" fill="#dbeafe" stroke="#3b82f6"/>
   <text x="195.0" y="162.9" font-size="14" fill="#1e40af" text-anchor="middle">目标函数与训练技巧</text>
   <rect x="25" y="204" width="340" height="42" fill="#dbeafe" stroke="#3b82f6"/>
-  <text x="195.0" y="229.9" font-size="14" fill="#1e40af" text-anchor="middle">正则、归一化与初始化</text>
+  <text x="195.0" y="229.9" font-size="14" fill="#1e40af" text-anchor="middle">正则 / 归一化 / 初始化</text>
   <rect x="25" y="271" width="340" height="42" fill="#dbeafe" stroke="#3b82f6"/>
   <text x="195.0" y="296.9" font-size="14" fill="#1e40af" text-anchor="middle">足够多的数据</text>
   <rect x="393" y="70" width="340" height="243" fill="#f3e8ff" stroke="#a855f7"/>

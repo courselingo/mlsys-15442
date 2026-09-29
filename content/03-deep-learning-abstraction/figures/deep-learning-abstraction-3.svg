@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 634 244.0" width="634" height="244.0"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 732 317.0" width="732" height="317.0"
      role="img" aria-labelledby="fig-deep-learning-abstraction-3-title fig-deep-learning-abstraction-3-desc">
-  <title id="fig-deep-learning-abstraction-3-title">深度学习改的是「模型」这一栏</title>
-  <desc id="fig-deep-learning-abstraction-3-desc">它把多个简单层叠成一个复合模型，并且所有层的参数一起学；损失函数与训练方法那两栏，课件明确说和其他机器学习方法一样。</desc>
+  <title id="fig-deep-learning-abstraction-3-title">深度学习改的是三栏里的第一栏</title>
+  <desc id="fig-deep-learning-abstraction-3-desc">上面一行是机器学习的三个要素，第一栏被标成要改的那一栏；下面两条分别讲深度学习在这一栏里做了什么，以及另外两栏为什么可以照旧。</desc>
 
   <defs>
     <style>
@@ -13,24 +13,19 @@
     </marker>
   </defs>
 
-  <rect x="2" y="13.0" width="634" height="244.0" fill="#ffffff"/>
+  <rect x="2" y="13.0" width="732" height="317.0" fill="#ffffff"/>
 
-  <text x="319.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">深度学习改的是「模型」这一栏</text>
-  <rect x="25" y="70" width="170" height="68" fill="#dbeafe" stroke="#3b82f6"/>
-  <text x="110.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">第 1 层</text>
-  <text x="110.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">一次简单变换</text>
-  <rect x="223" y="70" width="170" height="68" fill="#fef3c7" stroke="#f59e0b"/>
-  <text x="308.0" y="99.7" font-size="15" fill="#b45309" text-anchor="middle">第 2 层</text>
-  <text x="308.0" y="117.7" font-size="12" fill="#b45309" text-anchor="middle">再变换一次</text>
-  <rect x="421" y="70" width="170" height="68" fill="#d1fae5" stroke="#22c55e"/>
-  <text x="506.0" y="99.7" font-size="15" fill="#166534" text-anchor="middle">预测</text>
-  <text x="506.0" y="117.7" font-size="12" fill="#166534" text-anchor="middle">叠起来的结果</text>
-  <path d="M200,104 L212,104" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M398,104 L410,104" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <rect x="25" y="166" width="280" height="68" fill="#fef3c7" stroke="#f59e0b"/>
-  <text x="165.0" y="195.7" font-size="15" fill="#b45309" text-anchor="middle">端到端训练</text>
-  <text x="165.0" y="213.7" font-size="12" fill="#b45309" text-anchor="middle">所有层的参数一起学</text>
-  <rect x="333" y="166" width="280" height="68" fill="#f3e8ff" stroke="#a855f7"/>
-  <text x="473.0" y="195.7" font-size="15" fill="#6b21a8" text-anchor="middle">其余两栏不变</text>
-  <text x="473.0" y="213.7" font-size="12" fill="#6b21a8" text-anchor="middle">损失与训练方法照旧</text>
+  <text x="368.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">深度学习改的是三栏里的第一栏</text>
+  <rect x="25" y="70" width="210" height="45" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="130.0" y="97.8" font-size="15" fill="#9d174d" text-anchor="middle">模型类</text>
+  <rect x="263" y="70" width="210" height="45" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="368.0" y="97.8" font-size="15" fill="#1e40af" text-anchor="middle">损失函数</text>
+  <rect x="501" y="70" width="210" height="45" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="606.0" y="97.8" font-size="15" fill="#1e40af" text-anchor="middle">训练方法</text>
+  <rect x="25" y="143" width="686" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="368.0" y="172.7" font-size="15" fill="#b45309" text-anchor="middle">第一栏里加一条设定：多层组合</text>
+  <text x="368.0" y="190.7" font-size="12" fill="#b45309" text-anchor="middle">把简单层叠起来，所有层的参数一起学，也就是端到端训练</text>
+  <rect x="25" y="239" width="686" height="68" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="368.0" y="268.7" font-size="15" fill="#1e40af" text-anchor="middle">另外两栏照旧</text>
+  <text x="368.0" y="286.7" font-size="12" fill="#1e40af" text-anchor="middle">损失函数与训练方法，和别的机器学习方法一样</text>
 </svg>
