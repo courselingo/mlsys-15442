@@ -18,15 +18,15 @@
   <text x="379.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">内核能看到的三种内存，快慢差很多</text>
   <rect x="25" y="70" width="300" height="68" fill="#dbeafe" stroke="#3b82f6"/>
   <text x="175.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">每线程私有</text>
-  <text x="175.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">寄存器与本地内存</text>
+  <text x="175.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">只有本线程能读写</text>
   <rect x="25" y="163" width="300" height="68" fill="#fef3c7" stroke="#f59e0b"/>
   <text x="175.0" y="192.7" font-size="15" fill="#b45309" text-anchor="middle">每块共享</text>
   <text x="175.0" y="210.7" font-size="12" fill="#b45309" text-anchor="middle">块内所有线程可读写</text>
-  <rect x="25" y="256" width="300" height="68" fill="#fce7f3" stroke="#ec4899"/>
-  <text x="175.0" y="285.7" font-size="15" fill="#9d174d" text-anchor="middle">设备全局</text>
-  <text x="175.0" y="303.7" font-size="12" fill="#9d174d" text-anchor="middle">所有线程可见</text>
+  <rect x="25" y="256" width="300" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="175.0" y="285.7" font-size="15" fill="#b45309" text-anchor="middle">设备全局</text>
+  <text x="175.0" y="303.7" font-size="12" fill="#b45309" text-anchor="middle">所有线程都可见</text>
   <rect x="353" y="70" width="380" height="260" fill="#f3e8ff" stroke="#a855f7"/>
-  <text x="543.0" y="186.7" font-size="15" fill="#6b21a8" text-anchor="middle">三者的快慢差别很大</text>
-  <text x="543.0" y="204.7" font-size="12" fill="#6b21a8" text-anchor="middle">共享内存要自己管</text>
-  <text x="543.0" y="222.7" font-size="12" fill="#6b21a8" text-anchor="middle">全局内存最慢也最大</text>
+  <text x="543.0" y="186.7" font-size="15" fill="#6b21a8" text-anchor="middle">课件在这里问了一句</text>
+  <text x="543.0" y="204.7" font-size="12" fill="#6b21a8" text-anchor="middle">为什么需要共享内存</text>
+  <text x="543.0" y="222.7" font-size="12" fill="#6b21a8" text-anchor="middle">答案是让块内线程能协作</text>
 </svg>
