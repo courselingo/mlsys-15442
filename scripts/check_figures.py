@@ -66,16 +66,41 @@ def main(argv: list[str] | None = None) -> int:
         return 0
 
     print(f"配图房规检查：{len(figures)} 张图")
-    proc = subprocess.run(
-        [node, str(linter), *[str(f) for f in figures]],
-        capture_output=True, text=True, encoding="utf-8",
-    )
-    out = ((proc.stdout or "") + (proc.stderr or "")).strip()
+
+    # ★★ 必须**分批**调用 linter。**不要把所有路径塞进一个 argv。**
+    #
+    # 起因（2026-09-29，`mlsys` 第 21 讲交付时作者报的）：
+    #   这门课的图从 46 张长到 **291 张**，而 `argv` 的总长度有上限
+    #   （Windows 上 `CreateProcess` 约 32 KB）⇒ 直接抛：
+    #       FileNotFoundError: [WinError 206] 文件名或扩展名太长。
+    #   **⇒ 第 4 道门禁不是「判了不合格」，而是「自己挂了」。**
+    #
+    # ★ 而它最阴的地方是**它随规模悄悄失效**：
+    #   图少的时候这一行跑得好好的（本会话此前跑这门课它一直是 exit 0），
+    #   图多到某个数之后它才第一次抛异常 —— 而抛异常**看起来像门的判定**。
+    #   ⇒ 若作者没有用「同一个 linter、同一个 --strict、只改分批」的等价方法复验，
+    #     他会以为「配图不合规」，而真相是**闸门本身坏了**。
+    #
+    # ⇒ 分批大小取得保守（60），并把每批的 error/warning 行数**相加**
+    #   —— 语义与一次性调用完全一致（linter 逐文件独立判定，批次之间无耦合）。
+    BATCH = 60
+    outs: list[str] = []
+    errors = 0
+    warnings = 0
+    for i in range(0, len(figures), BATCH):
+        chunk = figures[i:i + BATCH]
+        proc = subprocess.run(
+            [node, str(linter), *[str(f) for f in chunk]],
+            capture_output=True, text=True, encoding="utf-8",
+        )
+        part = ((proc.stdout or "") + (proc.stderr or "")).strip()
+        outs.append(part)
+        errors += len([ln for ln in part.splitlines() if " error " in ln])
+        warnings += len([ln for ln in part.splitlines() if " warning " in ln])
+
+    out = "\n".join(outs).strip()
     # 只保留结论行，避免刷屏；完整输出在有错时打印
     tail = [ln for ln in out.splitlines() if "file(s)" in ln or "WARNINGS" in ln]
-
-    errors = len([ln for ln in out.splitlines() if " error " in ln])
-    warnings = len([ln for ln in out.splitlines() if " warning " in ln])
 
     if errors or (args.strict and warnings):
         print(out)
