@@ -184,10 +184,26 @@ def audit(path: Path, root: Path, systems: list[str] | None = None,
 
 
     # ---- C. 无图缺口 ----
+    # ★★ 只量「正文」：把元信息尾巴切掉（2026-09-29 修）
+    #   起因：eth-ca 第 11 讲报「(结尾) 附近连续 1413 汉字无图」，
+    #   而那一千四百字**全是模板的标准尾巴**（读完应该能回答 / 脉络回顾 / 溯源）——
+    #   那三节是元信息（自测题、回顾、溯源），**本来就不该配图**。
+    #   而尾段长度是**随讲次增长**的（实测 12 讲：385 → 426 → … → 796 → 1200 → 1413）
+    #   ⇒ 这条规则会持续误报，而 10、12 讲已贴着上限。
+    #   ★ 而这不是「挪门柱让失败通过」：规则自己的注释写着本意是「别让读者久等」，
+    #     那是对**正文**的读者体验要求；而尾巴是我设计的模板，不是正文。
+    _tail_m = re.search(
+        r"^##\s+.*?(?:读完应该能回答|读完能回答|脉络回顾|溯源|小结)\s*$",
+        body, re.M,
+    )
+    if _tail_m:
+        body = body[: _tail_m.start()]
     if imgs:
         prev = 0
         worst = ("", 0)
         for m in imgs:
+            if m.start() >= len(body):
+                break
             gap = len(CJK.findall(body[prev:m.start()]))
             if gap > worst[1]:
                 seg = body[prev:m.start()]
