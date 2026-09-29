@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 846 312.0" width="846" height="312.0"
+     role="img" aria-labelledby="fig-ml-compiler-gemm-11-title fig-ml-compiler-gemm-11-desc">
+  <title id="fig-ml-compiler-gemm-11-title">GEMM 优化的正确次序</title>
+  <desc id="fig-ml-compiler-gemm-11-desc">课件给的次序是：先定共享内存的布局，再去配置 TMA 来填满它。也就是说，先想清楚数据怎么摆，再决定怎么搬，而不是反过来。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="846" height="312.0" fill="#ffffff"/>
+
+  <text x="425.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">GEMM 优化的正确次序</text>
+  <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">先设计共享内存布局，再让 TMA 去填</text>
+  <rect x="25" y="138" width="170" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="110.0" y="167.7" font-size="15" fill="#1e40af" text-anchor="middle">第一步 选分块形状</text>
+  <text x="110.0" y="185.7" font-size="12" fill="#1e40af" text-anchor="middle">决定块多大</text>
+  <rect x="223" y="138" width="170" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="308.0" y="167.7" font-size="15" fill="#b45309" text-anchor="middle">第二步 定 swizzle</text>
+  <text x="308.0" y="185.7" font-size="12" fill="#b45309" text-anchor="middle">由分块推出来</text>
+  <rect x="421" y="138" width="170" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="506.0" y="167.7" font-size="15" fill="#b45309" text-anchor="middle">第三步 调分块</text>
+  <text x="506.0" y="185.7" font-size="12" fill="#b45309" text-anchor="middle">按约束回头调</text>
+  <rect x="619" y="138" width="170" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="704.0" y="167.7" font-size="15" fill="#166534" text-anchor="middle">第四步 配 TMA</text>
+  <text x="704.0" y="185.7" font-size="12" fill="#166534" text-anchor="middle">最后配搬法</text>
+  <rect x="25" y="234" width="800" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="425.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">次序不能颠倒</text>
+  <text x="425.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">先配 TMA 再改布局，等于每次都重配一遍</text>
+</svg>

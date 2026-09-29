@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 866 430.0" width="866" height="430.0"
+     role="img" aria-labelledby="fig-ml-compiler-gemm-13-title fig-ml-compiler-gemm-13-desc">
+  <title id="fig-ml-compiler-gemm-13-title">三层约束是叠在一起的</title>
+  <desc id="fig-ml-compiler-gemm-13-desc">张量核心决定了共享内存要摆成什么形状，swizzle 又反过来约束分块尺寸，最后 TMA 的配置要同时满足前两条。三者不是三个独立步骤，而是一条链。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="866" height="430.0" fill="#ffffff"/>
+
+  <text x="435.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">三层约束是叠在一起的</text>
+  <rect x="25" y="70" width="620" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="335.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">张量核心的形状</text>
+  <text x="335.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">决定共享内存里要摆什么</text>
+  <rect x="25" y="163" width="620" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="335.0" y="192.7" font-size="15" fill="#b45309" text-anchor="middle">swizzle 的约束</text>
+  <text x="335.0" y="210.7" font-size="12" fill="#b45309" text-anchor="middle">决定分块能取哪些尺寸</text>
+  <rect x="25" y="256" width="620" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="335.0" y="285.7" font-size="15" fill="#166534" text-anchor="middle">TMA 的配置</text>
+  <text x="335.0" y="303.7" font-size="12" fill="#166534" text-anchor="middle">决定怎么把这一块搬进来</text>
+  <rect x="25" y="352" width="820" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="435.0" y="381.7" font-size="15" fill="#9d174d" text-anchor="middle">改任何一环，另外两环都得跟着改</text>
+  <text x="435.0" y="399.7" font-size="12" fill="#9d174d" text-anchor="middle">这正是 GEMM 内核难写的原因</text>
+</svg>

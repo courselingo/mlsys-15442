@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 766 312.0" width="766" height="312.0"
+     role="img" aria-labelledby="fig-ml-compiler-gemm-3-title fig-ml-compiler-gemm-3-desc">
+  <title id="fig-ml-compiler-gemm-3-title">swizzle 原子：8 行、8 个扇区列</title>
+  <desc id="fig-ml-compiler-gemm-3-desc">课件给的定义是原子等于 8 行乘 8 个扇区列，合起来 8 个 128 字节，也就是 8 个 bank 扇区。它把这 8 个扇区当成一格来看，是为了把地址算简单。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="766" height="312.0" fill="#ffffff"/>
+
+  <text x="385.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">swizzle 原子：8 行、8 个扇区列</text>
+  <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">swizzle 原子 = 8 行 × 8 个扇区列 = 8 × 128B</text>
+  <rect x="25" y="138" width="340" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="195.0" y="167.7" font-size="15" fill="#1e40af" text-anchor="middle">8 行</text>
+  <text x="195.0" y="185.7" font-size="12" fill="#1e40af" text-anchor="middle">每次参与访问的行数</text>
+  <rect x="393" y="138" width="340" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.0" y="167.7" font-size="15" fill="#b45309" text-anchor="middle">8 个扇区</text>
+  <text x="563.0" y="185.7" font-size="12" fill="#b45309" text-anchor="middle">一行覆盖 8 个 bank 扇区</text>
+  <rect x="25" y="234" width="720" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="385.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">8 × 8 正好铺满一次无冲突访问</text>
+  <text x="385.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">课件把每个扇区缩成一格来画，方便看公式</text>
+</svg>
