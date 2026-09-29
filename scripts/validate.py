@@ -271,12 +271,28 @@ def check_glossary(gl: dict, rep: Report) -> dict[str, tuple[str, str]]:
 def check_body(rel: str, body: str, rep: Report, glossary_index: dict[str, tuple[str, str]]) -> None:
     """正文层面的检查：术语标记引用 + 原文转载探测 + 术语漂移。讲座与论文页共用。"""
     # 术语标记引用（行内 code 里的 [[term:key]] 是写法示例，不算引用）
+    stripped = INLINE_CODE_RE.sub("", body)
     used: set[str] = set()
-    for m in TERM_RE.finditer(INLINE_CODE_RE.sub("", body)):
+    for m in TERM_RE.finditer(stripped):
         key = m.group(1).lower()
         if key not in glossary_index:
             rep.error(rel, f"[[term:{key}]] 未在 glossary.toml 中定义")
         used.add(key)
+
+    # ★ 闸门缺口（由 cs168-author 发现、Lead 复现后补上）：
+    #   TERM_RE 的键只允许 [A-Za-z0-9_.-]，所以 [[term:physical layer]]（含空格）
+    #   **不被识别为标记** —— 于是上面那个循环看不见它：不会报「未定义」，
+    #   validate 干净通过，**而页面上会原样渲染出 [[term:physical layer]] 这段字面量**。
+    #   这是「能骗过机检、却让成品出错」的一类写法，必须显式拦：
+    #   凡出现 [[term: 字样，就必须整体匹配上合法标记。
+    for m in re.finditer(r"\[\[term:([^\]]*)\]\]", stripped):
+        if not re.fullmatch(r"[A-Za-z0-9_.\-]+", m.group(1)):
+            rep.error(
+                rel,
+                f"术语标记 [[term:{m.group(1)}]] 的键含非法字符（只允许 A-Za-z0-9_.-）"
+                f"⇒ 它不会被识别为标记，页面上会**原样显示这段字符**。"
+                f"键请写成 [[term:{slugify(m.group(1))}]]",
+            )
 
     # 原文转载探测 + 术语漂移
     for para in iter_paragraphs(body):
