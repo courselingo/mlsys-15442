@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 836 312.0" width="836" height="312.0"
+     role="img" aria-labelledby="fig-llm-finetuning-10-title fig-llm-finetuning-10-desc">
+  <title id="fig-llm-finetuning-10-title">量化：把浮点压成更少的位</title>
+  <desc id="fig-llm-finetuning-10-desc">课件的定义是把一种数据类型转换成更少的位；例子是把 FP32 张量转成取值在 -128 到 127 的整数张量。它指出的问题是：当数值里有特别大的量级时，量化的分档用不满。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="836" height="312.0" fill="#ffffff"/>
+
+  <text x="420.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">量化：把浮点压成更少的位</text>
+  <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">量化：把数据类型压到更少的位</text>
+  <rect x="25" y="138" width="340" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="195.0" y="167.7" font-size="15" fill="#1e40af" text-anchor="middle">做法</text>
+  <text x="195.0" y="185.7" font-size="12" fill="#1e40af" text-anchor="middle">FP32 转成 8 位整数</text>
+  <rect x="393" y="138" width="340" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="563.0" y="167.7" font-size="15" fill="#9d174d" text-anchor="middle">问题</text>
+  <text x="563.0" y="185.7" font-size="12" fill="#9d174d" text-anchor="middle">量级大的值会让分档用不满</text>
+  <rect x="25" y="234" width="790" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="420.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">这个问题的解法就是把张量切开，各自定标</text>
+  <text x="420.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">也就是下一页要讲的分块量化</text>
+</svg>

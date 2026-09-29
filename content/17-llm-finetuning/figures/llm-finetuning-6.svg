@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 796 312.0" width="796" height="312.0"
+     role="img" aria-labelledby="fig-llm-finetuning-6-title fig-llm-finetuning-6-desc">
+  <title id="fig-llm-finetuning-6-title">适配器：在模型里插小模块</title>
+  <desc id="fig-llm-finetuning-6-desc">做法是往大模型里加入参数很少的适配器模块；微调时冻住原来的网络，只训练这些适配器。课件给的收益是效果与全量训练相当，但可训练参数少得多。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="796" height="312.0" fill="#ffffff"/>
+
+  <text x="400.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">适配器：在模型里插小模块</text>
+  <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">插入小模块，只训练小模块</text>
+  <rect x="25" y="138" width="340" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="195.0" y="167.7" font-size="15" fill="#1e40af" text-anchor="middle">做法</text>
+  <text x="195.0" y="185.7" font-size="12" fill="#1e40af" text-anchor="middle">加适配器模块，冻住主干</text>
+  <rect x="393" y="138" width="340" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.0" y="167.7" font-size="15" fill="#166534" text-anchor="middle">收益</text>
+  <text x="563.0" y="185.7" font-size="12" fill="#166534" text-anchor="middle">效果相当，可训练参数少得多</text>
+  <rect x="25" y="234" width="750" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="400.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">课件给的出处是 2019 年那份参数高效迁移学习的工作</text>
+  <text x="400.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">注意它比 LoRA 更早，思路是一样的：只训练一小部分</text>
+</svg>
