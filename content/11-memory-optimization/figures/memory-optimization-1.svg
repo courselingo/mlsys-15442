@@ -26,6 +26,6 @@
   <text x="606.0" y="99.7" font-size="15" fill="#166534" text-anchor="middle">完全分片</text>
   <text x="606.0" y="117.7" font-size="12" fill="#166534" text-anchor="middle">参数不再每卡一份</text>
   <rect x="25" y="166" width="712" height="68" fill="#f3e8ff" stroke="#a855f7"/>
-  <text x="381.0" y="195.7" font-size="15" fill="#6b21a8" text-anchor="middle">前两块省的是中间值，第三块省的是模型副本</text>
+  <text x="381.0" y="195.7" font-size="15" fill="#6b21a8" text-anchor="middle">第一块省中间值，第二块把每份数值变小，第三块省模型副本</text>
   <text x="381.0" y="213.7" font-size="12" fill="#6b21a8" text-anchor="middle">三条路可以叠加使用</text>
 </svg>
