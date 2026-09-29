@@ -20,7 +20,7 @@
   <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">案例：把反量化与相邻算子融合起来</text>
   <rect x="25" y="138" width="340" height="68" fill="#dbeafe" stroke="#3b82f6"/>
   <text x="195.0" y="167.7" font-size="15" fill="#1e40af" text-anchor="middle">它为什么能融合</text>
-  <text x="195.0" y="185.7" font-size="12" fill="#1e40af" text-anchor="middle">计算模式是逐元素的</text>
+  <text x="195.0" y="185.7" font-size="12" fill="#1e40af" text-anchor="middle">课件的标签是 Injective（单射）</text>
   <rect x="393" y="138" width="340" height="68" fill="#d1fae5" stroke="#22c55e"/>
   <text x="563.0" y="167.7" font-size="15" fill="#166534" text-anchor="middle">融合省掉什么</text>
   <text x="563.0" y="185.7" font-size="12" fill="#166534" text-anchor="middle">中间结果的一次写与一次读</text>

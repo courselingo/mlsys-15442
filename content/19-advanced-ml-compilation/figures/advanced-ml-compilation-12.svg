@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 856 244.0" width="856" height="244.0"
      role="img" aria-labelledby="fig-advanced-ml-compilation-12-title fig-advanced-ml-compilation-12-desc">
   <title id="fig-advanced-ml-compilation-12-title">从推理引擎到智能体</title>
-  <desc id="fig-advanced-ml-compilation-12-desc">课件把 LLM 系统的形态画了出来：预填充、上下文、思考、动作调用、输出，一路串下去就是智能体的流程；而每一种环节对推理引擎的要求都不同。</desc>
+  <desc id="fig-advanced-ml-compilation-12-desc">课件把 LLM 系统的形态画了出来：上下文的准备、预填充、思考、动作调用、再思考、输出，共六个环节（中间用省略号表示会重复），一路串下去就是智能体的流程；而每一种环节对推理引擎的要求都不同。</desc>
 
   <defs>
     <style>

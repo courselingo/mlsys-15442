@@ -19,12 +19,12 @@
   <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
   <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">课件把最难的一组问题列了出来</text>
   <rect x="25" y="138" width="340" height="68" fill="#dbeafe" stroke="#3b82f6"/>
-  <text x="195.0" y="167.7" font-size="15" fill="#1e40af" text-anchor="middle">偏向模型一侧</text>
-  <text x="195.0" y="185.7" font-size="12" fill="#1e40af" text-anchor="middle">稀疏权重、参数分片</text>
+  <text x="195.0" y="167.7" font-size="15" fill="#1e40af" text-anchor="middle">建模那一行</text>
+  <text x="195.0" y="185.7" font-size="12" fill="#1e40af" text-anchor="middle">语言模型、扩散、多查询注意力、位置编码</text>
   <rect x="393" y="138" width="340" height="68" fill="#fef3c7" stroke="#f59e0b"/>
   <text x="563.0" y="167.7" font-size="15" fill="#b45309" text-anchor="middle">偏向工程一侧</text>
   <text x="563.0" y="185.7" font-size="12" fill="#b45309" text-anchor="middle">内存、规划、算子库、派发、融合</text>
   <rect x="25" y="234" width="730" height="68" fill="#f3e8ff" stroke="#a855f7"/>
-  <text x="390.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">这两侧的边界正是编译要处理的地方</text>
+  <text x="390.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">课件的收束句是两行要携起手来</text>
   <text x="390.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">课件没有给单一答案，它把这一页当成提问</text>
 </svg>
