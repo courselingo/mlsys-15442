@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 646 368.5" width="646" height="368.5"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 696 436.0" width="696" height="436.0"
      role="img" aria-labelledby="fig-why-ml-systems-3-title fig-why-ml-systems-3-desc">
-  <title id="fig-why-ml-systems-3-title">2000 年之后，换掉的是数据与算力</title>
-  <desc id="fig-why-ml-systems-3-desc">研究期把算法基本备齐，数据期让标注变得便宜，算力期让矩阵乘加有了专用电路；三段推着模型变大。</desc>
+  <title id="fig-why-ml-systems-3-title">课件把 2000 年之后标成两段，而这两段是重叠的</title>
+  <desc id="fig-why-ml-systems-3-desc">课件在时间轴上标出「2000 到 2010 数据」与「2006 至今 算力与规模」两个标签，两者在 2006 到 2010 年间同时成立，因此是并列而不是接续。</desc>
 
   <defs>
     <style>
@@ -13,9 +13,9 @@
     </marker>
   </defs>
 
-  <rect x="2" y="13.0" width="646" height="368.5" fill="#ffffff"/>
+  <rect x="2" y="13.0" width="696" height="436.0" fill="#ffffff"/>
 
-  <text x="325.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">2000 年之后，换掉的是数据与算力</text>
+  <text x="350.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">课件把 2000 年之后标成两段，而这两段是重叠的</text>
   <rect x="25" y="70" width="300" height="68" fill="#dbeafe" stroke="#3b82f6"/>
   <text x="175.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">1958–2000 研究期</text>
   <text x="175.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">算法这一段基本齐了</text>
@@ -25,7 +25,7 @@
   <rect x="25" y="262" width="600" height="68" fill="#fce7f3" stroke="#ec4899"/>
   <text x="325.0" y="291.7" font-size="15" fill="#9d174d" text-anchor="middle">2006 至今 算力与规模</text>
   <text x="325.0" y="309.7" font-size="12" fill="#9d174d" text-anchor="middle">算力曲线抬头，模型跟着变大</text>
-  <path d="M175,143 L175,155" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M250,239 L250,251" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <text x="325" y="356" font-size="10" fill="#94a3b8" text-anchor="middle">（分期是课件时间轴的划分，年份取自课件）</text>
+  <rect x="25" y="358" width="650" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="350.0" y="387.7" font-size="15" fill="#6b21a8" text-anchor="middle">后两段在 2006 到 2010 年间是重叠的</text>
+  <text x="350.0" y="405.7" font-size="12" fill="#6b21a8" text-anchor="middle">课件给的是三个并列标签，不是三个先后相接的阶段</text>
 </svg>

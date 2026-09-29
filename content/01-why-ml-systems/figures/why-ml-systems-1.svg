@@ -21,7 +21,7 @@
   <text x="140.0" y="127.7" font-size="12" fill="#9d174d" text-anchor="middle">模型更大，算得更多</text>
   <rect x="268" y="80" width="200" height="68" fill="#dbeafe" stroke="#3b82f6"/>
   <text x="368.0" y="109.7" font-size="15" fill="#1e40af" text-anchor="middle">同一个任务</text>
-  <text x="368.0" y="127.7" font-size="12" fill="#1e40af" text-anchor="middle">行人检测：X% × Y ms</text>
+  <text x="368.0" y="127.7" font-size="12" fill="#1e40af" text-anchor="middle">行人检测：X% ／ Y ms</text>
   <rect x="496" y="80" width="200" height="68" fill="#d1fae5" stroke="#22c55e"/>
   <text x="596.0" y="109.7" font-size="15" fill="#166534" text-anchor="middle">延迟 Y 毫秒</text>
   <text x="596.0" y="127.7" font-size="12" fill="#166534" text-anchor="middle">引擎更快，算得更少</text>
