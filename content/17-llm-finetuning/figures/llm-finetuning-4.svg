@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 776 312.0" width="776" height="312.0"
      role="img" aria-labelledby="fig-llm-finetuning-4-title fig-llm-finetuning-4-desc">
-  <title id="fig-llm-finetuning-4-title">提示工程的三个局限</title>
+  <title id="fig-llm-finetuning-4-title">提示工程的两个局限</title>
   <desc id="fig-llm-finetuning-4-desc">课件列了两条明确的问题：好的提示很难设计，需要大量精力；而且提示不可微，所以不能直接在一个数据集上微调它。课件由此提出了一个问题：能不能让提示变得可训练。</desc>
 
   <defs>
@@ -15,7 +15,7 @@
 
   <rect x="2" y="13.0" width="776" height="312.0" fill="#ffffff"/>
 
-  <text x="390.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">提示工程的三个局限</text>
+  <text x="390.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">提示工程的两个局限</text>
   <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
   <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">为什么手工提示不够用</text>
   <rect x="25" y="138" width="340" height="68" fill="#fce7f3" stroke="#ec4899"/>

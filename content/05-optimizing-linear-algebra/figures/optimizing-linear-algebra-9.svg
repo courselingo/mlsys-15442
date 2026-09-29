@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 807 312.0" width="807" height="312.0"
      role="img" aria-labelledby="fig-optimizing-linear-algebra-9-title fig-optimizing-linear-algebra-9-desc">
   <title id="fig-optimizing-linear-algebra-9-title">第一层：寄存器分块</title>
-  <desc id="fig-optimizing-linear-algebra-9-desc">把三个维度各切一刀，一次算出一小块 C：a 被复用 v2 次，b 被复用 v1 次，寄存器里的乘加次数降到 n³ 除以 v2。</desc>
+  <desc id="fig-optimizing-linear-algebra-9-desc">把三个维度各切一刀，一次算出一小块 C：a 被复用 v2 次，b 被复用 v1 次；乘加次数本身不随分块改变，仍是 n³，而 a 的载入次数降到 n³ 除以 v2。</desc>
 
   <defs>
     <style>
@@ -29,5 +29,5 @@
   <text x="668.5" y="185.7" font-size="12" fill="#b45309" text-anchor="middle">块大小 v3</text>
   <rect x="25" y="234" width="761" height="68" fill="#d1fae5" stroke="#22c55e"/>
   <text x="405.5" y="263.7" font-size="15" fill="#166534" text-anchor="middle">a 被复用 v2 次，b 被复用 v1 次</text>
-  <text x="405.5" y="281.7" font-size="12" fill="#166534" text-anchor="middle">寄存器里的乘加次数降到 n³ / v2</text>
+  <text x="405.5" y="281.7" font-size="12" fill="#166534" text-anchor="middle">乘加次数不变（仍是 n³），a 的载入次数降到 n³ / v2</text>
 </svg>

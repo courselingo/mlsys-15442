@@ -20,7 +20,7 @@
   <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">从一块卡内部到整个集群</text>
   <rect x="25" y="138" width="340" height="68" fill="#dbeafe" stroke="#3b82f6"/>
   <text x="195.0" y="167.7" font-size="15" fill="#1e40af" text-anchor="middle">卡内</text>
-  <text x="195.0" y="185.7" font-size="12" fill="#1e40af" text-anchor="middle">上百个 SM、128 个 CUDA 核心、4 个张量核心</text>
+  <text x="195.0" y="185.7" font-size="12" fill="#1e40af" text-anchor="middle">上百个 SM，每个 SM 128 个 CUDA 核心、4 个张量核心</text>
   <rect x="393" y="138" width="340" height="68" fill="#fef3c7" stroke="#f59e0b"/>
   <text x="563.0" y="167.7" font-size="15" fill="#b45309" text-anchor="middle">卡间</text>
   <text x="563.0" y="185.7" font-size="12" fill="#b45309" text-anchor="middle">上千到十万块 GPU，靠高性能网络连起来</text>

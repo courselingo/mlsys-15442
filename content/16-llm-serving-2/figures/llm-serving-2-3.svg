@@ -17,7 +17,7 @@
 
   <text x="385.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">大模型与小模型的取舍</text>
   <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
-  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">大模型与小模型，各有一头</text>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">大模型与小模型，各有长短</text>
   <rect x="25" y="138" width="340" height="68" fill="#fef3c7" stroke="#f59e0b"/>
   <text x="195.0" y="167.7" font-size="15" fill="#b45309" text-anchor="middle">大模型</text>
   <text x="195.0" y="185.7" font-size="12" fill="#b45309" text-anchor="middle">质量好，但慢且贵</text>

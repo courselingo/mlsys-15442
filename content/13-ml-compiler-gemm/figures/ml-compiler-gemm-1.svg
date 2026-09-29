@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 810 244.0" width="810" height="244.0"
      role="img" aria-labelledby="fig-ml-compiler-gemm-1-title fig-ml-compiler-gemm-1-desc">
-  <title id="fig-ml-compiler-gemm-1-title">这一讲按数据通路的顺序讲四块</title>
-  <desc id="fig-ml-compiler-gemm-1-desc">课件的大纲是四条：swizzle 深入、张量核心、TMA 张量内存加速器、以及把它们拼起来。顺序正好是一条数据从全局内存走到计算单元的路。</desc>
+  <title id="fig-ml-compiler-gemm-1-title">这一讲要讲的四块内容</title>
+  <desc id="fig-ml-compiler-gemm-1-desc">课件的大纲是四条：swizzle 深入、张量核心、TMA 张量内存加速器、以及把它们拼起来。这四块拼起来才是一个 GEMM 内核的全貌，而不是一条按数据流向排好的链。</desc>
 
   <defs>
     <style>
@@ -15,7 +15,7 @@
 
   <rect x="2" y="13.0" width="810" height="244.0" fill="#ffffff"/>
 
-  <text x="407.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">这一讲按数据通路的顺序讲四块</text>
+  <text x="407.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">这一讲要讲的四块内容</text>
   <rect x="25" y="70" width="170" height="68" fill="#dbeafe" stroke="#3b82f6"/>
   <text x="110.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">swizzle 深入</text>
   <text x="110.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">地址怎么排</text>
@@ -30,5 +30,5 @@
   <text x="704.0" y="117.7" font-size="12" fill="#166534" text-anchor="middle">一条完整的通路</text>
   <rect x="25" y="166" width="700" height="68" fill="#f3e8ff" stroke="#a855f7"/>
   <text x="375.0" y="195.7" font-size="15" fill="#6b21a8" text-anchor="middle">四块合起来是一个 GEMM 内核的全貌</text>
-  <text x="375.0" y="213.7" font-size="12" fill="#6b21a8" text-anchor="middle">顺序就是数据流动的顺序</text>
+  <text x="375.0" y="213.7" font-size="12" fill="#6b21a8" text-anchor="middle">四块拼起来才是一条完整的通路</text>
 </svg>

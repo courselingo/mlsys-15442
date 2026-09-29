@@ -17,11 +17,11 @@
 
   <text x="379.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">张量上的反向：形状要对得上</text>
   <rect x="25" y="70" width="340" height="68" fill="#dbeafe" stroke="#3b82f6"/>
-  <text x="195.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">前向：标量输出、矩阵输入</text>
+  <text x="195.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">前向：矩阵输入、矩阵输出</text>
   <text x="195.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">Y = XW</text>
   <rect x="25" y="163" width="340" height="68" fill="#fef3c7" stroke="#f59e0b"/>
   <text x="195.0" y="192.7" font-size="15" fill="#b45309" text-anchor="middle">反向：矩阵形式</text>
-  <text x="195.0" y="210.7" font-size="12" fill="#b45309" text-anchor="middle">X 的伴随与 W 的转置相乘</text>
+  <text x="195.0" y="210.7" font-size="12" fill="#b45309" text-anchor="middle">输出的伴随与 W 的转置相乘</text>
   <rect x="393" y="70" width="340" height="164" fill="#f3e8ff" stroke="#a855f7"/>
   <text x="563.0" y="138.7" font-size="15" fill="#6b21a8" text-anchor="middle">为什么是转置</text>
   <text x="563.0" y="156.7" font-size="12" fill="#6b21a8" text-anchor="middle">前向把两个矩阵乘起来</text>
