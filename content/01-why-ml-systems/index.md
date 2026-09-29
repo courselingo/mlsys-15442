@@ -2,7 +2,7 @@
 title = "为什么需要机器学习系统"
 lecture = 1
 slug = "why-ml-systems"
-status = "draft"
+status = "reviewed"
 source_kind = "slides"
 source_url = "https://mlsyscourse.org/slides/01-course-introduction.pdf"
 source_title = "Week 1: Why ML Systems?（Tianqi Chen 主讲，2026-01-12）"
