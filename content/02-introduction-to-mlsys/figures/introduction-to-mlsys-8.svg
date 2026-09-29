@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 758 232.0" width="758" height="232.0"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 732 232.0" width="732" height="232.0"
      role="img" aria-labelledby="fig-introduction-to-mlsys-8-title fig-introduction-to-mlsys-8-desc">
   <title id="fig-introduction-to-mlsys-8-title">图优化规则库的三个局限</title>
   <desc id="fig-introduction-to-mlsys-8-desc">课件列了三条：鲁棒性上经验规则不覆盖所有模型与硬件，可扩展性上新算子与新图结构都要再写规则，性能上会错过针对特定硬件的细粒度优化。</desc>
@@ -13,11 +13,11 @@
     </marker>
   </defs>
 
-  <rect x="2" y="13.0" width="758" height="232.0" fill="#ffffff"/>
+  <rect x="2" y="13.0" width="732" height="232.0" fill="#ffffff"/>
 
-  <text x="381.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">图优化规则库的三个局限</text>
-  <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
-  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">规则库的三个局限</text>
+  <text x="368.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">图优化规则库的三个局限</text>
+  <rect x="25" y="70" width="686" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="368.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">规则库的三个局限</text>
   <rect x="25" y="138" width="210" height="84" fill="#fce7f3" stroke="#ec4899"/>
   <text x="130.0" y="166.6" font-size="14" fill="#9d174d" text-anchor="middle">鲁棒性</text>
   <text x="130.0" y="184.6" font-size="12" fill="#9d174d" text-anchor="middle">经验规则并不适用于</text>

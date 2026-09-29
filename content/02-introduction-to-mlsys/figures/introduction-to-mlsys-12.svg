@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 754 244.0" width="754" height="244.0"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 754 311.0" width="754" height="311.0"
      role="img" aria-labelledby="fig-introduction-to-mlsys-12-title fig-introduction-to-mlsys-12-desc">
-  <title id="fig-introduction-to-mlsys-12-title">训练的三步，以及把每一步拆到多块卡上的两种走法</title>
-  <desc id="fig-introduction-to-mlsys-12-desc">上排是一次迭代的三步：前向传播、反向传播、权重更新；下排是两种并行方式，数据并行切数据，模型并行切模型。</desc>
+  <title id="fig-introduction-to-mlsys-12-title">训练的三步，以及把这三步拆到多块卡上的两种走法</title>
+  <desc id="fig-introduction-to-mlsys-12-desc">上排是一次迭代的三步：前向传播、反向传播、权重更新；中间一行点明下面两种切法都作用在这三步之上；下排才是数据并行与模型并行。</desc>
 
   <defs>
     <style>
@@ -13,9 +13,9 @@
     </marker>
   </defs>
 
-  <rect x="2" y="13.0" width="754" height="244.0" fill="#ffffff"/>
+  <rect x="2" y="13.0" width="754" height="311.0" fill="#ffffff"/>
 
-  <text x="379.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">训练的三步，以及把每一步拆到多块卡上的两种走法</text>
+  <text x="379.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">训练的三步，以及把这三步拆到多块卡上的两种走法</text>
   <rect x="25" y="70" width="210" height="68" fill="#dbeafe" stroke="#3b82f6"/>
   <text x="130.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">第一步 前向传播</text>
   <text x="130.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">算出一批样本的预测</text>
@@ -27,12 +27,14 @@
   <text x="606.0" y="117.7" font-size="12" fill="#166534" text-anchor="middle">用损失值更新权重</text>
   <path d="M240,104 L252,104" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
   <path d="M478,104 L490,104" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <rect x="25" y="166" width="340" height="68" fill="#dbeafe" stroke="#3b82f6"/>
-  <text x="195.0" y="195.7" font-size="15" fill="#1e40af" text-anchor="middle">数据并行</text>
-  <text x="195.0" y="213.7" font-size="12" fill="#1e40af" text-anchor="middle">切数据，每块卡算一批梯度再汇总</text>
-  <rect x="393" y="166" width="340" height="68" fill="#fef3c7" stroke="#f59e0b"/>
-  <text x="563.0" y="195.7" font-size="15" fill="#b45309" text-anchor="middle">模型并行</text>
-  <text x="563.0" y="213.7" font-size="12" fill="#b45309" text-anchor="middle">切模型，卡间来回传中间结果</text>
-  <path d="M195,143 L195,155" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M563,143 L563,155" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="25" y="166" width="686" height="39" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="368.0" y="190.1" font-size="13" fill="#1e40af" text-anchor="middle">下面两种切法，都作用在上面这三步之上</text>
+  <rect x="25" y="233" width="340" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="195.0" y="262.7" font-size="15" fill="#1e40af" text-anchor="middle">数据并行</text>
+  <text x="195.0" y="280.7" font-size="12" fill="#1e40af" text-anchor="middle">切数据，每块卡算一批梯度再汇总</text>
+  <rect x="393" y="233" width="340" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.0" y="262.7" font-size="15" fill="#b45309" text-anchor="middle">模型并行</text>
+  <text x="563.0" y="280.7" font-size="12" fill="#b45309" text-anchor="middle">切模型，卡间来回传中间结果</text>
+  <path d="M195,210 L195,222" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M563,210 L563,222" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
 </svg>

@@ -18,10 +18,10 @@
   <text x="380.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">同一张优化后的图，两块卡上结论相反</text>
   <rect x="25" y="70" width="340" height="68" fill="#d1fae5" stroke="#22c55e"/>
   <text x="195.0" y="99.7" font-size="15" fill="#166534" text-anchor="middle">V100 上快 30%</text>
-  <text x="195.0" y="117.7" font-size="12" fill="#166534" text-anchor="middle">同一份优化后的图</text>
+  <text x="195.0" y="117.7" font-size="12" fill="#166534" text-anchor="middle">同一张优化后的图</text>
   <rect x="393" y="70" width="340" height="68" fill="#fce7f3" stroke="#ec4899"/>
   <text x="563.0" y="99.7" font-size="15" fill="#9d174d" text-anchor="middle">K80 上慢 10%</text>
-  <text x="563.0" y="117.7" font-size="12" fill="#9d174d" text-anchor="middle">同一份优化后的图</text>
+  <text x="563.0" y="117.7" font-size="12" fill="#9d174d" text-anchor="middle">同一张优化后的图</text>
   <rect x="25" y="166" width="710" height="68" fill="#f3e8ff" stroke="#a855f7"/>
   <text x="380.0" y="195.7" font-size="15" fill="#6b21a8" text-anchor="middle">换一块卡，结论就反过来</text>
   <text x="380.0" y="213.7" font-size="12" fill="#6b21a8" text-anchor="middle">规则是人写的，而硬件与模型都在变</text>

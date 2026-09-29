@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 858 148.0" width="858" height="148.0"
      role="img" aria-labelledby="fig-introduction-to-mlsys-11-title fig-introduction-to-mlsys-11-desc">
   <title id="fig-introduction-to-mlsys-11-title">把图优化本身自动化：生成候选、再验证等价</title>
-  <desc id="fig-introduction-to-mlsys-11-desc">流程是五步：从机器学习数学性质出发，让生成器提出候选变换，再让验证器证明候选与原因等价，只有验证通过的才交给图优化器落地。</desc>
+  <desc id="fig-introduction-to-mlsys-11-desc">流程是五步：从机器学习数学性质出发，让生成器提出候选变换，再让验证器证明候选与原图等价，只有验证通过的才交给图优化器落地。</desc>
 
   <defs>
     <style>

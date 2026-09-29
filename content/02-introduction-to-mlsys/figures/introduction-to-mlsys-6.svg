@@ -17,8 +17,8 @@
 
   <text x="319.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">归一化为什么能折进卷积：它本身是逐通道的仿射变换</text>
   <rect x="25" y="70" width="280" height="68" fill="#fef3c7" stroke="#f59e0b"/>
-  <text x="165.0" y="99.7" font-size="15" fill="#b45309" text-anchor="middle">Y = Conv2D(X, W)</text>
-  <text x="165.0" y="117.7" font-size="12" fill="#b45309" text-anchor="middle">一次卷积</text>
+  <text x="165.0" y="99.7" font-size="15" fill="#b45309" text-anchor="middle">Y = Conv2D(X, W) + B</text>
+  <text x="165.0" y="117.7" font-size="12" fill="#b45309" text-anchor="middle">一次卷积，加一个偏置</text>
   <rect x="25" y="163" width="280" height="68" fill="#fef3c7" stroke="#f59e0b"/>
   <text x="165.0" y="192.7" font-size="15" fill="#b45309" text-anchor="middle">Z = (Y − R) / P</text>
   <text x="165.0" y="210.7" font-size="12" fill="#b45309" text-anchor="middle">逐通道归一化</text>

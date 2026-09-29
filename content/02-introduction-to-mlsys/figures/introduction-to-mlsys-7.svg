@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 758 391.0" width="758" height="391.0"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 777 312.0" width="777" height="312.0"
      role="img" aria-labelledby="fig-introduction-to-mlsys-7-title fig-introduction-to-mlsys-7-desc">
-  <title id="fig-introduction-to-mlsys-7-title">规则库的规模：200 条规则，53,000 行代码</title>
-  <desc id="fig-introduction-to-mlsys-7-desc">课件给的数据是 TensorFlow 当时内置约 200 条图优化规则、约 53,000 行代码；其中光是为了优化卷积就用了约 4,000 行。</desc>
+  <title id="fig-introduction-to-mlsys-7-title">规则库的规模：课件给的三个数字</title>
+  <desc id="fig-introduction-to-mlsys-7-desc">TensorFlow 当时内置约 200 条图优化规则、约 53,000 行代码；其中光是为了优化卷积一个算子，就用了约 4,000 行。三个数字单位不同，这里并列列出而不比长度。</desc>
 
   <defs>
     <style>
@@ -13,16 +13,21 @@
     </marker>
   </defs>
 
-  <rect x="2" y="13.0" width="758" height="391.0" fill="#ffffff"/>
+  <rect x="2" y="13.0" width="777" height="312.0" fill="#ffffff"/>
 
-  <text x="381.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">规则库的规模：200 条规则，53,000 行代码</text>
-  <rect x="25" y="70" width="200" height="56" fill="#dbeafe" stroke="#3b82f6"/>
-  <text x="125.0" y="102.9" font-size="14" fill="#1e40af" text-anchor="middle">约 200 条规则</text>
-  <rect x="25" y="151" width="440" height="56" fill="#fef3c7" stroke="#f59e0b"/>
-  <text x="245.0" y="183.9" font-size="14" fill="#b45309" text-anchor="middle">约 53,000 行代码</text>
-  <rect x="25" y="232" width="320" height="56" fill="#fce7f3" stroke="#ec4899"/>
-  <text x="185.0" y="264.9" font-size="14" fill="#9d174d" text-anchor="middle">约 4,000 行：只为卷积</text>
-  <rect x="25" y="313" width="712" height="68" fill="#f3e8ff" stroke="#a855f7"/>
-  <text x="381.0" y="342.7" font-size="15" fill="#6b21a8" text-anchor="middle">规则是人手写进去的</text>
-  <text x="381.0" y="360.7" font-size="12" fill="#6b21a8" text-anchor="middle">每多一种算子、多一种硬件，就要再补一批规则</text>
+  <text x="390.5" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">规则库的规模：课件给的三个数字</text>
+  <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">规则库的规模（课件给的数字）</text>
+  <rect x="25" y="138" width="225" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="137.5" y="167.7" font-size="15" fill="#1e40af" text-anchor="middle">约 200 条规则</text>
+  <text x="137.5" y="185.7" font-size="12" fill="#1e40af" text-anchor="middle">人手写进优化器</text>
+  <rect x="278" y="138" width="225" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="390.5" y="167.7" font-size="15" fill="#b45309" text-anchor="middle">约 53,000 行代码</text>
+  <text x="390.5" y="185.7" font-size="12" fill="#b45309" text-anchor="middle">规则库的总量</text>
+  <rect x="531" y="138" width="225" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="643.5" y="167.7" font-size="15" fill="#9d174d" text-anchor="middle">约 4,000 行</text>
+  <text x="643.5" y="185.7" font-size="12" fill="#9d174d" text-anchor="middle">只为优化卷积</text>
+  <rect x="25" y="234" width="712" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="381.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">规则是人手写进去的</text>
+  <text x="381.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">每多一种算子、多一种硬件，就要再补一批规则</text>
 </svg>
