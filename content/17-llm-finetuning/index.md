@@ -212,7 +212,7 @@ LoHa 用逐元素乘积（哈达玛积）替换矩阵乘积，它可以在同样
 ## 溯源
 
 - 对应：CMU 15-442 / 15-642 Machine Learning Systems，Week 10 — LLM Finetuning Techniques（Tianqi Chen、Zhihao Jia 主讲，2026-03-18）。
-- 原文课件：https://mlsyscourse.org/slides/16-LLM-finetuning.pdf
+- 原文课件：https://mlsyscourse.org/slides/16-LLM-finetuning.pdf（课件号的对照见第 8 讲溯源；本页一律用仓库讲次号指路。）
 - 上游许可：CC BY-NC 4.0（课程仓库根 LICENSE，19,342 B）。允许翻译与改编，须署名且不得商用。本页未转载原图与整页文字，配图全部自绘。
 - 课件在这一讲里引了若干外部材料，本页照原样标注，且均未转载其原图：GPT-3 那篇「语言模型是少样本学习者」（上下文学习）、提示工程的插图（署名为 Cobus Greyling）、Prefix-Tuning（连续提示的优化）、参数高效迁移学习（2019，适配器）、LoRA（Hu 等人 2021）、QLoRA（量化大模型的高效微调）、以及量化侧调优那份工作。
 - 本讲取材范围分四块。一是动机：微调的定义与全量微调的代价（八十块 A100-40GB、约 1 TB 存储）。二是调提示：上下文学习、提示工程与思维链、两条局限、以及前缀调优接上一串虚拟 token 并只训练这段前缀。三是调适配器：适配器模块与「效果相当、参数更少」、LoRA 的秩分解、它不增加推理延迟、两个变体（LoHa 与 LoKr）。四是量化与侧调优：量化的定义与分档用不满、分块量化与双重量化、QLoRA、适配器省不掉激活值、以及量化侧调优的两步。

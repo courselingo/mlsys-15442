@@ -206,7 +206,7 @@ PyTorch 的写法是一串重复与矩阵乘。另一种做法（课件引的是
 ## 溯源
 
 - 对应：CMU 15-442 / 15-642 Machine Learning Systems，Advanced Topics: ML Superoptimization（Tianqi Chen、Zhihao Jia 主讲，2026-04-06）。
-- 原文课件：https://mlsyscourse.org/slides/18-kernel-superoptimization.pdf
+- 原文课件：https://mlsyscourse.org/slides/18-kernel-superoptimization.pdf（课件号的对照见第 8 讲溯源；本页一律用仓库讲次号指路。）
 - 上游许可：CC BY-NC 4.0（课程仓库根 LICENSE，19,342 B）。允许翻译与改编，须署名且不得商用。本页未转载原图与整页文字，配图全部自绘。
 - 课件在这一讲里引了若干外部材料，本页照原样标注，且均未转载其原图：单位成本算力那条长期曲线（课件标注 Ray Kurzweil 的《The Singularity Is Near》，2005，并在图上标出「2023 年超过人脑算力」这个预测）、规模定律那一页的两个来源（OpenAI 与 NVIDIA）、Mirage、FlashDecoding、Triton、以及 Schwartz-Zippel 引理。
 - 本讲取材范围分五块。一是动机：推动力这个问题与算力这条答案、三条互相推动的线、硬件的高度并行与异构、以及硬件的快速演进。二是超级优化的定义与 Mirage 的定位：同时考虑代数变换、自定义 GPU 内核与调度变换。三是表示与例子：GPU 编程层次的回顾、分层图与共享内存对合并边界的决定、RMSNorm 与矩阵乘、分组查询注意力的两种写法与 FlashDecoding 的 softmax 分解。四是两个挑战与三个部件：生成候选与验证等价、三个部件、抽象表达式、以及基于 Schwartz-Zippel 引理的随机输入验证。五是案例与收益：RMSNorm 加线性层、LoRA、门控多层感知机，总体 1.4 到 2.7 倍。

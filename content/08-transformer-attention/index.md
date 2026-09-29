@@ -206,6 +206,19 @@ Flash-Decoding 把键值切成若干小块，各块用 FlashAttention 并行算�
 
 - 对应：CMU 15-442 / 15-642 Machine Learning Systems，Week 5 — Case study: Transformer, Attention, Optimizations（Zhihao Jia 主讲，2026-02-09）。
 - 原文课件：https://mlsyscourse.org/slides/07-transformers-attention.pdf
+- **课件号与仓库讲次号的对照（这一讲是本课程里两者第一次不一致的地方，所以在这里给出全表）。**
+  课件文件名里的编号与本仓库讲次号不是一回事：本仓库把若干课件拆成了多讲（课件 06 供了第 6、7 讲；课件 16 供了第 17、18 讲），
+  也有若干课件号没被用到。所以偏移量逐讲变化，而不是一个常数：
+  `第 5 讲 ← 05-hardware-acceleration`；`第 6、7 讲 ← 06-CUDA-programming`；
+  `第 8 讲 ← 07-transformers-attention`；`第 9 讲 ← 08-ML-parallelization-part1`；`第 10 讲 ← 09-ML-parallelization-part2`；
+
+- **对照表（续）**：
+  `第 11 讲 ← 11-memory-optimization`；`第 12 讲 ← data_layout（网页版，无编号）`；`第 13 讲 ← gemm（网页版，无编号）`；
+  `第 14 讲 ← 14-LLM-serving-part1`；`第 15 讲 ← tirx-gemm（网页版，无编号）`；`第 16 讲 ← 15-LLM-serving-part2`；
+  `第 17 讲 ← 16-LLM-finetuning`；`第 18 讲 ← 16-mixture-of-experts`；`第 19 讲 ← advanced-topic-mlc（无编号）`；
+  `第 20 讲 ← 18-kernel-superoptimization`；`第 21 讲 ← 19-mega-kernel`。
+- **本页以及全课程的其他页，一律用仓库讲次号指路**：也就是 front matter 里的 lecture，也是读者在目录与链接里看到的那个号。
+
 - 上游许可：CC BY-NC 4.0（课程仓库根 LICENSE，19,342 B）。允许翻译与改编，须署名且不得商用。本页未转载原图与整页文字，配图全部自绘。
 - 课件在这一讲里引了两处外部材料，本页照原样标注来源：自注意力的插图署名为 Jay Allamar，分块的动画署名为 Francisco Massa。这两处原图未转载，本页的相关配图为自绘。
 - 本讲取材范围分四块。一是注意力本身：课件的定义、自注意力的四步、Transformer 与 Vaswani 等人的引用、多头注意力的做法与两条好处。二是在 GPU 上的开销：`softmax(QK^T)V` 与各矩阵的形状、挑战是中间结果很大、共享内存与全局显存的两个带宽数字。三是 FlashAttention：分块与重算两个技术、在线 softmax 与 65504 这个上界、重算的实测三行数字、线程块级的先分头再分查询与负载均衡的回答、warp 级沿查询切不用通信、2 到 4 倍加速与 10 到 20 倍显存下降。四是推理：预填充与解码两个阶段、FlashAttention 在解码阶段失效的原因、Flash-Decoding 的三步与结合律交换律这条前提、最多 8 倍的收益。

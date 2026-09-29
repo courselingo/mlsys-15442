@@ -210,7 +210,7 @@ swizzle 有很多种格式，课件专门讲了为什么默认选 128B。
 ## 溯源
 
 - 对应：CMU 15-442 / 15-642 Machine Learning Systems，Week 7 — ML Compiler: GEMM on Modern GPUs（Tianqi Chen、Zhihao Jia 主讲，2026-02-25）。
-- 原文课件：https://mlsyscourse.org/slides/modern-gpu-gemm/ （网页版 reveal.js 课件；正文的说明分散在若干嵌套的交互页面里）
+- 原文课件：https://mlsyscourse.org/slides/modern-gpu-gemm/ （网页版 reveal.js 课件；正文的说明分散在若干嵌套的交互页面里）（课件号的对照见第 8 讲溯源；本页一律用仓库讲次号指路。）
 - 上游许可：CC BY-NC 4.0（课程仓库根 LICENSE，19,342 B）。允许翻译与改编，须署名且不得商用。本页未转载原图、整页文字与任何交互示例，配图全部自绘。
 - 证据来源与提取方式：本讲的源是一份网页课件。本页用到的依据有两部分：一是课件主页面的小节标题与文字段落；二是它嵌入的九个说明页面，分别是张量核心的形状、张量核心与 swizzle 的关系、TMA 的二维拷贝、三维 TMA、为什么偏好 128B、GEMM 的优化工作流、端到端 GEMM、SWIZZLE_128B 的原子、以及分块与 swizzle 的探索页。两部分的原文都缓存为本地的 HTML 文件，逐字比对的是这两份 HTML 里的可见文字。
 - 本讲取材范围分四块，与课件的 outline 一致。一是 swizzle 的深入：8×8 的回顾、swizzle 原子的尺寸（8 行 × 8 个扇区列 = 8 × 128B）、`swizzled_col = logical_col XOR row`、以及 swizzle 反过来加给分块的整除约束。二是张量核心：M 与 N 的四个取值（16、32、64、128）、K 固定为 16、两个转置开关、以及「读 M×16 需要 8×8 无冲突」这条对应。三是 TMA：带可选 swizzle 的硬件二维拷贝、一条指令不需要线程、16×128 fp16 的搬运例子、三维 TMA 搬进分块加 swizzle 的共享内存、16×256 fp16 每行 512 字节这个例子。四是拼起来：为什么偏好 128B（两侧各自的理由与「分块宽度小于 64 个 fp16」这个限定）、四步工作流、以及端到端的数据通路与两重循环。

@@ -210,7 +210,7 @@ output_mode = "explanation"
 ## 溯源
 
 - 对应：CMU 15-442 / 15-642 Machine Learning Systems，Week 12 — Advanced topics: ML Compilation: Enable Model Deployment across Cloud and Edge（Tianqi Chen 主讲，2026-03-30）。
-- 原文课件：https://mlsyscourse.org/slides/advanced-topic-mlc.pdf
+- 原文课件：https://mlsyscourse.org/slides/advanced-topic-mlc.pdf（课件号的对照见第 8 讲溯源；本页一律用仓库讲次号指路。）
 - 上游许可：CC BY-NC 4.0（课程仓库根 LICENSE，19,342 B）。允许翻译与改编，须署名且不得商用。本页未转载原图与整页文字，配图全部自绘。
 - 课件在这一讲里引了两处外部材料，本页照原样标注，且均未转载其原图：Relax（Composable Abstractions for End-to-End Dynamic Machine Learning，用于讲 IRModule 与符号形状那几页）、XGrammar（Efficient and Flexible Grammar Engine，用于讲约束解码那几页）；课件还标注了 XGrammar 在 vLLM 里的集成以及一份来自 vLLM 博客的来源。
 - 本讲取材范围分五块。一是动机与光谱：机器学习系统在三次浪潮中的角色、云与端两类机会、部署光谱的六个目标与「用最少工程量铺满」这个提问、机器学习编译能提供的解耦、以及课件列出的那组最难问题（内存、规划、算子库、派发、算子融合、参数分片、稀疏权重）。二是开发模式与 Relax：两种开发方式的对比、Relax 的定位与 IRModule、一段最短的矩阵乘例子。三是动态性：一等的符号形状（问号形状的例子）、跨函数的全局形状推导、以及跨层级的动态性追踪。四是融合案例：量化模型里反量化的计算模式分析、三个 pass 的分工。五是收尾：LLM 系统朝智能体中心演进、结构化输出与约束解码的两个难点、XGrammar 的关键洞察与加速比、以及一组从服务器到浏览器的真实部署。

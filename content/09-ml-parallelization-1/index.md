@@ -222,7 +222,7 @@ ZeRO 要做的，就是把「乘以 N」这件事从这些项里去掉。
 ## 溯源
 
 - 对应：CMU 15-442 / 15-642 Machine Learning Systems，Week 5 — ML Parallelization (Data Parallelism and Zero Redundancy)（Zhihao Jia 主讲，2026-02-11）。周次照课程表（`02/11 Wed` 那一行写的是 Week 5；日历自证也对：首周 01/12 起算，02/11 落在第五周）。课件标题页没印周次，这一项是照课程表加的。
-- 原文课件：https://mlsyscourse.org/slides/08-ML-parallelization-part1.pdf
+- 原文课件：https://mlsyscourse.org/slides/08-ML-parallelization-part1.pdf（课件号的对照见第 8 讲溯源；本页一律用仓库讲次号指路。）
 - 上游许可：CC BY-NC 4.0（课程仓库根 LICENSE，19,342 B）。允许翻译与改编，须署名且不得商用。本页未转载原图与整页文字，配图全部自绘。
 - 本讲取材范围分四块：训练回顾与数据并行；AllReduce 的四种做法与那一页的五列对比；显存构成（四个模型的五组数、参数/梯度/优化器状态/FP32 副本、Adam 的一阶与二阶动量）；以及 ZeRO（三个阶段各切什么、第三阶段的参数分布与用完即丢）。
 - 数字与定义以课件页面为准。课件未展开的推论属于 CourseLingo 的讲解，不当作原文引用。这类推论分三组。一组是取舍判断：通信量小不等于更快、延迟可以理解成一轮里有多少次等待、第三阶段的代价与收益就是在显存与通信之间挪边界。一组是因果与量级：显存这道墙加卡绕不过去。还有一组是分工的区分：compute 与硬件加速器决定算多快，存储与通信的安排决定算得动多大。

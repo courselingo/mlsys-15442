@@ -204,7 +204,7 @@ output_mode = "explanation"
 ## 溯源
 
 - 对应：CMU 15-442 / 15-642 Machine Learning Systems，Week 7 — ML Compiler: Data Layouts（Tianqi Chen、Zhihao Jia 主讲，2026-02-23）。
-- 原文课件：https://mlsyscourse.org/slides/data_layout/ （网页版 reveal.js 课件；正文的若干示例是嵌套的交互页面）
+- 原文课件：https://mlsyscourse.org/slides/data_layout/ （网页版 reveal.js 课件；正文的若干示例是嵌套的交互页面）（课件号的对照见第 8 讲溯源；本页一律用仓库讲次号指路。）
 - 上游许可：CC BY-NC 4.0（课程仓库根 LICENSE，19,342 B）。允许翻译与改编，须署名且不得商用。本页未转载原图、整页文字与任何交互示例，配图全部自绘。
 - 证据来源与提取方式：本讲的源是一份网页课件，正文之外的说明分散在若干被嵌入的交互页面里。本页用到的依据有两部分：一是课件主页面（`mlsys-deck-datalayout.html`）上的小节标题与文字段落；二是它嵌入的六个说明页面，分别是「为什么需要布局」「形状-步长记号」「分块布局的推导」「复制的布局」「内存 bank 冲突」「线程与寄存器布局」。两部分的原文都缓存为本地的 HTML 文件，逐字比对的是这两份 HTML 里的可见文字。
 - 本讲取材范围分三块。第一块是记号：数据布局的定义与两种物理位置、形状-步长记号的写法与它的来源（课件的说法是 CuTe 的简化版、采用行优先）。第二块是分块与线程：8×8 按 2×4 分块的推导（形状 (4,2,2,4)、步长 (16,4,8,1)、A[2,3] 落在 19）、具名轴与 @m 与 @warpid 与 @tmemcol、线程与寄存器的两级轴、分布式轴 @gpuid_x 与 @gpuid_y、复制维度 R 的写法。第三块是 bank 与 swizzle：内存 bank 的并行读取与取模规则、0/1/2/3 与 0/4/8/12 两组对照、swizzle 的重映射性质、SWIZZLE_128B 的收益与「这个想法不只属于共享内存」这句、使用 swizzle 的三条建议。

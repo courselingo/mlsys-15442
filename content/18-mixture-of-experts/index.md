@@ -208,7 +208,7 @@ output_mode = "explanation"
 ## 溯源
 
 - 对应：CMU 15-442 / 15-642 Machine Learning Systems，Mixture of Experts（Tianqi Chen、Zhihao Jia 主讲，2026-03-25）。
-- 原文课件：https://mlsyscourse.org/slides/16-mixture-of-experts.pdf
+- 原文课件：https://mlsyscourse.org/slides/16-mixture-of-experts.pdf（课件号的对照见第 8 讲溯源；本页一律用仓库讲次号指路。）
 - 上游许可：CC BY-NC 4.0（课程仓库根 LICENSE，19,342 B）。允许翻译与改编，须署名且不得商用。本页未转载原图与整页文字，配图全部自绘。
 - 课件在这一讲里引了一处外部工作，本页照原样标注，且未转载其原图：MegaBlocks（Efficient Sparse Training with Mixture-of-Experts，Gale 等人），出现在「批量化 MoE 计算」那一页。
 - 本讲取材范围分四块。一是结构与动机：Transformer 块的回顾、前馈层的形状、混合专家的关键想法（让每个专家专注一部分情况，且每个专家是一个前馈网络）、门控的作用、以及把前馈层直接替换成混合专家。二是单批次与批量：单份输入时门控给出权重与专家下标、批量线性层的矩阵形式。三是高效计算：MegaBlocks 的批量化思路、按专家的路由与置换、用前缀和求置换下标、以及置换之后每个专家处理一段连续输入。四是课件留下的两道讨论题（加速专家层的机会与挑战、并行化专家层的机会与挑战）。
