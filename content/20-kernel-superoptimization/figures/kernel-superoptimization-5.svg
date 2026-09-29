@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 786 430.0" width="786" height="430.0"
+     role="img" aria-labelledby="fig-kernel-superoptimization-5-title fig-kernel-superoptimization-5-desc">
+  <title id="fig-kernel-superoptimization-5-title">超级优化要同时考虑三件事</title>
+  <desc id="fig-kernel-superoptimization-5-desc">课件给的定义是：把代数变换、自定义 GPU 内核、以及调度变换放在一起同时考虑，而不是分别优化。三者合起来才是这一讲要搜索的空间。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="786" height="430.0" fill="#ffffff"/>
+
+  <text x="395.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">超级优化要同时考虑三件事</text>
+  <rect x="25" y="70" width="620" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="335.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">代数变换</text>
+  <text x="335.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">把式子改写成等价但更好算的形式</text>
+  <rect x="25" y="163" width="620" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="335.0" y="192.7" font-size="15" fill="#b45309" text-anchor="middle">自定义 GPU 内核</text>
+  <text x="335.0" y="210.7" font-size="12" fill="#b45309" text-anchor="middle">把算子写成具体的并行代码</text>
+  <rect x="25" y="256" width="620" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="335.0" y="285.7" font-size="15" fill="#b45309" text-anchor="middle">调度变换</text>
+  <text x="335.0" y="303.7" font-size="12" fill="#b45309" text-anchor="middle">决定分块、循环顺序与并行方式</text>
+  <rect x="25" y="352" width="740" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="395.0" y="381.7" font-size="15" fill="#6b21a8" text-anchor="middle">关键词是「同时」</text>
+  <text x="395.0" y="399.7" font-size="12" fill="#6b21a8" text-anchor="middle">分别优化只能得到局部最优，而三者是互相牵制的</text>
+</svg>

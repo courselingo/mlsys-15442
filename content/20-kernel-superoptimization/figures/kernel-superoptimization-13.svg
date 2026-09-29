@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 866 312.0" width="866" height="312.0"
+     role="img" aria-labelledby="fig-kernel-superoptimization-13-title fig-kernel-superoptimization-13-desc">
+  <title id="fig-kernel-superoptimization-13-title">等价性验证：随机输入加有限域</title>
+  <desc id="fig-kernel-superoptimization-13-desc">课件引的是 Schwartz-Zippel 引理，做法是用有限域里的随机输入去检验两个图是否等价；它不是逐项证明，而是以极高的概率给出判断。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="866" height="312.0" fill="#ffffff"/>
+
+  <text x="435.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">等价性验证：随机输入加有限域</text>
+  <rect x="25" y="70" width="712" height="42" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#166534" text-anchor="middle">用随机输入检验等价性</text>
+  <rect x="25" y="138" width="340" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="195.0" y="167.7" font-size="15" fill="#1e40af" text-anchor="middle">做法</text>
+  <text x="195.0" y="185.7" font-size="12" fill="#1e40af" text-anchor="middle">在有限域里取随机输入</text>
+  <rect x="393" y="138" width="340" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.0" y="167.7" font-size="15" fill="#166534" text-anchor="middle">得到什么</text>
+  <text x="563.0" y="185.7" font-size="12" fill="#166534" text-anchor="middle">以极高概率成立的等价判断</text>
+  <rect x="25" y="234" width="820" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="435.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">这不是形式化证明</text>
+  <text x="435.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">但在一个要反复判断成千上万次候选的搜索里，速度比绝对严谨更重要</text>
+</svg>

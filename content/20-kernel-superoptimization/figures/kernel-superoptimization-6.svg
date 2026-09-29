@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 796 312.0" width="796" height="312.0"
+     role="img" aria-labelledby="fig-kernel-superoptimization-6-title fig-kernel-superoptimization-6-desc">
+  <title id="fig-kernel-superoptimization-6-title">Mirage 的核心想法</title>
+  <desc id="fig-kernel-superoptimization-6-desc">课件把 Mirage 定位成给机器学习用的超级优化器，关键想法是为深度网络自动生成高度优化的 GPU 内核；它给的对比是：数千行 CUDA 代码，换成几行 Python。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="796" height="312.0" fill="#ffffff"/>
+
+  <text x="400.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">Mirage 的核心想法</text>
+  <rect x="25" y="70" width="712" height="42" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#166534" text-anchor="middle">从手写内核，换到自动生成内核</text>
+  <rect x="25" y="138" width="340" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="195.0" y="167.7" font-size="15" fill="#166534" text-anchor="middle">省下的是什么</text>
+  <text x="195.0" y="185.7" font-size="12" fill="#166534" text-anchor="middle">数千行 CUDA 的工程量</text>
+  <rect x="393" y="138" width="340" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="563.0" y="167.7" font-size="15" fill="#1e40af" text-anchor="middle">换来的是什么</text>
+  <text x="563.0" y="185.7" font-size="12" fill="#1e40af" text-anchor="middle">几行 Python 的描述</text>
+  <rect x="25" y="234" width="750" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="400.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">省工程量只是表层收益</text>
+  <text x="400.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">更深的一层是：搜索可以覆盖人想不到的组合</text>
+</svg>

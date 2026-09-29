@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 836 312.0" width="836" height="312.0"
+     role="img" aria-labelledby="fig-kernel-superoptimization-10-title fig-kernel-superoptimization-10-desc">
+  <title id="fig-kernel-superoptimization-10-title">两个核心挑战</title>
+  <desc id="fig-kernel-superoptimization-10-desc">课件把「找出高性能图」这件事拆成两个问题：第一，怎么生成候选的图；第二，怎么验证它们是对的。前者是搜索空间问题，后者是正确性问题。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="836" height="312.0" fill="#ffffff"/>
+
+  <text x="420.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">两个核心挑战</text>
+  <rect x="25" y="70" width="712" height="42" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#9d174d" text-anchor="middle">两个必须同时解决的问题</text>
+  <rect x="25" y="138" width="340" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="195.0" y="167.7" font-size="15" fill="#9d174d" text-anchor="middle">第一个</text>
+  <text x="195.0" y="185.7" font-size="12" fill="#9d174d" text-anchor="middle">怎么生成候选图</text>
+  <rect x="393" y="138" width="340" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="563.0" y="167.7" font-size="15" fill="#9d174d" text-anchor="middle">第二个</text>
+  <text x="563.0" y="185.7" font-size="12" fill="#9d174d" text-anchor="middle">怎么验证它们等价</text>
+  <rect x="25" y="234" width="790" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="420.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">两个问题缺一不可</text>
+  <text x="420.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">只生成不验证会算错，只验证不生成则无从搜索</text>
+</svg>

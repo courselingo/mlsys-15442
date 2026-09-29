@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 846 244.0" width="846" height="244.0"
+     role="img" aria-labelledby="fig-kernel-superoptimization-11-title fig-kernel-superoptimization-11-desc">
+  <title id="fig-kernel-superoptimization-11-title">Mirage 的三个部件</title>
+  <desc id="fig-kernel-superoptimization-11-desc">课件的总览是三个部件：图生成器负责产出候选，等价验证器负责判断对错，图优化器负责在候选里挑出最好的，最后交给后端生成真正能跑的 GPU 内核。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="846" height="244.0" fill="#ffffff"/>
+
+  <text x="425.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">Mirage 的三个部件</text>
+  <rect x="25" y="70" width="170" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="110.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">图生成器</text>
+  <text x="110.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">产出候选图</text>
+  <rect x="223" y="70" width="170" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="308.0" y="99.7" font-size="15" fill="#b45309" text-anchor="middle">等价验证器</text>
+  <text x="308.0" y="117.7" font-size="12" fill="#b45309" text-anchor="middle">判断是否等价</text>
+  <rect x="421" y="70" width="170" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="506.0" y="99.7" font-size="15" fill="#b45309" text-anchor="middle">图优化器</text>
+  <text x="506.0" y="117.7" font-size="12" fill="#b45309" text-anchor="middle">挑出最好的图</text>
+  <rect x="619" y="70" width="170" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="704.0" y="99.7" font-size="15" fill="#166534" text-anchor="middle">后端</text>
+  <text x="704.0" y="117.7" font-size="12" fill="#166534" text-anchor="middle">生成 GPU 内核</text>
+  <rect x="25" y="166" width="800" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="425.0" y="195.7" font-size="15" fill="#6b21a8" text-anchor="middle">生成器在算子、线程块、线程三个层级上展开</text>
+  <text x="425.0" y="213.7" font-size="12" fill="#6b21a8" text-anchor="middle">这一点决定了它的搜索空间有多大</text>
+</svg>
