@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 796 312.0" width="796" height="312.0"
+     role="img" aria-labelledby="fig-transformer-attention-10-title fig-transformer-attention-10-desc">
+  <title id="fig-transformer-attention-10-title">怎么把 FlashAttention 切给线程块：先分头，再分查询</title>
+  <desc id="fig-transformer-attention-10-desc">课件给的背景是一块 A100 有 108 个 SMM，也就是大约 108 个线程块的位置；切法是先把不同的头分给不同的线程块，再把不同的查询分给不同的线程块。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="796" height="312.0" fill="#ffffff"/>
+
+  <text x="400.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">怎么把 FlashAttention 切给线程块：先分头，再分查询</text>
+  <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">先分头，再分查询</text>
+  <rect x="25" y="138" width="340" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="195.0" y="167.7" font-size="15" fill="#1e40af" text-anchor="middle">第一步</text>
+  <text x="195.0" y="185.7" font-size="12" fill="#1e40af" text-anchor="middle">不同的头分给不同线程块</text>
+  <rect x="393" y="138" width="340" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.0" y="167.7" font-size="15" fill="#b45309" text-anchor="middle">第二步</text>
+  <text x="563.0" y="185.7" font-size="12" fill="#b45309" text-anchor="middle">不同的查询分给不同线程块</text>
+  <rect x="25" y="234" width="750" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="400.0" y="263.7" font-size="15" fill="#166534" text-anchor="middle">要担心负载不均吗</text>
+  <text x="400.0" y="281.7" font-size="12" fill="#166534" text-anchor="middle">不用，调度器会在块结束时自动补上下一个</text>
+</svg>

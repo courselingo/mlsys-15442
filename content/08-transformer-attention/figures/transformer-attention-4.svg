@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 734 244.0" width="734" height="244.0"
+     role="img" aria-labelledby="fig-transformer-attention-4-title fig-transformer-attention-4-desc">
+  <title id="fig-transformer-attention-4-title">多头注意力：把输入投影成多组，各自算一遍</title>
+  <desc id="fig-transformer-attention-4-desc">做法是把输入与输出各做若干组不同的线性变换，各组独立算注意力，最后拼起来再投影一次；课件给的好处是并行度更高、计算开销更小。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="734" height="244.0" fill="#ffffff"/>
+
+  <text x="369.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">多头注意力：把输入投影成多组，各自算一遍</text>
+  <rect x="25" y="70" width="320" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="185.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">做法</text>
+  <text x="185.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">投影成多组 Q、K、V</text>
+  <rect x="25" y="163" width="320" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="185.0" y="192.7" font-size="15" fill="#b45309" text-anchor="middle">各组独立算</text>
+  <text x="185.0" y="210.7" font-size="12" fill="#b45309" text-anchor="middle">最后拼起来再投影一次</text>
+  <rect x="373" y="70" width="340" height="164" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="543.0" y="138.7" font-size="15" fill="#166534" text-anchor="middle">课件给的好处</text>
+  <text x="543.0" y="156.7" font-size="12" fill="#166534" text-anchor="middle">并行度更高</text>
+  <text x="543.0" y="174.7" font-size="12" fill="#166534" text-anchor="middle">计算开销更小</text>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 -1.0 758 300.0" width="758" height="300.0"
+     role="img" aria-labelledby="fig-transformer-attention-12-title fig-transformer-attention-12-desc">
+  <title id="fig-transformer-attention-12-title">生成式推理分两个阶段，形态完全不同</title>
+  <desc id="fig-transformer-attention-12-desc">预填充阶段一次处理全部输入 token；解码阶段每一步只生成一个 token，但要读前面所有 token 的键与值。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="-1.0" width="758" height="300.0" fill="#ffffff"/>
+
+  <text x="381.0" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">生成式推理分两个阶段，形态完全不同</text>
+  <rect x="25" y="56" width="712" height="96" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-dasharray="6,4"/>
+  <text x="38" y="73.85" font-size="11" fill="#64748b">预填充阶段（第 0 次迭代）</text>
+  <rect x="40" y="95" width="682" height="42" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="381.0" y="120.9" font-size="14" fill="#1e40af" text-anchor="middle">一次处理全部输入 token，查询很多，形状规整</text>
+  <rect x="25" y="180" width="712" height="96" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-dasharray="6,4"/>
+  <text x="38" y="197.85" font-size="11" fill="#64748b">解码阶段（其余每次迭代）</text>
+  <rect x="40" y="219" width="682" height="42" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="381.0" y="244.9" font-size="14" fill="#b45309" text-anchor="middle">每一步只生成一个 token，但要读前面所有 token 的键与值</text>
+</svg>

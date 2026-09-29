@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 806 244.0" width="806" height="244.0"
+     role="img" aria-labelledby="fig-transformer-attention-13-title fig-transformer-attention-13-desc">
+  <title id="fig-transformer-attention-13-title">FlashAttention 用在解码阶段会失效</title>
+  <desc id="fig-transformer-attention-13-desc">分块要能切开才有并行度，而解码阶段每一步只有一个查询；课件给的结论是它只能沿键值顺序处理，长上下文时效率很低。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="806" height="244.0" fill="#ffffff"/>
+
+  <text x="405.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">FlashAttention 用在解码阶段会失效</text>
+  <rect x="25" y="70" width="360" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="205.0" y="99.7" font-size="15" fill="#166534" text-anchor="middle">预填充阶段</text>
+  <text x="205.0" y="117.7" font-size="12" fill="#166534" text-anchor="middle">查询很多，可以直接分块</text>
+  <rect x="413" y="70" width="360" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="593.0" y="99.7" font-size="15" fill="#9d174d" text-anchor="middle">解码阶段</text>
+  <text x="593.0" y="117.7" font-size="12" fill="#9d174d" text-anchor="middle">只有一个查询，切不开</text>
+  <rect x="25" y="166" width="760" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="405.0" y="195.7" font-size="15" fill="#9d174d" text-anchor="middle">于是只能沿键值顺序处理</text>
+  <text x="405.0" y="213.7" font-size="12" fill="#9d174d" text-anchor="middle">上下文一长，那一步就成了瓶颈</text>
+</svg>

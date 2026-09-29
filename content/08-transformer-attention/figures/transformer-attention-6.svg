@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 754 244.0" width="754" height="244.0"
+     role="img" aria-labelledby="fig-transformer-attention-6-title fig-transformer-attention-6-desc">
+  <title id="fig-transformer-attention-6-title">FlashAttention 的出发点：两级存储差了一个数量级</title>
+  <desc id="fig-transformer-attention-6-desc">课件给的两个数字是：每块的共享内存约 20 MB，带宽 19 TB/s；设备全局显存 80 GB 量级，带宽 1.5 TB/s。容量与带宽仍然是反向的。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="754" height="244.0" fill="#ffffff"/>
+
+  <text x="379.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">FlashAttention 的出发点：两级存储差了一个数量级</text>
+  <rect x="25" y="70" width="360" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="205.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">共享内存</text>
+  <text x="205.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">约 20 MB，19 TB/s</text>
+  <rect x="25" y="163" width="360" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="205.0" y="192.7" font-size="15" fill="#b45309" text-anchor="middle">全局显存</text>
+  <text x="205.0" y="210.7" font-size="12" fill="#b45309" text-anchor="middle">80 GB 量级，1.5 TB/s</text>
+  <rect x="413" y="70" width="320" height="164" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="573.0" y="138.7" font-size="15" fill="#9d174d" text-anchor="middle">带宽差了十几倍</text>
+  <text x="573.0" y="156.7" font-size="12" fill="#9d174d" text-anchor="middle">所以瓶颈是搬</text>
+  <text x="573.0" y="174.7" font-size="12" fill="#9d174d" text-anchor="middle">不是算</text>
+</svg>

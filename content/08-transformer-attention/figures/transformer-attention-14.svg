@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 777 312.0" width="777" height="312.0"
+     role="img" aria-labelledby="fig-transformer-attention-14-title fig-transformer-attention-14-desc">
+  <title id="fig-transformer-attention-14-title">Flash-Decoding：改从键值这一侧切</title>
+  <desc id="fig-transformer-attention-14-desc">做法是把键值切成若干小块，各块用 FlashAttention 并行算，最后把各块的结果合并；它能成立的关键是注意力满足结合律与交换律。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="777" height="312.0" fill="#ffffff"/>
+
+  <text x="390.5" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">Flash-Decoding：改从键值这一侧切</text>
+  <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">关键前提：注意力满足结合律与交换律</text>
+  <rect x="25" y="138" width="225" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="137.5" y="167.7" font-size="15" fill="#1e40af" text-anchor="middle">第一步</text>
+  <text x="137.5" y="185.7" font-size="12" fill="#1e40af" text-anchor="middle">键值切成若干小块</text>
+  <rect x="278" y="138" width="225" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="390.5" y="167.7" font-size="15" fill="#b45309" text-anchor="middle">第二步</text>
+  <text x="390.5" y="185.7" font-size="12" fill="#b45309" text-anchor="middle">各块用 FlashAttention 并行算</text>
+  <rect x="531" y="138" width="225" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="643.5" y="167.7" font-size="15" fill="#166534" text-anchor="middle">第三步</text>
+  <text x="643.5" y="185.7" font-size="12" fill="#166534" text-anchor="middle">把各块结果合并</text>
+  <rect x="25" y="234" width="700" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="375.0" y="263.7" font-size="15" fill="#166534" text-anchor="middle">课件给的收益：比之前的工作快最多 8 倍</text>
+  <text x="375.0" y="281.7" font-size="12" fill="#166534" text-anchor="middle">切成小块还带来一件事：块数变多，GPU 才喂得饱</text>
+</svg>

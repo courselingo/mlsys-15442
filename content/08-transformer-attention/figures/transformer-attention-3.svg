@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 686 323.0" width="686" height="323.0"
+     role="img" aria-labelledby="fig-transformer-attention-3-title fig-transformer-attention-3-desc">
+  <title id="fig-transformer-attention-3-title">自注意力：一个位置发出的查询，去读全部位置的键值</title>
+  <desc id="fig-transformer-attention-3-desc">自注意力的做法是把查询与一组键值对映射成一个输出。课件把这一步拆成四步：算 QKV、算匹配分数、softmax 成权重、用权重加权求和。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="686" height="323.0" fill="#ffffff"/>
+
+  <text x="345.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">自注意力：一个位置发出的查询，去读全部位置的键值</text>
+  <rect x="25" y="70" width="640" height="42" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="345.0" y="95.9" font-size="14" fill="#b45309" text-anchor="middle">第一步 由输入算出查询 Q、键 K、值 V</text>
+  <rect x="25" y="137" width="640" height="42" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="345.0" y="162.9" font-size="14" fill="#b45309" text-anchor="middle">第二步 Q 乘 K 的转置，得到每个位置之间的匹配分数</text>
+  <rect x="25" y="204" width="640" height="42" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="345.0" y="229.9" font-size="14" fill="#b45309" text-anchor="middle">第三步 对分数做 softmax，得到一组权重</text>
+  <rect x="25" y="271" width="640" height="42" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="345.0" y="296.9" font-size="14" fill="#b45309" text-anchor="middle">第四步 用权重对 V 加权求和，得到输出</text>
+  <path d="M345,117 L345,126" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M345,184 L345,193" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M345,251 L345,260" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+</svg>

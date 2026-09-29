@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 777 312.0" width="777" height="312.0"
+     role="img" aria-labelledby="fig-transformer-attention-9-title fig-transformer-attention-9-desc">
+  <title id="fig-transformer-attention-9-title">重算：用一次额外的计算换掉一大块显存</title>
+  <desc id="fig-transformer-attention-9-desc">前向只存 softmax 的归一化因子（长度是 N），反向时再从共享内存里的输入把注意力重算一遍；课件给的实测是三行对比。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="777" height="312.0" fill="#ffffff"/>
+
+  <text x="390.5" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">重算：用一次额外的计算换掉一大块显存</text>
+  <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">做法：存归一化因子，不存 N×N 的矩阵</text>
+  <rect x="25" y="138" width="225" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="137.5" y="167.7" font-size="15" fill="#9d174d" text-anchor="middle">计算量 GFLOPs</text>
+  <text x="137.5" y="185.7" font-size="12" fill="#9d174d" text-anchor="middle">66.6 → 75.2</text>
+  <rect x="278" y="138" width="225" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="390.5" y="167.7" font-size="15" fill="#166534" text-anchor="middle">全局访存</text>
+  <text x="390.5" y="185.7" font-size="12" fill="#166534" text-anchor="middle">40.3 GB → 4.4 GB</text>
+  <rect x="531" y="138" width="225" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="643.5" y="167.7" font-size="15" fill="#166534" text-anchor="middle">运行时间</text>
+  <text x="643.5" y="185.7" font-size="12" fill="#166534" text-anchor="middle">41.7 ms → 7.3 ms</text>
+  <rect x="25" y="234" width="731" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="390.5" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">多算了约一成，少搬了近九成</text>
+  <text x="390.5" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">时间是原来的大约六分之一</text>
+</svg>
