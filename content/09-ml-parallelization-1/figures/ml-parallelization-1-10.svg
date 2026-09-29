@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 806 312.0" width="806" height="312.0"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 816 312.0" width="816" height="312.0"
      role="img" aria-labelledby="fig-ml-parallelization-1-10-title fig-ml-parallelization-1-10-desc">
-  <title id="fig-ml-parallelization-1-10-title">三种 AllReduce 的通信量放在一起看</title>
-  <desc id="fig-ml-parallelization-1-10-desc">朴素做法随工人数平方增长，环形与树形则不是；课件把参数服务器、朴素、环形、树形四种放在一页上比较。</desc>
+  <title id="fig-ml-parallelization-1-10-title">同一口径下的通信量：朴素带 N 的平方，其余带 N</title>
+  <desc id="fig-ml-parallelization-1-10-desc">课件把参数服务器与四种 AllReduce 做法（朴素、环形、树形、蝶形）共五列放在一页上比较。这里统一用全体合计口径：朴素是 N(N−1)M，环形是 2MN，树形是 2NM，蝶形是 NM 乘 log N。换成每个工人口径后，环形的约 2M 才与工人数无关。</desc>
 
   <defs>
     <style>
@@ -13,21 +13,24 @@
     </marker>
   </defs>
 
-  <rect x="2" y="13.0" width="806" height="312.0" fill="#ffffff"/>
+  <rect x="2" y="13.0" width="816" height="312.0" fill="#ffffff"/>
 
-  <text x="405.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">三种 AllReduce 的通信量放在一起看</text>
+  <text x="410.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">同一口径下的通信量：朴素带 N 的平方，其余带 N</text>
   <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
-  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">三种做法的通信量</text>
-  <rect x="25" y="138" width="225" height="68" fill="#fce7f3" stroke="#ec4899"/>
-  <text x="137.5" y="167.7" font-size="15" fill="#9d174d" text-anchor="middle">朴素</text>
-  <text x="137.5" y="185.7" font-size="12" fill="#9d174d" text-anchor="middle">N × (N − 1) × M</text>
-  <rect x="278" y="138" width="225" height="68" fill="#d1fae5" stroke="#22c55e"/>
-  <text x="390.5" y="167.7" font-size="15" fill="#166534" text-anchor="middle">环形</text>
-  <text x="390.5" y="185.7" font-size="12" fill="#166534" text-anchor="middle">每个工人约 2M</text>
-  <rect x="531" y="138" width="225" height="68" fill="#fef3c7" stroke="#f59e0b"/>
-  <text x="643.5" y="167.7" font-size="15" fill="#b45309" text-anchor="middle">树形</text>
-  <text x="643.5" y="185.7" font-size="12" fill="#b45309" text-anchor="middle">2 × N × M</text>
-  <rect x="25" y="234" width="760" height="68" fill="#f3e8ff" stroke="#a855f7"/>
-  <text x="405.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">环形那一项与工人数几乎无关</text>
-  <text x="405.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">这是它在实际系统里更常用的原因</text>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">全体合计口径下的通信量</text>
+  <rect x="25" y="138" width="170" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="110.0" y="167.7" font-size="15" fill="#9d174d" text-anchor="middle">朴素</text>
+  <text x="110.0" y="185.7" font-size="12" fill="#9d174d" text-anchor="middle">N(N−1)M</text>
+  <rect x="223" y="138" width="170" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="308.0" y="167.7" font-size="15" fill="#166534" text-anchor="middle">环形</text>
+  <text x="308.0" y="185.7" font-size="12" fill="#166534" text-anchor="middle">2MN</text>
+  <rect x="421" y="138" width="170" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="506.0" y="167.7" font-size="15" fill="#b45309" text-anchor="middle">树形</text>
+  <text x="506.0" y="185.7" font-size="12" fill="#b45309" text-anchor="middle">2NM</text>
+  <rect x="619" y="138" width="170" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="704.0" y="167.7" font-size="15" fill="#b45309" text-anchor="middle">蝶形</text>
+  <text x="704.0" y="185.7" font-size="12" fill="#b45309" text-anchor="middle">NM 乘 log N</text>
+  <rect x="25" y="234" width="770" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="410.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">差别在幂次：朴素带 N 的平方，其余带 N</text>
+  <text x="410.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">换成每个工人口径，环形的约 2M 才与工人数无关</text>
 </svg>
