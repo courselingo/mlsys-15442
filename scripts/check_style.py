@@ -66,6 +66,31 @@ def check(path: Path) -> list[str]:
     if n_cjk < 400:
         return []
     problems: list[str] = []
+
+    # ---- 混入字符（2026-09-29 加；来源：cs168 作者的发现）----
+    # ① 兼容汉字等：字符在 NFKC 下会**变成汉字**，而它自己不是汉字。
+    #    实测 `⼩`（U+2F29，部首区）渲染出来与「小」（U+5C0F）几乎一样 ——
+    #    **读者的眼睛看不出，而 CJK 正则也不匹配它** ⇒ 汉字数与密度会静默偏低。
+    #    ★ 不报「NFKC 后不等」的全部情形：那会误杀全角标点（`，`→`,`），而中文正文本该用它。
+    import unicodedata as _ud
+    _cjk1 = re.compile(r"[\u4e00-\u9fff]")
+    _weird: dict[str, str] = {}
+    for _ch in body:
+        if _ch.isascii() or _cjk1.match(_ch):
+            continue
+        _nf = _ud.normalize("NFKC", _ch)
+        if _nf != _ch and _cjk1.match(_nf):
+            _weird.setdefault(_ch, _nf)
+    if _weird:
+        _show = "、".join(f"{c}(U+{ord(c):04X})→{n}" for c, n in list(_weird.items())[:6])
+        problems.append(
+            f"[混入字符] {len(_weird)} 个字符在 NFKC 下会变成汉字、而它们本身不是汉字：{_show}"
+            f" —— 渲染出来与汉字几乎一样（读者看不出），而汉字计数会漏掉它们"
+        )
+    # ② ★ 已撤（2026-09-29）：曾加过「中文标点前有孤立英文词 ⇒ 报」，而实测五仓命中
+    #    14/4/9/21/6 处，几乎全是**合法的英文专名**（Reading / Networks / Python / Spectre /
+    #    Spanner / Takeaways / Kaashoek …）⇒ **要判定它得有一部词典，不是可机械化的缺陷。**
+    #    ⇒ 作者那条自查里，**NFKC 那一半可以机械化，英文词那一半不能**（留给人工与作者自查）。
     per_k = max(n_cjk / 1000.0, 0.001)
 
     # 硬拦词
