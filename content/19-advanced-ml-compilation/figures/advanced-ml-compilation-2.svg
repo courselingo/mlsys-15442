@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 810 314.0" width="810" height="314.0"
+     role="img" aria-labelledby="fig-advanced-ml-compilation-2-title fig-advanced-ml-compilation-2-desc">
+  <title id="fig-advanced-ml-compilation-2-title">部署是一段光谱，不是几个点</title>
+  <desc id="fig-advanced-ml-compilation-2-desc">课件把部署目标排成一段光谱：浏览器、云服务器、桌面与笔记本、平板、手机、机器人或嵌入式；两端的需求差别极大，而中间还有大量中间形态。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="810" height="314.0" fill="#ffffff"/>
+
+  <text x="407.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">部署是一段光谱，不是几个点</text>
+  <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">从云服务器到嵌入式，是一段连续的光谱</text>
+  <rect x="25" y="140" width="170" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="110.0" y="169.7" font-size="15" fill="#1e40af" text-anchor="middle">云端</text>
+  <text x="110.0" y="187.7" font-size="12" fill="#1e40af" text-anchor="middle">算力充裕</text>
+  <rect x="223" y="140" width="170" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="308.0" y="169.7" font-size="15" fill="#b45309" text-anchor="middle">桌面与手机</text>
+  <text x="308.0" y="187.7" font-size="12" fill="#b45309" text-anchor="middle">算力与功耗兼顾</text>
+  <rect x="421" y="140" width="170" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="506.0" y="169.7" font-size="15" fill="#b45309" text-anchor="middle">嵌入式</text>
+  <text x="506.0" y="187.7" font-size="12" fill="#b45309" text-anchor="middle">资源最紧</text>
+  <rect x="619" y="140" width="170" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="704.0" y="169.7" font-size="15" fill="#9d174d" text-anchor="middle">浏览器</text>
+  <text x="704.0" y="187.7" font-size="12" fill="#9d174d" text-anchor="middle">运行环境受限</text>
+  <rect x="25" y="236" width="710" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380.0" y="265.7" font-size="15" fill="#6b21a8" text-anchor="middle">课件的问法是：怎么用尽量少的工程量把方案铺满整段光谱</text>
+  <text x="380.0" y="283.7" font-size="12" fill="#6b21a8" text-anchor="middle">如果每个目标都要单独适配一次，工程量会随目标数线性上涨</text>
+</svg>

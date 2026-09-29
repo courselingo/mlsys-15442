@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 866 312.0" width="866" height="312.0"
+     role="img" aria-labelledby="fig-advanced-ml-compilation-13-title fig-advanced-ml-compilation-13-desc">
+  <title id="fig-advanced-ml-compilation-13-title">结构化输出与约束解码</title>
+  <desc id="fig-advanced-ml-compilation-13-desc">要让模型输出合法的结构化内容，做法是在每一步用一个掩码把不合文法的 token 挡掉；难点在于词表很大、文法状态可能无穷多，而掩码生成还留在 CPU 上。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="866" height="312.0" fill="#ffffff"/>
+
+  <text x="435.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">结构化输出与约束解码</text>
+  <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">约束解码：每一步用一个掩码限制可选 token</text>
+  <rect x="25" y="138" width="340" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="195.0" y="167.7" font-size="15" fill="#9d174d" text-anchor="middle">难在哪</text>
+  <text x="195.0" y="185.7" font-size="12" fill="#9d174d" text-anchor="middle">词表十几万，文法状态可能无穷</text>
+  <rect x="393" y="138" width="340" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="563.0" y="167.7" font-size="15" fill="#9d174d" text-anchor="middle">更麻烦的</text>
+  <text x="563.0" y="185.7" font-size="12" fill="#9d174d" text-anchor="middle">GPU 越来越快，CPU 上的掩码生成跟不上</text>
+  <rect x="25" y="234" width="820" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="435.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">课件引的是 XGrammar 这份工作</text>
+  <text x="435.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">它的关键洞察是：绝大多数 token 只看栈顶就能提前定下来</text>
+</svg>

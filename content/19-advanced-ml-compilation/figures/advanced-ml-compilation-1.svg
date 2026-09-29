@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 754 244.0" width="754" height="244.0"
+     role="img" aria-labelledby="fig-advanced-ml-compilation-1-title fig-advanced-ml-compilation-1-desc">
+  <title id="fig-advanced-ml-compilation-1-title">这一讲的主线：同一套模型，从云跑到端</title>
+  <desc id="fig-advanced-ml-compilation-1-desc">课件的题目是「用机器学习编译把模型部署到云与端」；它要解决的问题是同一份模型要在差异极大的设备上跑起来，而工程投入要尽量少。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="754" height="244.0" fill="#ffffff"/>
+
+  <text x="379.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">这一讲的主线：同一套模型，从云跑到端</text>
+  <rect x="25" y="70" width="340" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="195.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">要解决什么</text>
+  <text x="195.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">一份模型跑在很多种设备上</text>
+  <rect x="393" y="70" width="340" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.0" y="99.7" font-size="15" fill="#b45309" text-anchor="middle">靠什么解决</text>
+  <text x="563.0" y="117.7" font-size="12" fill="#b45309" text-anchor="middle">机器学习编译这一层</text>
+  <rect x="25" y="166" width="700" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="375.0" y="195.7" font-size="15" fill="#6b21a8" text-anchor="middle">这一讲既是技术讲，也是一次回顾</text>
+  <text x="375.0" y="213.7" font-size="12" fill="#6b21a8" text-anchor="middle">它把前面几讲的手段放到「跨设备部署」这个目标下重新组织一遍</text>
+</svg>

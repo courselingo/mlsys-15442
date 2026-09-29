@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 836 312.0" width="836" height="312.0"
+     role="img" aria-labelledby="fig-advanced-ml-compilation-10-title fig-advanced-ml-compilation-10-desc">
+  <title id="fig-advanced-ml-compilation-10-title">案例：量化模型的算子融合</title>
+  <desc id="fig-advanced-ml-compilation-10-desc">课件用一个量化模型讲融合：反量化是一个逐元素操作，它的计算模式被标注成单射，于是可以和其他逐元素操作融合在一起，省掉中间结果。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="836" height="312.0" fill="#ffffff"/>
+
+  <text x="420.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">案例：量化模型的算子融合</text>
+  <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">案例：把反量化与相邻算子融合起来</text>
+  <rect x="25" y="138" width="340" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="195.0" y="167.7" font-size="15" fill="#1e40af" text-anchor="middle">它为什么能融合</text>
+  <text x="195.0" y="185.7" font-size="12" fill="#1e40af" text-anchor="middle">计算模式是逐元素的</text>
+  <rect x="393" y="138" width="340" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.0" y="167.7" font-size="15" fill="#166534" text-anchor="middle">融合省掉什么</text>
+  <text x="563.0" y="185.7" font-size="12" fill="#166534" text-anchor="middle">中间结果的一次写与一次读</text>
+  <rect x="25" y="234" width="790" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="420.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">这一条与第 2 讲的规则式融合是同一个目标</text>
+  <text x="420.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">区别在于这里是靠分析计算模式自动得出的</text>
+</svg>
