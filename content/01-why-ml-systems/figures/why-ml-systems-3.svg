@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 696 436.0" width="696" height="436.0"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 -1.0 768 298.0" width="768" height="298.0"
      role="img" aria-labelledby="fig-why-ml-systems-3-title fig-why-ml-systems-3-desc">
   <title id="fig-why-ml-systems-3-title">课件把 2000 年之后标成两段，而这两段是重叠的</title>
-  <desc id="fig-why-ml-systems-3-desc">课件在时间轴上标出「2000 到 2010 数据」与「2006 至今 算力与规模」两个标签，两者在 2006 到 2010 年间同时成立，因此是并列而不是接续。</desc>
+  <desc id="fig-why-ml-systems-3-desc">三个标签并排画在同一层，没有先后箭头也没有阶梯；因为「2000 到 2010 数据」与「2006 至今 算力」在 2006 到 2010 年间同时成立，它们是并列的，不是接续的。</desc>
 
   <defs>
     <style>
@@ -13,19 +13,21 @@
     </marker>
   </defs>
 
-  <rect x="2" y="13.0" width="696" height="436.0" fill="#ffffff"/>
+  <rect x="2" y="-1.0" width="768" height="298.0" fill="#ffffff"/>
 
-  <text x="350.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">课件把 2000 年之后标成两段，而这两段是重叠的</text>
-  <rect x="25" y="70" width="300" height="68" fill="#dbeafe" stroke="#3b82f6"/>
-  <text x="175.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">1958–2000 研究期</text>
-  <text x="175.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">算法这一段基本齐了</text>
-  <rect x="25" y="166" width="450" height="68" fill="#fef3c7" stroke="#f59e0b"/>
-  <text x="250.0" y="195.7" font-size="15" fill="#b45309" text-anchor="middle">2000–2010 数据期</text>
-  <text x="250.0" y="213.7" font-size="12" fill="#b45309" text-anchor="middle">数据成了模型的燃料</text>
-  <rect x="25" y="262" width="600" height="68" fill="#fce7f3" stroke="#ec4899"/>
-  <text x="325.0" y="291.7" font-size="15" fill="#9d174d" text-anchor="middle">2006 至今 算力与规模</text>
-  <text x="325.0" y="309.7" font-size="12" fill="#9d174d" text-anchor="middle">算力曲线抬头，模型跟着变大</text>
-  <rect x="25" y="358" width="650" height="68" fill="#f3e8ff" stroke="#a855f7"/>
-  <text x="350.0" y="387.7" font-size="15" fill="#6b21a8" text-anchor="middle">后两段在 2006 到 2010 年间是重叠的</text>
-  <text x="350.0" y="405.7" font-size="12" fill="#6b21a8" text-anchor="middle">课件给的是三个并列标签，不是三个先后相接的阶段</text>
+  <text x="386.0" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">课件把 2000 年之后标成两段，而这两段是重叠的</text>
+  <rect x="25" y="56" width="722" height="122" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-dasharray="6,4"/>
+  <text x="38" y="73.85" font-size="11" fill="#64748b">课件给的三个并列标签</text>
+  <rect x="40" y="95" width="212" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="146.0" y="124.7" font-size="15" fill="#1e40af" text-anchor="middle">1958–2000 研究期</text>
+  <text x="146.0" y="142.7" font-size="12" fill="#1e40af" text-anchor="middle">算法基本齐了</text>
+  <rect x="280" y="95" width="212" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="386.0" y="124.7" font-size="15" fill="#b45309" text-anchor="middle">2000–2010 数据期</text>
+  <text x="386.0" y="142.7" font-size="12" fill="#b45309" text-anchor="middle">数据成了燃料</text>
+  <rect x="520" y="95" width="212" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="626.0" y="124.7" font-size="15" fill="#9d174d" text-anchor="middle">2006 至今 算力期</text>
+  <text x="626.0" y="142.7" font-size="12" fill="#9d174d" text-anchor="middle">算力曲线抬头</text>
+  <rect x="25" y="206" width="722" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="386.0" y="235.7" font-size="15" fill="#6b21a8" text-anchor="middle">后两段在 2006 到 2010 年间是重叠的</text>
+  <text x="386.0" y="253.7" font-size="12" fill="#6b21a8" text-anchor="middle">所以它们是并列的标签，不是三个先后相接的阶段</text>
 </svg>
