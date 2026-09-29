@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 776 340.0" width="776" height="340.0"
+     role="img" aria-labelledby="fig-optimizing-linear-algebra-3-title fig-optimizing-linear-algebra-3-desc">
+  <title id="fig-optimizing-linear-algebra-3-title">同一个矩阵，内存里可以有两种排法</title>
+  <desc id="fig-optimizing-linear-algebra-3-desc">行优先是先放完第一行再放第二行，列优先反过来；更一般的写法是给行与列各一个步长，地址由两个步长算出来。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="776" height="340.0" fill="#ffffff"/>
+
+  <text x="390.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">同一个矩阵，内存里可以有两种排法</text>
+  <rect x="25" y="70" width="430" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="240.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">行优先</text>
+  <text x="240.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">先放完第一行，再放第二行</text>
+  <rect x="25" y="166" width="430" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="240.0" y="195.7" font-size="15" fill="#b45309" text-anchor="middle">列优先</text>
+  <text x="240.0" y="213.7" font-size="12" fill="#b45309" text-anchor="middle">先放完第一列，再放第二列</text>
+  <rect x="25" y="262" width="430" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="240.0" y="291.7" font-size="15" fill="#166534" text-anchor="middle">步长格式</text>
+  <text x="240.0" y="309.7" font-size="12" fill="#166534" text-anchor="middle">行与列各给一个步长</text>
+  <rect x="483" y="70" width="272" height="200" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="619.0" y="156.7" font-size="15" fill="#6b21a8" text-anchor="middle">地址怎么算</text>
+  <text x="619.0" y="174.7" font-size="12" fill="#6b21a8" text-anchor="middle">行号乘行步长，加上列号乘列步长</text>
+  <text x="619.0" y="192.7" font-size="12" fill="#6b21a8" text-anchor="middle">行优先时列步长是 1</text>
+</svg>

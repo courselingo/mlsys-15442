@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 766 244.0" width="766" height="244.0"
+     role="img" aria-labelledby="fig-optimizing-linear-algebra-6-title fig-optimizing-linear-algebra-6-desc">
+  <title id="fig-optimizing-linear-algebra-6-title">案例的起点：朴素矩阵乘</title>
+  <desc id="fig-optimizing-linear-algebra-6-desc">三层循环逐项累加，代价是 n³ 次乘加；课件接下来要说明，问题不在乘加次数，而在每次乘加的数据从哪来。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="766" height="244.0" fill="#ffffff"/>
+
+  <text x="385.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">案例的起点：朴素矩阵乘</text>
+  <rect x="25" y="70" width="340" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="195.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">朴素写法</text>
+  <text x="195.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">三层循环，逐项累加</text>
+  <rect x="393" y="70" width="340" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="563.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">代价</text>
+  <text x="563.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">n³ 次乘加</text>
+  <rect x="25" y="166" width="720" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="385.0" y="195.7" font-size="15" fill="#9d174d" text-anchor="middle">问题不在乘加次数</text>
+  <text x="385.0" y="213.7" font-size="12" fill="#9d174d" text-anchor="middle">而在每次乘加的数据从哪里来</text>
+</svg>

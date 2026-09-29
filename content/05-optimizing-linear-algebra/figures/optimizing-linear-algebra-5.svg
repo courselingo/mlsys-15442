@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 770 288.0" width="770" height="288.0"
+     role="img" aria-labelledby="fig-optimizing-linear-algebra-5-title fig-optimizing-linear-algebra-5-desc">
+  <title id="fig-optimizing-linear-algebra-5-title">并行化：把循环切给多个线程</title>
+  <desc id="fig-optimizing-linear-algebra-5-desc">同一个循环加一行编译指令就能分给多个线程执行；前提是切出来的各段互不重叠，否则会算错。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="770" height="288.0" fill="#ffffff"/>
+
+  <text x="387.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">并行化：把循环切给多个线程</text>
+  <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">把循环切给多个线程</text>
+  <rect x="25" y="138" width="160" height="56" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="105.0" y="170.9" font-size="14" fill="#b45309" text-anchor="middle">线程 0 算 0–15</text>
+  <rect x="213" y="138" width="160" height="56" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="293.0" y="170.9" font-size="14" fill="#b45309" text-anchor="middle">线程 1 算 16–31</text>
+  <rect x="401" y="138" width="160" height="56" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="481.0" y="170.9" font-size="14" fill="#b45309" text-anchor="middle">线程 2 算 32–47</text>
+  <rect x="589" y="138" width="160" height="56" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="669.0" y="170.9" font-size="14" fill="#b45309" text-anchor="middle">线程 3 算 48–63</text>
+  <rect x="25" y="222" width="724" height="56" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="387.0" y="254.9" font-size="14" fill="#166534" text-anchor="middle">每个线程各算一段，彼此不重叠</text>
+</svg>

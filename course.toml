@@ -62,6 +62,8 @@ named_systems = [
   # 硬件
   "GPU", "TPU", "Tensor Core", "Blackwell", "Hopper", "Ampere", "Volta",
   "GTX 580", "GTX 470", "A100", "H100", "HBM", "SM", "warp", "shared memory",
+  "x86", "ARM", "AVX", "SIMD", "DRAM", "L1 cache", "L2 cache", "register file",
+  "NVCC", "GEMM", "BLAS", "roofline",
   # 模型与数据集
   "AlexNet", "ResNet", "Transformer", "BERT", "GPT", "ImageNet", "MoE",
   "attention", "softmax", "batch norm", "dropout", "SGD", "Adam", "LoRA",

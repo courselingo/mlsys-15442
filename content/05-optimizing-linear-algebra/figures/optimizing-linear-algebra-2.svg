@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 758 312.0" width="758" height="312.0"
+     role="img" aria-labelledby="fig-optimizing-linear-algebra-2-title fig-optimizing-linear-algebra-2-desc">
+  <title id="fig-optimizing-linear-algebra-2-title">向量化：一条指令处理四个数</title>
+  <desc id="fig-optimizing-linear-algebra-2-desc">同样的数组相加，标量写法要循环 256 次，向量写法只要 64 次；前提是三块内存都按 128 位对齐。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="758" height="312.0" fill="#ffffff"/>
+
+  <text x="381.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">向量化：一条指令处理四个数</text>
+  <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">向量化：把标量循环改成向量循环</text>
+  <rect x="25" y="138" width="340" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="195.0" y="167.7" font-size="15" fill="#9d174d" text-anchor="middle">标量写法</text>
+  <text x="195.0" y="185.7" font-size="12" fill="#9d174d" text-anchor="middle">循环 256 次，每次一个加法</text>
+  <rect x="393" y="138" width="340" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.0" y="167.7" font-size="15" fill="#166534" text-anchor="middle">向量写法</text>
+  <text x="563.0" y="185.7" font-size="12" fill="#166534" text-anchor="middle">循环 64 次，每次四个加法</text>
+  <rect x="25" y="234" width="712" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="381.0" y="263.7" font-size="15" fill="#9d174d" text-anchor="middle">前提：内存按 128 位对齐</text>
+  <text x="381.0" y="281.7" font-size="12" fill="#9d174d" text-anchor="middle">不对齐就没法一次读四个数，向量化用不上</text>
+</svg>

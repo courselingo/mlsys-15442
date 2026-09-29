@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 792 312.0" width="792" height="312.0"
+     role="img" aria-labelledby="fig-optimizing-linear-algebra-1-title fig-optimizing-linear-algebra-1-desc">
+  <title id="fig-optimizing-linear-algebra-1-title">让程序跑快，课件先给三个通用手段</title>
+  <desc id="fig-optimizing-linear-algebra-1-desc">向量化、数据布局、并行化。它们都不针对具体算法，换到 CUDA 或 x86 上思路一样，所以先讲它们再讲矩阵乘的案例。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="792" height="312.0" fill="#ffffff"/>
+
+  <text x="398.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">让程序跑快，课件先给三个通用手段</text>
+  <rect x="25" y="70" width="230" height="45" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="140.0" y="97.8" font-size="15" fill="#1e40af" text-anchor="middle">向量化</text>
+  <rect x="283" y="70" width="230" height="45" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="398.0" y="97.8" font-size="15" fill="#b45309" text-anchor="middle">数据布局</text>
+  <rect x="541" y="70" width="230" height="45" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="656.0" y="97.8" font-size="15" fill="#166534" text-anchor="middle">并行化</text>
+  <rect x="25" y="143" width="230" height="63" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="140.0" y="170.1" font-size="14" fill="#1e40af" text-anchor="middle">一条指令处理多个数</text>
+  <text x="140.0" y="188.1" font-size="12" fill="#1e40af" text-anchor="middle">把标量循环改成向量循环</text>
+  <rect x="283" y="143" width="230" height="63" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="398.0" y="170.1" font-size="14" fill="#b45309" text-anchor="middle">决定数据在内存里怎么排</text>
+  <text x="398.0" y="188.1" font-size="12" fill="#b45309" text-anchor="middle">行优先、列优先与步长</text>
+  <rect x="541" y="143" width="230" height="63" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="656.0" y="170.1" font-size="14" fill="#166534" text-anchor="middle">把循环切给多个线程</text>
+  <text x="656.0" y="188.1" font-size="12" fill="#166534" text-anchor="middle">前提是各段互不重叠</text>
+  <rect x="25" y="234" width="746" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="398.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">三个手段都不针对具体算法</text>
+  <text x="398.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">换一个后端，思路是一样的</text>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 754 231.0" width="754" height="231.0"
+     role="img" aria-labelledby="fig-optimizing-linear-algebra-4-title fig-optimizing-linear-algebra-4-desc">
+  <title id="fig-optimizing-linear-algebra-4-title">步长格式：变换不用搬数据，代价是访问不连续</title>
+  <desc id="fig-optimizing-linear-algebra-4-desc">切片只改起点与形状，转置只交换两个步长，广播把某个步长设成 0，都是零拷贝；但访问不再连续，向量化更难做。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="754" height="231.0" fill="#ffffff"/>
+
+  <text x="379.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">步长格式：变换不用搬数据，代价是访问不连续</text>
+  <rect x="25" y="70" width="340" height="42" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="195.0" y="95.9" font-size="14" fill="#166534" text-anchor="middle">好处：变换不用搬数据</text>
+  <rect x="25" y="137" width="340" height="84" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="195.0" y="165.6" font-size="14" fill="#166534" text-anchor="middle">切片：改起点与形状</text>
+  <text x="195.0" y="183.6" font-size="12" fill="#166534" text-anchor="middle">转置：交换两个步长</text>
+  <text x="195.0" y="201.6" font-size="12" fill="#166534" text-anchor="middle">广播：把某个步长设成 0</text>
+  <rect x="393" y="70" width="340" height="42" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="563.0" y="95.9" font-size="14" fill="#9d174d" text-anchor="middle">代价：访问不再连续</text>
+  <rect x="393" y="137" width="340" height="84" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="563.0" y="165.6" font-size="14" fill="#9d174d" text-anchor="middle">向量化更难做</text>
+  <text x="563.0" y="183.6" font-size="12" fill="#9d174d" text-anchor="middle">很多线性代数运算</text>
+  <text x="563.0" y="201.6" font-size="12" fill="#9d174d" text-anchor="middle">要先把它压实</text>
+</svg>
