@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 836 312.0" width="836" height="312.0"
      role="img" aria-labelledby="fig-advanced-ml-compilation-10-title fig-advanced-ml-compilation-10-desc">
   <title id="fig-advanced-ml-compilation-10-title">案例：量化模型的算子融合</title>
-  <desc id="fig-advanced-ml-compilation-10-desc">课件用一个量化模型讲融合：反量化是一个逐元素操作，它的计算模式被标注成单射，于是可以和其他逐元素操作融合在一起，省掉中间结果。</desc>
+  <desc id="fig-advanced-ml-compilation-10-desc">课件用一个量化模型讲融合：反量化那个算子的计算模式被课件标注成 Injective（单射），矩阵乘被标注成 OutputEwiseFusible，于是反量化可以与相邻操作融合，省掉中间结果的一次写与一次读。</desc>
 
   <defs>
     <style>

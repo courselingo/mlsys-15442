@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 786 312.0" width="786" height="312.0"
      role="img" aria-labelledby="fig-advanced-ml-compilation-5-title fig-advanced-ml-compilation-5-desc">
-  <title id="fig-advanced-ml-compilation-5-title">LLM 时代，开发模式变了</title>
-  <desc id="fig-advanced-ml-compilation-5-desc">课件对比了两种开发方式：一种是假设底层框架已经成熟、自己只做封闭的变换；另一种是直接为模型定制函数的组合。它认为后一种正在变多。</desc>
+  <title id="fig-advanced-ml-compilation-5-title">LLM 时代，开发模式变了（课件列了三种）</title>
+  <desc id="fig-advanced-ml-compilation-5-desc">课件列了三种开发方式：一种是假定框架成熟、只做局部变换；一种是常规编译器开发（评语是跨多层改动很慢）；还有一种是领域专用的机器学习编译流水线，既定制最初的组合方式、也定制变换本身。本页只画前两种，差别在于后者要自己定制函数组合。</desc>
 
   <defs>
     <style>
@@ -15,9 +15,9 @@
 
   <rect x="2" y="13.0" width="786" height="312.0" fill="#ffffff"/>
 
-  <text x="395.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">LLM 时代，开发模式变了</text>
+  <text x="395.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">LLM 时代，开发模式变了（课件列了三种）</text>
   <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
-  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">两种开发方式</text>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">课件列了三种，本图画前两种</text>
   <rect x="25" y="138" width="340" height="68" fill="#eff6ff" stroke="#3b82f6"/>
   <text x="195.0" y="167.7" font-size="15" fill="#1e40af" text-anchor="middle">旧的方式</text>
   <text x="195.0" y="185.7" font-size="12" fill="#1e40af" text-anchor="middle">假定框架成熟，只做局部变换</text>

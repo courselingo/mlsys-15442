@@ -26,5 +26,5 @@
   <text x="563.0" y="185.7" font-size="12" fill="#9d174d" text-anchor="middle">形状要在编译期推导出来</text>
   <rect x="25" y="234" width="760" height="68" fill="#f3e8ff" stroke="#a855f7"/>
   <text x="405.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">课件给的例子是一个形状为问号乘 2 乘 2 的张量</text>
-  <text x="405.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">「问号」就是那个未知的批</text>
+  <text x="405.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">源里只标了 unknown，批是我们的推断</text>
 </svg>
