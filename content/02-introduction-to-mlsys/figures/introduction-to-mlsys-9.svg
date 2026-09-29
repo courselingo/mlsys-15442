@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 770 244.0" width="770" height="244.0"
      role="img" aria-labelledby="fig-introduction-to-mlsys-9-title fig-introduction-to-mlsys-9-desc">
   <title id="fig-introduction-to-mlsys-9-title">课件在 ResNet 上做的一串图变换</title>
-  <desc id="fig-introduction-to-mlsys-9-desc">从原始残差块出发，先把小卷积放大，再把卷积拆开重新合并，最后把加法和卷积融在一起；课件在其中一步标了会掉性能。</desc>
+  <desc id="fig-introduction-to-mlsys-9-desc">一个起点加三步：从原始残差块出发，先把小卷积放大（课件叫 Enlarge convs），再把卷积拆开重新合并（Split / Fuse convs），最后把加法与卷积融在一起（Fuse conv 与 add）。课件在这串变换的图上标了会掉性能，按帧序它最先出现在放大卷积那一帧上；文字层里这个标注出现三次，单看文字层无法断定贴着哪一步。</desc>
 
   <defs>
     <style>
