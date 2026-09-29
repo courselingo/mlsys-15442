@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 758 334.0" width="758" height="334.0"
+     role="img" aria-labelledby="fig-ml-parallelization-2-6-title fig-ml-parallelization-2-6-desc">
+  <title id="fig-ml-parallelization-2-6-title">同一个网络里，两类层该用不同的切法</title>
+  <desc id="fig-ml-parallelization-2-6-desc">课件给的两个数字是关键：卷积层占了 90% 到 95% 的计算量，但只有 5% 的参数，而且中间激活值非常大；全连接层恰好相反。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="758" height="334.0" fill="#ffffff"/>
+
+  <text x="381.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">同一个网络里，两类层该用不同的切法</text>
+  <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">卷积层与全连接层，差别很大</text>
+  <rect x="25" y="138" width="340" height="90" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="195.0" y="169.7" font-size="15" fill="#b45309" text-anchor="middle">卷积层</text>
+  <text x="195.0" y="187.7" font-size="12" fill="#b45309" text-anchor="middle">九成以上的计算量</text>
+  <text x="195.0" y="205.7" font-size="12" fill="#b45309" text-anchor="middle">只占 5% 的参数，激活值很大</text>
+  <rect x="393" y="138" width="340" height="90" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="563.0" y="169.7" font-size="15" fill="#1e40af" text-anchor="middle">全连接层</text>
+  <text x="563.0" y="187.7" font-size="12" fill="#1e40af" text-anchor="middle">参数占大头</text>
+  <text x="563.0" y="205.7" font-size="12" fill="#1e40af" text-anchor="middle">计算量占比很小</text>
+  <rect x="25" y="256" width="700" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="375.0" y="285.7" font-size="15" fill="#166534" text-anchor="middle">于是卷积层用数据并行</text>
+  <text x="375.0" y="303.7" font-size="12" fill="#166534" text-anchor="middle">全连接层用张量并行</text>
+</svg>

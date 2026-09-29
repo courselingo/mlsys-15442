@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 782 312.0" width="782" height="312.0"
+     role="img" aria-labelledby="fig-ml-parallelization-2-15-title fig-ml-parallelization-2-15-desc">
+  <title id="fig-ml-parallelization-2-15-title">课件最后把三种并行方式放在一张表里比</title>
+  <desc id="fig-ml-parallelization-2-15-desc">数据并行、张量模型并行、流水线模型并行，各自列了擅长与不擅长的四条；课件引 DeepSpeed 的三维并行作为把三者叠起来的例子。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="782" height="312.0" fill="#ffffff"/>
+
+  <text x="393.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">课件最后把三种并行方式放在一张表里比</text>
+  <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">三条路，各有各的强项</text>
+  <rect x="25" y="138" width="225" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="137.5" y="167.7" font-size="15" fill="#1e40af" text-anchor="middle">数据并行</text>
+  <text x="137.5" y="185.7" font-size="12" fill="#1e40af" text-anchor="middle">好扩展、前反向不通信</text>
+  <rect x="278" y="138" width="225" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="390.5" y="167.7" font-size="15" fill="#b45309" text-anchor="middle">张量并行</text>
+  <text x="390.5" y="185.7" font-size="12" fill="#b45309" text-anchor="middle">能训大模型、参数多时高效</text>
+  <rect x="531" y="138" width="225" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="643.5" y="167.7" font-size="15" fill="#166534" text-anchor="middle">流水线并行</text>
+  <text x="643.5" y="185.7" font-size="12" fill="#166534" text-anchor="middle">设备不闲着，但调度复杂</text>
+  <rect x="25" y="234" width="736" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="393.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">三种可以叠起来用</text>
+  <text x="393.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">课件给的例子是 DeepSpeed 的三维并行</text>
+</svg>

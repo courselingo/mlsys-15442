@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 762 312.0" width="762" height="312.0"
+     role="img" aria-labelledby="fig-ml-parallelization-2-5-title fig-ml-parallelization-2-5-desc">
+  <title id="fig-ml-parallelization-2-5-title">两种切法在通信上的差别</title>
+  <desc id="fig-ml-parallelization-2-5-desc">课件用前向、反向、梯度同步三段来对照：数据并行的通信发生在计算之外，张量并行的通信嵌在计算里面。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="762" height="312.0" fill="#ffffff"/>
+
+  <text x="383.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">两种切法在通信上的差别</text>
+  <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">同样的三个阶段，通信位置不同</text>
+  <rect x="25" y="138" width="340" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="195.0" y="167.7" font-size="15" fill="#166534" text-anchor="middle">数据并行</text>
+  <text x="195.0" y="185.7" font-size="12" fill="#166534" text-anchor="middle">计算期间不通信</text>
+  <rect x="393" y="138" width="340" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="563.0" y="167.7" font-size="15" fill="#9d174d" text-anchor="middle">张量并行</text>
+  <text x="563.0" y="185.7" font-size="12" fill="#9d174d" text-anchor="middle">计算期间一直要通信</text>
+  <rect x="25" y="234" width="716" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="383.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">这决定了两种切法擅长的事不一样</text>
+  <text x="383.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">一种适合把数据摊开，一种适合把模型摊开</text>
+</svg>

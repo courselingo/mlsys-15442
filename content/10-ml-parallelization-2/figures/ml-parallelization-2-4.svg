@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 782 312.0" width="782" height="312.0"
+     role="img" aria-labelledby="fig-ml-parallelization-2-4-title fig-ml-parallelization-2-4-desc">
+  <title id="fig-ml-parallelization-2-4-title">张量并行：切开的是同一层内部的参数</title>
+  <desc id="fig-ml-parallelization-2-4-desc">课件强调切的位置是层内部：一个线性层 y 等于 W 乘 x，参数按行或按列切开，各设备的输出再拼起来或加起来，得到和原来一样的结果。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="782" height="312.0" fill="#ffffff"/>
+
+  <text x="393.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">张量并行：切开的是同一层内部的参数</text>
+  <rect x="25" y="70" width="690" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="370.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">张量并行：在层内部切参数与梯度</text>
+  <rect x="25" y="138" width="340" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="195.0" y="167.7" font-size="15" fill="#1e40af" text-anchor="middle">原始的一层</text>
+  <text x="195.0" y="185.7" font-size="12" fill="#1e40af" text-anchor="middle">y = W 乘 x</text>
+  <rect x="393" y="138" width="340" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.0" y="167.7" font-size="15" fill="#b45309" text-anchor="middle">切开之后</text>
+  <text x="563.0" y="185.7" font-size="12" fill="#b45309" text-anchor="middle">W1 与 W2 各在一台设备上</text>
+  <rect x="25" y="234" width="736" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="393.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">关键在切的位置：切的是同一层的参数，不是把层分给不同设备</text>
+  <text x="393.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">所以它需要设备之间频繁通信</text>
+</svg>
