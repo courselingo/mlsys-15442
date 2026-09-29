@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 876 244.0" width="876" height="244.0"
+     role="img" aria-labelledby="fig-mixture-of-experts-14-title fig-mixture-of-experts-14-desc">
+  <title id="fig-mixture-of-experts-14-title">这一讲在课程里的位置</title>
+  <desc id="fig-mixture-of-experts-14-desc">第 3 讲把混合专家当概念讲过一次；这一讲把它当成一个要落地的层来讲，于是第 10 讲的并行化问题在新的形状下重新出现。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="876" height="244.0" fill="#ffffff"/>
+
+  <text x="440.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">这一讲在课程里的位置</text>
+  <rect x="25" y="70" width="210" height="68" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="130.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">第 3 讲</text>
+  <text x="130.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">概念上是什么</text>
+  <rect x="263" y="70" width="210" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="368.0" y="99.7" font-size="15" fill="#166534" text-anchor="middle">这一讲</text>
+  <text x="368.0" y="117.7" font-size="12" fill="#166534" text-anchor="middle">怎么算得快</text>
+  <rect x="501" y="70" width="210" height="68" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="606.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">后面几讲</text>
+  <text x="606.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">稀疏与不均衡的延续</text>
+  <rect x="25" y="166" width="830" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="440.0" y="195.7" font-size="15" fill="#6b21a8" text-anchor="middle">同一个结构在不同讲里被从不同角度处理</text>
+  <text x="440.0" y="213.7" font-size="12" fill="#6b21a8" text-anchor="middle">这也是这门课的一条主线：先讲清楚是什么，再讲怎么算得快</text>
+</svg>

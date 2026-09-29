@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 766 312.0" width="766" height="312.0"
+     role="img" aria-labelledby="fig-mixture-of-experts-3-title fig-mixture-of-experts-3-desc">
+  <title id="fig-mixture-of-experts-3-title">MoE 的核心想法</title>
+  <desc id="fig-mixture-of-experts-3-desc">课件给的关键想法是让每个专家专注预测一部分情况下的正确答案；它同时点明，这里的每个专家在实践中就是一个前馈网络。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="766" height="312.0" fill="#ffffff"/>
+
+  <text x="385.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">MoE 的核心想法</text>
+  <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">让每个专家只管一部分情况</text>
+  <rect x="25" y="138" width="340" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="195.0" y="167.7" font-size="15" fill="#1e40af" text-anchor="middle">专家的本质</text>
+  <text x="195.0" y="185.7" font-size="12" fill="#1e40af" text-anchor="middle">就是一个前馈网络</text>
+  <rect x="393" y="138" width="340" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.0" y="167.7" font-size="15" fill="#b45309" text-anchor="middle">分的是什么</text>
+  <text x="563.0" y="185.7" font-size="12" fill="#b45309" text-anchor="middle">不同的输入走不同专家</text>
+  <rect x="25" y="234" width="720" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="385.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">这个想法在第 3 讲出现过一次</text>
+  <text x="385.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">当时只讲了概念，这一讲要讲它怎么算</text>
+</svg>

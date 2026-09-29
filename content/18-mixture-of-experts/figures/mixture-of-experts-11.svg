@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 846 312.0" width="846" height="312.0"
+     role="img" aria-labelledby="fig-mixture-of-experts-11-title fig-mixture-of-experts-11-desc">
+  <title id="fig-mixture-of-experts-11-title">用前缀和求置换下标</title>
+  <desc id="fig-mixture-of-experts-11-desc">课件给的技巧是用前缀和算出每个专家在一维数组里的起始位置：先数出每个专家分到几个输入，做一次前缀和，就得到了各段的起点。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="846" height="312.0" fill="#ffffff"/>
+
+  <text x="425.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">用前缀和求置换下标</text>
+  <rect x="25" y="70" width="712" height="42" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#166534" text-anchor="middle">前缀和：从计数直接算出各段起点</text>
+  <rect x="25" y="138" width="340" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="195.0" y="167.7" font-size="15" fill="#b45309" text-anchor="middle">第一步</text>
+  <text x="195.0" y="185.7" font-size="12" fill="#b45309" text-anchor="middle">数出每个专家分到几个输入</text>
+  <rect x="393" y="138" width="340" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.0" y="167.7" font-size="15" fill="#b45309" text-anchor="middle">第二步</text>
+  <text x="563.0" y="185.7" font-size="12" fill="#b45309" text-anchor="middle">对这些计数做前缀和</text>
+  <rect x="25" y="234" width="800" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="425.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">前缀和的最后一个值就是总数</text>
+  <text x="425.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">于是缓冲区要开多大也能一次算出来</text>
+</svg>

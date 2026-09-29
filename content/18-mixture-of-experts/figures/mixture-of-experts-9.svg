@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 826 312.0" width="826" height="312.0"
+     role="img" aria-labelledby="fig-mixture-of-experts-9-title fig-mixture-of-experts-9-desc">
+  <title id="fig-mixture-of-experts-9-title">把 MoE 的计算也批起来</title>
+  <desc id="fig-mixture-of-experts-9-desc">课件引 MegaBlocks 这份工作来讲怎么批量化：核心思路是不再按「一个专家一次」来算，而是把同一批里所有发往同一个专家的输入聚在一起，一次算完。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="826" height="312.0" fill="#ffffff"/>
+
+  <text x="415.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">把 MoE 的计算也批起来</text>
+  <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">把发往同一个专家的输入聚起来一次算</text>
+  <rect x="25" y="138" width="340" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="195.0" y="167.7" font-size="15" fill="#9d174d" text-anchor="middle">原来的难处</text>
+  <text x="195.0" y="185.7" font-size="12" fill="#9d174d" text-anchor="middle">每份输入选的专家不一样</text>
+  <rect x="393" y="138" width="340" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.0" y="167.7" font-size="15" fill="#166534" text-anchor="middle">解法</text>
+  <text x="563.0" y="185.7" font-size="12" fill="#166534" text-anchor="middle">按专家重新分组再批量算</text>
+  <rect x="25" y="234" width="780" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="415.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">课件引的是 MegaBlocks</text>
+  <text x="415.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">它的出发点就是让稀疏的专家计算也能用上规整的批量矩阵乘</text>
+</svg>

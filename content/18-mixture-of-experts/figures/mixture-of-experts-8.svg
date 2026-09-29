@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 816 312.0" width="816" height="312.0"
+     role="img" aria-labelledby="fig-mixture-of-experts-8-title fig-mixture-of-experts-8-desc">
+  <title id="fig-mixture-of-experts-8-title">批量线性层</title>
+  <desc id="fig-mixture-of-experts-8-desc">课件接着给出批量的形式：一批输入一起过一个线性层，可以写成一次矩阵乘。这一步本身没有稀疏性，是规整的。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="816" height="312.0" fill="#ffffff"/>
+
+  <text x="410.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">批量线性层</text>
+  <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">一批输入一起过线性层</text>
+  <rect x="25" y="138" width="340" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="195.0" y="167.7" font-size="15" fill="#1e40af" text-anchor="middle">形式</text>
+  <text x="195.0" y="185.7" font-size="12" fill="#1e40af" text-anchor="middle">一次矩阵乘</text>
+  <rect x="393" y="138" width="340" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.0" y="167.7" font-size="15" fill="#166534" text-anchor="middle">特点</text>
+  <text x="563.0" y="185.7" font-size="12" fill="#166534" text-anchor="middle">规整、好并行</text>
+  <rect x="25" y="234" width="770" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="410.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">课件把它写成矩阵形式</text>
+  <text x="410.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">这一页是后面「批量化」的参照物</text>
+</svg>
