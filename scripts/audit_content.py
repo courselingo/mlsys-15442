@@ -267,7 +267,18 @@ def audit(path: Path, root: Path, systems: list[str] | None = None,
     pool = systems if systems is not None else DEFAULT_SYSTEMS
     named = sum(1 for s in pool if s.lower() in body.lower())
     if named < named_min:
-        warns.append(f"[点名不足] 只点到 {named} 个具体对象（建议 ≥{named_min}）")
+        # ★ 报错信息要说清「它数的到底是什么」（2026-09-29 修，附录五十四）
+        #   一位作者补了七个**真实芯片名**（POWER6/Denver/ROCK/…）而计数仍是 2 ——
+        #   因为判据数的是「命中 course.toml 的 named_systems 池几个」，
+        #   不是「点了多少专有名词」。⇒ 把池子写进报错里，作者就不必去读源码。
+        _pool_show = "/".join(str(x) for x in pool[:14])
+        warns.append(
+            f"[点名不足] 只点到 {named} 个具体对象（建议 ≥{named_min}）"
+            f" —— ★ 它数的是命中**池**里几个，不是「点了多少专有名词」；"
+            f"补真实但不在池里的名字（如 POWER6/Denver）**一个都不算**。"
+            f"池内前若干个：{_pool_show} …"
+            f"（完整池见 course.toml 的 named_systems；修法是自然地提到池内成员）"
+        )
 
     # ---- G. 结构与术语 ----
     if len(h2s) < MIN_H2:
