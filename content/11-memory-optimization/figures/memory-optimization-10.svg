@@ -25,6 +25,6 @@
   <rect x="25" y="300" width="640" height="56" fill="#fef3c7" stroke="#f59e0b"/>
   <text x="345.0" y="332.9" font-size="14" fill="#b45309" text-anchor="middle">allgather：每个设备把自己那一片发给所有人</text>
   <rect x="25" y="381" width="640" height="68" fill="#f3e8ff" stroke="#a855f7"/>
-  <text x="345.0" y="410.7" font-size="15" fill="#6b21a8" text-anchor="middle">前两个合起来，就是最后一个</text>
+  <text x="345.0" y="410.7" font-size="15" fill="#6b21a8" text-anchor="middle">后两个合起来，就是第一个</text>
   <text x="345.0" y="428.7" font-size="12" fill="#6b21a8" text-anchor="middle">所以通信原语可以拆开单独用</text>
 </svg>

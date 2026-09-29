@@ -25,6 +25,6 @@
   <text x="563.0" y="167.7" font-size="15" fill="#166534" text-anchor="middle">算的那一段</text>
   <text x="563.0" y="185.7" font-size="12" fill="#166534" text-anchor="middle">张量核心读共享内存里的两块相乘</text>
   <rect x="25" y="234" width="810" height="68" fill="#f3e8ff" stroke="#a855f7"/>
-  <text x="430.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">课件还标出了两重循环</text>
-  <text x="430.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">外层是 N 方向的分块，内层是 K 方向的分块</text>
+  <text x="430.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">课件在这一页标出的是三级，不是两重</text>
+  <text x="430.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">N 方向的分块，以及 K 方向拆成的 Outer K 与 Inner K</text>
 </svg>
