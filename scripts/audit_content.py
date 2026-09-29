@@ -271,7 +271,11 @@ def audit(path: Path, root: Path, systems: list[str] | None = None,
         #   一位作者补了七个**真实芯片名**（POWER6/Denver/ROCK/…）而计数仍是 2 ——
         #   因为判据数的是「命中 course.toml 的 named_systems 池几个」，
         #   不是「点了多少专有名词」。⇒ 把池子写进报错里，作者就不必去读源码。
-        _pool_show = "/".join(str(x) for x in pool[:14])
+        # ★ 打印**本课**的池子（`extra`），而不是那份默认池（2026-09-29 修）
+        #   起因：我上一版只打印 DEFAULT_SYSTEMS，而那是 cs168 的池子
+        #   ⇒ 对另外四门课的作者，那条提示**指向错误的池子**（比不说更糟）。
+        _extra_show = "/".join(str(x) for x in (extra or [])[:16])
+        _pool_show = _extra_show if extra else "/".join(str(x) for x in DEFAULT_SYSTEMS[:14])
         warns.append(
             f"[点名不足] 只点到 {named} 个具体对象（建议 ≥{named_min}）"
             f" —— ★ 它数的是命中**池**里几个，不是「点了多少专有名词」；"
