@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import argparse
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -39,6 +40,38 @@ def find_node() -> str | None:
     # 本机 DSH 运行时里常见的固定位置
     guess = Path.home() / ".dsh" / "dsh-runtimes" / "dsh-primary-runtime" / "dependencies" / "node" / "bin" / "node.exe"
     return str(guess) if guess.exists() else None
+
+
+def report_missing_figures(root: Path) -> int:
+    """★ 引用了而磁盘上不存在的图（2026-09-29 加，见 quality-audit 附录六十六）。
+
+    起因：mit-6.006 第 10、11 讲各**引用 11 张图**而 figures/ 是空的，而
+    **六道门全部通过** —— 因为 `check_figures` 只遍历磁盘上有的图，
+    而 `audit_content` 的 IMG 正则只读 markdown、不看文件是否存在。
+    ⇒ 于是「所有图都缺失」这个状态落在每一道门的视野之外，而读者看到破图图标。
+
+    ★ 判据的误报率**可证明为 0**：引用了不存在的文件永远是缺陷，没有例外。
+    """
+    missing: list[str] = []
+    for md in sorted(root.glob("content/**/index.md")):
+        text = md.read_text(encoding="utf-8", errors="replace")
+        refs = re.findall(r"\]\((?:\.\./)*figures/([^)\s]+)\)", text)
+        if not refs:
+            continue
+        fdir = md.parent / "figures"
+        present = {p.name for p in fdir.glob("*")} if fdir.is_dir() else set()
+        rel = md.relative_to(root).as_posix()
+        for name in dict.fromkeys(refs):
+            if name not in present:
+                missing.append(f"{rel}: 引用了 figures/{name}，而它不在磁盘上")
+    if missing:
+        print("\n❌ 引用了而磁盘上不存在的图：")
+        for m in missing:
+            print(f"   {m}")
+        print(f"   ⇒ 共 {len(missing)} 处。读者会看到破图图标。")
+        return 1
+    print("✅ 图片引用与磁盘一致（无缺文件）")
+    return 0
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -114,7 +147,8 @@ def main(argv: list[str] | None = None) -> int:
     for ln in tail:
         print("  " + ln)
     print(f"✅ 配图通过房规（{errors} error，{warnings} warning）")
-    return 0
+    # ★ 房规过了，还要核「引用了而磁盘上没有的图」（附录六十六）
+    return max(report_missing_figures(root), 0)
 
 
 if __name__ == "__main__":
