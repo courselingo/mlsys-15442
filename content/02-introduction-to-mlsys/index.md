@@ -2,7 +2,7 @@
 title = "机器学习系统导论"
 lecture = 2
 slug = "introduction-to-mlsys"
-status = "draft"
+status = "reviewed"
 source_kind = "slides"
 source_url = "https://mlsyscourse.org/slides/02-introduction-to-MLSys.pdf"
 source_title = "Week 1: Introduction to Machine Learning Systems（Tianqi Chen 主讲，2026-01-14）"
