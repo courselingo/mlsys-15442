@@ -9,7 +9,9 @@
   - ⚠️ **「文本块数 ≠ PDF 页数」在本文件不成立的那一半**：本文件的 `===== PAGE =====` 分隔符正好 **57 个块、PDF 原件也是 57 页**（`pdfium.PdfDocument` 实测 `len(doc)=57`）。本记录仍**一律用「幻灯片标题 + 逐字原文」定位**，页号只作辅助。
 
 ## 结论
-P0（事实错误）：**3** 条 ｜ P1（易误解/依据不足）：**2** 条 ｜ P2（措辞）：**3** 条
+P0（事实错误）：**4** 条 ｜ P1（易误解/依据不足）：**3** 条 ｜ P2（措辞）：**3** 条
+
+> **补记说明**：P0-4 是我在核完第 21 讲、回头比对各讲「收束」口径时才发现的（同一件事在第 21 讲那边是自洽的，在第 19 讲这边不自洽）。它**推翻了本记录初稿的 P0=3**，故在此按 P0-4 补入，不重排前面的编号。
 
 ## P0 · 事实错误
 
@@ -18,6 +20,7 @@ P0（事实错误）：**3** 条 ｜ P1（易误解/依据不足）：**2** 条 
 | P0-1 | 正文「课件问：最大的挑战在哪」第 58 行；配图 `figures/advanced-ml-compilation-4.svg` 的「偏向模型一侧」块（第 23 行）与 `desc`（第 4 行） | 「偏向模型一侧的有**稀疏权重与参数分片**；偏向工程一侧的有内存、规划、算子库、派发与算子融合。」 | 标题 `What is the Biggest Challenge?` 的页面把清单排成**两行**：上排行标 `ML modeling`＝`Language Models` / `Diffusion` / `MultiQuery Attention` / `RoPE`；下排行标 `ML Engineering`＝`Memory Planning` / `Library Dispatch` / `Sparse Weights` / `Paged Attention` / 第二排 `Op Fusion` / `Parameter Sharding` / `Quantized Kernels` / `Layout Optimization`。**`Sparse Weights` 与 `Parameter Sharding` 两块都在 `ML Engineering` 行标之下**（不是模型侧）。 | 幻灯片标题 `What is the Biggest Challenge?`。faithful 文本层该页（4 个文本块之一）逐字为：`What is the Biggest Challenge? \| ML modeling \| ML Engineering \| Memory \| Planning \| Library \| Dispatch \| Op Fusion \| Parameter \| Sharding \| Sparse \| Weights \| Quantized \| Kernels \| Paged \| Attention \| Language \| Models \| Diffusion \| Layout \| Optimization \| MultiQuery \| Attention \| RoPE \| ML engineering now becomes critical and go hand in hand with ML modeling \| It is not about build silver bullet once but \| continuous improvement and innovations`。因文本层不保留坐标，**改用原件目视**（`pdfpage8.png`）：`Sparse Weights` 与 `Parameter Sharding` 两个徽章与 `Memory Planning`/`Library Dispatch`/`Paged Attention`/`Op Fusion`/`Quantized Kernels`/`Layout Optimization` 同处 `ML Engineering` 行标右侧，`ML modeling` 行标右侧只有 Language Models / Diffusion / MultiQuery Attention / RoPE 四块。 |
 | P0-2 | 正文第 164 行配图说明：「**四个框**分别是智能体流程里的**四个环节**」 | 指向 `Agentic Flow` 链条上有**六个**主阶段。 | `Agentic Flow` 行逐字为：`context \| prefill \| thinking \| actions(call) \| ... \| thinking \| output`（`...` 表示中间还有重复阶段）。目视 `pdfpage36.png`：`context`（橙）、`prefill`（绿）、`thinking`（黄）、`actions(call)`（蓝框）、`…`、`thinking`、`output`——共 6 个实体框 + 1 个省略号。正文第 166 行自己写的也是「预填充、**上下文**、思考、动作调用、再输出」，即 5 个不同名称 ⇒ 与「四个环节」自相矛盾。 |
 | P0-3 | 配图 `figures/advanced-ml-compilation-10.svg` 第 23 行（及 `desc` 第 4 行）：反量化的「计算模式是**逐元素的**」 | 案例页把该算子的 compute pattern 标注为 **`Injective`**，「逐元素」是另一回事。 | 幻灯片标题 `Case Study: Operator Fusion for Quantized Model`。聚合该页逐字原文：`func_attr("compute_pattern", "Injective")` … `func_attr("compute_pattern", "OutputEwiseFusible")`。源里出现的模式标签只有 `Injective`（`decode_q4`）与 `OutputEwiseFusible`（`mm`），**没有** `pointwise`/`逐元素` 这个标签。正文第 138 行写的「标注成单射」是对的 ⇒ 配图与正文不一致，且配图这一格是配图自身的事实主张。（`Injective` 与 elementwise 语义相关，但**标签名不是源里的词**。） |
+| P0-4 | 正文第 26 行与第 196 行（**补记**，见结论上方说明） | 第 26 行：「这一讲也是**全课的收束**」；第 196 行：「这也是**这门课最后一讲**的合适落点。」 | **本课最后一讲是第 21 讲（`mega-kernel`），不是第 19 讲。** 第 8 讲溯源第 219–220 行的全表把它钉死：`第 19 讲 ← advanced-topic-mlc（无编号）；第 20 讲 ← 18-kernel-superoptimization；第 21 讲 ← 19-mega-kernel`；仓库里也确实有 `content/21-mega-kernel/`（front matter `lecture = 21`），且**第 21 讲自己**写着「这是这门课 21 讲的最后一讲」（`content/21-mega-kernel/index.md` 第 192 行）。⇒ 两讲都自称「最后一讲」，第 19 讲那两句是事实错误，且**同一页出现了两次**。 | `content/08-transformer-attention/index.md` 第 219–220 行全表；`content/21-mega-kernel/index.md` 第 192 行。另核源件：本讲的源（`mlsys-slide-advanced-topic-mlc.pdf`，实测 57 页）**末页是 `Ongoing directions`**（faithful 块 57 逐字 `Across Multiple Services, Contexts \| Ongoing directions \| … \| Efficient tensor compiler abstractions \| … \| Open source`），**课件里没有任何收束语** ⇒ 「收束／最后一讲」是我们编排时写的，而这次编排与全表冲突。 |
 
 ## P1 · 易误解或依据不足
 
@@ -26,6 +29,7 @@ P0（事实错误）：**3** 条 ｜ P1（易误解/依据不足）：**2** 条 
 | P1-1 | 溯源第 215 行 | 「课件在这一讲里引了**两处**外部材料……**Relax**……**XGrammar**……课件还标注了 XGrammar 在 vLLM 里的集成以及一份来自 vLLM 博客的来源。」 | 计数少报，且**同一句话内部自相矛盾**（把 vLLM 博客说成「还标注了」= 第 3 处，却又把总数说成「两处」）。原件里可辨认的**带署名的外部材料共 3 处**。 | ① 标题页 `Relax: Composable Abstractions for End-to-End Dynamic Machine Learning`（幻灯片标题 `Relax: Composable Abstractions for End-to-End Dynamic Machine Learning`）；② `XGrammar: Efficient and Flexible Grammar Engine`（幻灯片标题同名）；③ 幻灯片标题 `XGrammar in vLLM` 下的 `Source: vllm blog` —— **目视 `pdfpage43.png` 确认该页整幅是第三方图表**（标题 `vLLM Guided Decoding Time per output token`，副标 `Llama-3.1-8B | H100 GPU | NousResearch/json-mode-eval | 50% guided decoding`，柱状图 `XGrammar`/`Outlines`），页脚 `Source: vllm blog`。此外幻灯片标题 `Low-latency Server GPU Serving` 页脚列为 `https://blog.mlc.ai/2024/10/10/optimizing-and-characterizing-high-throughput-low-latency-llm-inference` 并含两块署名第三方图（`Llama3 70B provider latency leaderboard` 带 `Artificial Analysis` 标与 `SGLang v0.3.1.post2, vLLM v0.6.1.post2` 字样）。正文第 215 行的「**均未转载其原图**」只对 Relax 与 XGrammar 两处成立，**对 vLLM 博客那一处不成立**。 |
 | P1-2 | 正文第 60 行；配图 `…-4.svg` 第 28 行 | 「这组问题的共同点是它们都跨在『模型的意图』与『硬件的约束』之间」；配图：「这两侧的**边界**正是编译要处理的地方」。 | 源里**没有**「模型侧／工程侧」这个二分，也没有「两者交界处」这句话。该页给的两行行标是 `ML modeling` / `ML Engineering`，末句是 `ML engineering now becomes critical and go hand in hand with ML modeling`（并列与协作，不是「中间有一道边界」）。此二分与「交界」属 CourseLingo 的编排，但被摆在**陈述课文内容**的位置，且溯源第 217 行的「课件未展开的推论」清单里**没有登记**它。 | 见 P0-1 的逐字引用：`ML engineering now becomes critical and go hand in hand with ML modeling`。检索词：`boundary`、`border`、`interface`、`cross`、`between`、`modeling`、`engineering`（均在 faithful 全文）。 |
 | P1-3 | 正文第 70 行、第 74 行 | 「课件认为**后一种正在变多**」「课件认为后者在变多」。 | 课件这一页（`Development Patterns in Age of LLMs`）列了三种开发方式并标注各自的性质（`Normal development assuming a mature framework foundation` / `Normal compiler development … Slow to change across multiple layers.` / `Domain specific ML compilation pipeline development … Customize both initial composition and transformation.`），**没有**任何一句说第三种/第二种「正在变多」。这是从课件对第三种方式的评价里读出来的判断。 | 幻灯片标题 `Development Patterns in Age of LLMs`。检索词：`more`、`increasing`、`growing`、`trend`、`becoming`、`popular`（均在 faithful 全文）；**逐字读完整 deck 57 页的聚合文本**后确认该判断无直接出处。 |
+| P1-4 | 正文第 26 行 | 「[[term:hardware-accelerator]] 的多样性在这里**第一次**成为主角。」 | 本课程**已经有一讲以硬件加速为主题**：仓库第 5 讲 `05-optimizing-linear-algebra` 的标题逐字是「优化线性代数：**硬件加速**」，其源件 `mlsys-slide-05-hardware-acceleration.pdf` 的标题页逐字为 `Hardware Acceleration`。⇒ 「第一次成为主角」与仓库自己的编排冲突；源课件这一页也没有这句判断。 | `content/05-optimizing-linear-algebra/index.md` 第 2 行；`mlsys-slide-05-hardware-acceleration.pdf.faithful.txt` 标题页逐字 `Hardware Acceleration`。本讲源件里检索 `first time` / `diversity` → 0。 |
 
 ## P2 · 措辞
 
@@ -49,6 +53,7 @@ P0（事实错误）：**3** 条 ｜ P1（易误解/依据不足）：**2** 条 
   - **逐张通读：6 张** —— `-2`（光谱）、`-3`（管什么/不管什么）、`-4`（两侧分类）、`-6`（Relax/IRModule）、`-7`（符号形状/问号）、`-12`（智能体四框）、`-14`（落地目标）；另**逐字读出 `desc` 与 `<text>` 节点**以核对说明文字（`desc` 不渲染，但它会被读屏与搜索碰到）。
   - **定向检索：0 张**（其余 8 张我只核对了正文中与它们绑定的数字/主张是否在源里有依据，未逐字通读其 `<text>`）。
   - 未逐张通读的 8 张：`-1`、`-5`、`-8`、`-9`、`-10`、`-11`、`-13`。**其中 `-10` 已因 P0-3 单独核过那一格**。
+  - **补记**：P0-4（第 19 讲自称「最后一讲」）**不是**从配图发现的，而是**跨讲比对**的产物（把第 19、20、21 三讲的「收束」措辞并排核）。⇒ 这条提示一件事：**编排类错误只能靠跨讲比对发现，单讲内部读不出来。**
 - **否定性结论的范围与检索词**（faithful 全文，逐行 UTF-8 解码 + NUL 替换）：
   - 「模型侧/工程侧二分」：`boundary` / `border` / `interface` / `cross` / `between` / `hand in hand` → 只有 `hand in hand` 命中（即 P1-2 引的那句）。
   - 「正在变多」：`more` / `increasing` / `growing` / `trend` / `becoming` / `popular`。
@@ -65,6 +70,7 @@ P0（事实错误）：**3** 条 ｜ P1（易误解/依据不足）：**2** 条 
 - 第 8 讲溯源第 209–220 行给出**全表**，其中含：`第 19 讲 ← advanced-topic-mlc（无编号）`、`第 20 讲 ← 18-kernel-superoptimization`、`第 21 讲 ← 19-mega-kernel`，并声明「本页以及全课程的其他页，一律用仓库讲次号指路」。
   - **第 19 讲已兑现**：本页溯源第 213 行逐字为「原文课件：https://mlsyscourse.org/slides/advanced-topic-mlc.pdf（课件号的对照见第 8 讲溯源；本页一律用仓库讲次号指路。）」—— **第 8 讲 ↔ 第 19 讲的双向对得上**（第 8 讲既列了本讲的课件映射，本页也回指了第 8 讲的那张表）。
 - 第 2 讲曾对「换出/offload」许过承诺（第 11 讲核对者已证明其从未兑现）。**本讲与「换出」无关**：本讲源 57 页里 `offload` / `swap` / `pinned` / `host` **命中 0**（`cpu` 命中 1 次，为 `Mask generation on CPU cannot keep up`，讲的是掩码生成的位置，不是参数换出）。⇒ 本讲**没有**补上那个缺口，也**没有**对「换出」许下新承诺。
+- **★ 本讲有一处与编排表冲突的「收束」口径**（已列为 P0-4）：本课到第 **21** 讲才结束，而本页两次自称「最后一讲／全课收束」。我把三讲的「收束」口径并排核过：**第 21 讲**（`content/21-mega-kernel/index.md` 第 192 行「这是这门课 21 讲的最后一讲」）**与全表一致**，**第 19 讲**（本页第 26、196 行）**与全表冲突**。⇒ 需要改的是第 19 讲那两句，不是第 21 讲。
 
 ## 一处给 Lead 的备注（不属于本讲核对的结论）
 
