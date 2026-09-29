@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 856 312.0" width="856" height="312.0"
+     role="img" aria-labelledby="fig-llm-serving-2-12-title fig-llm-serving-2-12-desc">
+  <title id="fig-llm-serving-2-12-title">后续工作：Medusa 与 Eagle</title>
+  <desc id="fig-llm-serving-2-12-desc">课件列了两条后续路线：Medusa 引入可训练的多余解码头来预测未来的 token；Eagle 的草稿模型复用大模型的嵌入与输出层，只新增一个可训练的注意力层。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="856" height="312.0" fill="#ffffff"/>
+
+  <text x="430.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">后续工作：Medusa 与 Eagle</text>
+  <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">两条后续路线</text>
+  <rect x="25" y="138" width="340" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="195.0" y="167.7" font-size="15" fill="#1e40af" text-anchor="middle">Medusa</text>
+  <text x="195.0" y="185.7" font-size="12" fill="#1e40af" text-anchor="middle">加几个可训练的解码头</text>
+  <rect x="393" y="138" width="340" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.0" y="167.7" font-size="15" fill="#b45309" text-anchor="middle">Eagle</text>
+  <text x="563.0" y="185.7" font-size="12" fill="#b45309" text-anchor="middle">复用嵌入与输出层，只加一个注意力层</text>
+  <rect x="25" y="234" width="810" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="430.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">Eagle 还有一步叫扩展阶段</text>
+  <text x="430.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">草稿模型每一轮选 K 个节点去解码，于是树是动态长出来的</text>
+</svg>

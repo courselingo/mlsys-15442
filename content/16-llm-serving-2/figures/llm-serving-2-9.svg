@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 826 312.0" width="826" height="312.0"
+     role="img" aria-labelledby="fig-llm-serving-2-9-title fig-llm-serving-2-9-desc">
+  <title id="fig-llm-serving-2-9-title">顺序解码的问题</title>
+  <desc id="fig-llm-serving-2-9-desc">课件对比了另一种做法：把多个候选当成多条独立序列来解码。它的两个问题是重复计算，以及请求数变多导致键值缓存占用更多显存。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="826" height="312.0" fill="#ffffff"/>
+
+  <text x="415.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">顺序解码的问题</text>
+  <rect x="25" y="70" width="712" height="42" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#9d174d" text-anchor="middle">把候选当成多条序列来解码，代价不小</text>
+  <rect x="25" y="138" width="340" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="195.0" y="167.7" font-size="15" fill="#9d174d" text-anchor="middle">问题一</text>
+  <text x="195.0" y="185.7" font-size="12" fill="#9d174d" text-anchor="middle">共同前缀被重复计算</text>
+  <rect x="393" y="138" width="340" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="563.0" y="167.7" font-size="15" fill="#9d174d" text-anchor="middle">问题二</text>
+  <text x="563.0" y="185.7" font-size="12" fill="#9d174d" text-anchor="middle">请求变多，键值缓存更占显存</text>
+  <rect x="25" y="234" width="780" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="415.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">这正好解释了为什么要有树</text>
+  <text x="415.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">树把共同前缀合成一条路径，两笔代价一起省掉</text>
+</svg>

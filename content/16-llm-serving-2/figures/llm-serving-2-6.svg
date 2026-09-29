@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 796 312.0" width="796" height="312.0"
+     role="img" aria-labelledby="fig-llm-serving-2-6-title fig-llm-serving-2-6-desc">
+  <title id="fig-llm-serving-2-6-title">SpecInfer：把大模型当成并行的树验证器</title>
+  <desc id="fig-llm-serving-2-6-desc">课件的关键想法是不再把大模型当逐个解码器，而是当成一个并行的 token 树验证器；它给的收益是比现有系统快 1.3 到 2.4 倍。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="796" height="312.0" fill="#ffffff"/>
+
+  <text x="400.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">SpecInfer：把大模型当成并行的树验证器</text>
+  <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">大模型的角色变了：从解码器变成验证器</text>
+  <rect x="25" y="138" width="340" height="68" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="195.0" y="167.7" font-size="15" fill="#1e40af" text-anchor="middle">改之前</text>
+  <text x="195.0" y="185.7" font-size="12" fill="#1e40af" text-anchor="middle">大模型逐个生成 token</text>
+  <rect x="393" y="138" width="340" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.0" y="167.7" font-size="15" fill="#166534" text-anchor="middle">改之后</text>
+  <text x="563.0" y="185.7" font-size="12" fill="#166534" text-anchor="middle">大模型并行验证一整棵树</text>
+  <rect x="25" y="234" width="750" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="400.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">课件给的框架名是 SpecInfer</text>
+  <text x="400.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">它把「验证」这件事从线性变成树形，于是同样一次前向能覆盖更多候选</text>
+</svg>

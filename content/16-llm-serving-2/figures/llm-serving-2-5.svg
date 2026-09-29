@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 786 312.0" width="786" height="312.0"
+     role="img" aria-labelledby="fig-llm-serving-2-5-title fig-llm-serving-2-5-desc">
+  <title id="fig-llm-serving-2-5-title">验证为什么划算</title>
+  <desc id="fig-llm-serving-2-5-desc">课件给的例子是一次大模型解码步骤里生成三个新 token；它把关键结论写得很直接：大模型推理的瓶颈在访问权重，所以用它一次解码多个 token 反而提高了 GPU 利用率。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="786" height="312.0" fill="#ffffff"/>
+
+  <text x="395.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">验证为什么划算</text>
+  <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">一次解码步骤里验证出三个 token</text>
+  <rect x="25" y="138" width="340" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="195.0" y="167.7" font-size="15" fill="#1e40af" text-anchor="middle">为什么可能</text>
+  <text x="195.0" y="185.7" font-size="12" fill="#1e40af" text-anchor="middle">瓶颈是读权重，不是算</text>
+  <rect x="393" y="138" width="340" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.0" y="167.7" font-size="15" fill="#166534" text-anchor="middle">收益是什么</text>
+  <text x="563.0" y="185.7" font-size="12" fill="#166534" text-anchor="middle">读一遍权重，产出多个 token</text>
+  <rect x="25" y="234" width="740" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="395.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">课件的原话是「瓶颈在访问模型权重」</text>
+  <text x="395.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">所以判断一笔投机值不值，要看猜中的比例够不够高</text>
+</svg>
