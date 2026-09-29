@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 782 266.0" width="782" height="266.0"
+     role="img" aria-labelledby="fig-memory-optimization-2-title fig-memory-optimization-2-desc">
+  <title id="fig-memory-optimization-2-title">推理只要 O(1)，训练却要 O(N)</title>
+  <desc id="fig-memory-optimization-2-desc">课件指出推理时只要循环使用两块缓冲区，就能算出 N 层网络的输出，显存与层数无关；而训练必须把中间值留着给梯度用，于是显存随层数增长。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="782" height="266.0" fill="#ffffff"/>
+
+  <text x="393.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">推理只要 O(1)，训练却要 O(N)</text>
+  <rect x="25" y="70" width="340" height="90" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="195.0" y="101.7" font-size="15" fill="#166534" text-anchor="middle">推理（Inference Only）</text>
+  <text x="195.0" y="119.7" font-size="12" fill="#166534" text-anchor="middle">两块缓冲区循环使用</text>
+  <text x="195.0" y="137.7" font-size="12" fill="#166534" text-anchor="middle">显存与层数无关</text>
+  <rect x="393" y="70" width="340" height="90" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="563.0" y="101.7" font-size="15" fill="#9d174d" text-anchor="middle">训练</text>
+  <text x="563.0" y="119.7" font-size="12" fill="#9d174d" text-anchor="middle">中间值要留着给梯度用</text>
+  <text x="563.0" y="137.7" font-size="12" fill="#9d174d" text-anchor="middle">N 层网络要 O(N) 的显存</text>
+  <rect x="25" y="188" width="736" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="393.0" y="217.7" font-size="15" fill="#6b21a8" text-anchor="middle">差别不在算多少，而在「中间值要留多久」</text>
+  <text x="393.0" y="235.7" font-size="12" fill="#6b21a8" text-anchor="middle">这一讲的三块内容都在处理这一行</text>
+</svg>

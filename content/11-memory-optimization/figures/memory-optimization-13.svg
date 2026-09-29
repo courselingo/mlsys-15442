@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 754 334.0" width="754" height="334.0"
+     role="img" aria-labelledby="fig-memory-optimization-13-title fig-memory-optimization-13-desc">
+  <title id="fig-memory-optimization-13-title">三种手段，省的是不同的东西</title>
+  <desc id="fig-memory-optimization-13-desc">检查点省的是激活值，混合精度省的是所有数值的位宽，分片省的是每块卡上的模型副本；三者作用的对象不重叠，所以可以叠加。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="754" height="334.0" fill="#ffffff"/>
+
+  <text x="379.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">三种手段，省的是不同的东西</text>
+  <rect x="25" y="70" width="360" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="205.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">检查点与重算</text>
+  <text x="205.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">省中间激活值</text>
+  <rect x="25" y="163" width="360" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="205.0" y="192.7" font-size="15" fill="#b45309" text-anchor="middle">混合精度</text>
+  <text x="205.0" y="210.7" font-size="12" fill="#b45309" text-anchor="middle">省所有数值的位宽</text>
+  <rect x="25" y="256" width="360" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="205.0" y="285.7" font-size="15" fill="#166534" text-anchor="middle">完全分片</text>
+  <text x="205.0" y="303.7" font-size="12" fill="#166534" text-anchor="middle">省每块卡上的模型副本</text>
+  <rect x="413" y="70" width="320" height="164" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="573.0" y="138.7" font-size="15" fill="#6b21a8" text-anchor="middle">三者作用对象不重叠</text>
+  <text x="573.0" y="156.7" font-size="12" fill="#6b21a8" text-anchor="middle">所以能叠起来用</text>
+  <text x="573.0" y="174.7" font-size="12" fill="#6b21a8" text-anchor="middle">实际系统里通常三个都用</text>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 758 459.0" width="758" height="459.0"
+     role="img" aria-labelledby="fig-memory-optimization-10-title fig-memory-optimization-10-desc">
+  <title id="fig-memory-optimization-10-title">三个通信抽象，一个比一个基础</title>
+  <desc id="fig-memory-optimization-10-desc">课件给的三行接口是：allreduce 是完整归约，reduce_scatter 负责分发归约结果，allgather 负责把分片凑齐；后两个合起来就是第一个。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="758" height="459.0" fill="#ffffff"/>
+
+  <text x="381.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">三个通信抽象，一个比一个基础</text>
+  <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">三个抽象的接口</text>
+  <rect x="25" y="138" width="640" height="56" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="345.0" y="170.9" font-size="14" fill="#b45309" text-anchor="middle">allreduce：每个设备都拿到完整归约结果</text>
+  <rect x="25" y="219" width="640" height="56" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="345.0" y="251.9" font-size="14" fill="#b45309" text-anchor="middle">reduce_scatter：每个设备拿到其中一片的归约结果</text>
+  <rect x="25" y="300" width="640" height="56" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="345.0" y="332.9" font-size="14" fill="#b45309" text-anchor="middle">allgather：每个设备把自己那一片发给所有人</text>
+  <rect x="25" y="381" width="640" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="345.0" y="410.7" font-size="15" fill="#6b21a8" text-anchor="middle">前两个合起来，就是最后一个</text>
+  <text x="345.0" y="428.7" font-size="12" fill="#6b21a8" text-anchor="middle">所以通信原语可以拆开单独用</text>
+</svg>

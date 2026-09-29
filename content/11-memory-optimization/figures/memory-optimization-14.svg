@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 810 312.0" width="810" height="312.0"
+     role="img" aria-labelledby="fig-memory-optimization-14-title fig-memory-optimization-14-desc">
+  <title id="fig-memory-optimization-14-title">这一讲把前面几讲留下的显存问题收了个口</title>
+  <desc id="fig-memory-optimization-14-desc">第 5 讲讲片上存储怎么用，第 8 讲讲注意力的平方中间结果怎么消掉，第 9 讲讲数据并行的显存墙；这一讲把剩下三种省显存的手段补上。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="810" height="312.0" fill="#ffffff"/>
+
+  <text x="407.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">这一讲把前面几讲留下的显存问题收了个口</text>
+  <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">显存这条线在这一讲收口</text>
+  <rect x="25" y="138" width="170" height="68" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="110.0" y="167.7" font-size="15" fill="#1e40af" text-anchor="middle">第 5 讲</text>
+  <text x="110.0" y="185.7" font-size="12" fill="#1e40af" text-anchor="middle">片上存储</text>
+  <rect x="223" y="138" width="170" height="68" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="308.0" y="167.7" font-size="15" fill="#1e40af" text-anchor="middle">第 8 讲</text>
+  <text x="308.0" y="185.7" font-size="12" fill="#1e40af" text-anchor="middle">注意力的平方项</text>
+  <rect x="421" y="138" width="170" height="68" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="506.0" y="167.7" font-size="15" fill="#1e40af" text-anchor="middle">第 9 讲</text>
+  <text x="506.0" y="185.7" font-size="12" fill="#1e40af" text-anchor="middle">数据并行的墙</text>
+  <rect x="619" y="138" width="170" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="704.0" y="167.7" font-size="15" fill="#166534" text-anchor="middle">第 11 讲</text>
+  <text x="704.0" y="185.7" font-size="12" fill="#166534" text-anchor="middle">三种省显存手段</text>
+  <rect x="25" y="234" width="760" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="405.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">前三讲各自解决了显存的一部分</text>
+  <text x="405.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">这一讲把它们之外剩下的三种补齐</text>
+</svg>

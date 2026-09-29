@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 758 244.0" width="758" height="244.0"
+     role="img" aria-labelledby="fig-memory-optimization-1-title fig-memory-optimization-1-desc">
+  <title id="fig-memory-optimization-1-title">三种省显存的手段，各管一段</title>
+  <desc id="fig-memory-optimization-1-desc">课件把这一讲讲成三块：激活检查点与重算、混合精度、完全分片的数据并行。前两块省的是训练时的中间值，第三块省的是模型本身的副本。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="758" height="244.0" fill="#ffffff"/>
+
+  <text x="381.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">三种省显存的手段，各管一段</text>
+  <rect x="25" y="70" width="210" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="130.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">检查点与重算</text>
+  <text x="130.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">少存中间值，用时再算</text>
+  <rect x="263" y="70" width="210" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="368.0" y="99.7" font-size="15" fill="#b45309" text-anchor="middle">混合精度</text>
+  <text x="368.0" y="117.7" font-size="12" fill="#b45309" text-anchor="middle">一部分数值改用 16 位</text>
+  <rect x="501" y="70" width="210" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="606.0" y="99.7" font-size="15" fill="#166534" text-anchor="middle">完全分片</text>
+  <text x="606.0" y="117.7" font-size="12" fill="#166534" text-anchor="middle">参数不再每卡一份</text>
+  <rect x="25" y="166" width="712" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="381.0" y="195.7" font-size="15" fill="#6b21a8" text-anchor="middle">前两块省的是中间值，第三块省的是模型副本</text>
+  <text x="381.0" y="213.7" font-size="12" fill="#6b21a8" text-anchor="middle">三条路可以叠加使用</text>
+</svg>
