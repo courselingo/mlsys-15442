@@ -113,11 +113,22 @@ def main(argv: list[str] | None = None) -> int:
         return 0
 
     print(f"配图房规检查：{len(figures)} 张图")
-    proc = subprocess.run(
-        [node, str(linter), *[str(f) for f in figures]],
-        capture_output=True, text=True, encoding="utf-8",
-    )
-    out = ((proc.stdout or "") + (proc.stderr or "")).strip()
+    # ★★ 分批调用 —— 2026-09-29 修。
+    #   起因：图多到一定程度后，把**全部**文件名放进一条命令行会超 Windows 的上限
+    #   （实测 351 张时报 `FileNotFoundError: [WinError 206] 文件名或扩展名太长`）——
+    #   而那让整道门**崩掉**（退出码 1 而没有任何一条 ❌），
+    #   于是它看起来像「配图有问题」，实际是「调用方式有问题」。
+    #   ⇒ 分块（每块 40 张）并把各块的输出拼起来统计。
+    CHUNK = 40
+    outs: list[str] = []
+    for i in range(0, len(figures), CHUNK):
+        batch = figures[i : i + CHUNK]
+        proc = subprocess.run(
+            [node, str(linter), *[str(f) for f in batch]],
+            capture_output=True, text=True, encoding="utf-8",
+        )
+        outs.append(((proc.stdout or "") + (proc.stderr or "")).strip())
+    out = "\n".join(outs)
     # 只保留结论行，避免刷屏；完整输出在有错时打印
     tail = [ln for ln in out.splitlines() if "file(s)" in ln or "WARNINGS" in ln]
 
