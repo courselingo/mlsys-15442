@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 758 415.0" width="758" height="415.0"
+     role="img" aria-labelledby="fig-ml-parallelization-1-14-title fig-ml-parallelization-1-14-desc">
+  <title id="fig-ml-parallelization-1-14-title">第三阶段：参数也被切开，用到才广播</title>
+  <desc id="fig-ml-parallelization-1-14-desc">在普通数据并行里所有 GPU 全程都留着全部参数；ZeRO 把参数也切开放到各卡上，前向用到哪一层就广播哪一层，用完立刻丢掉，反向再广播一次。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="758" height="415.0" fill="#ffffff"/>
+
+  <text x="381.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">第三阶段：参数也被切开，用到才广播</text>
+  <rect x="25" y="70" width="712" height="68" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">第三阶段：参数也切开，每块卡只留一份</text>
+  <text x="381.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">用的时候才凑齐，用完就丢</text>
+  <rect x="25" y="166" width="620" height="63" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="335.0" y="193.1" font-size="14" fill="#b45309" text-anchor="middle">前向用到哪一层</text>
+  <text x="335.0" y="211.1" font-size="12" fill="#b45309" text-anchor="middle">就广播哪一层的参数</text>
+  <rect x="25" y="254" width="620" height="63" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="335.0" y="281.1" font-size="14" fill="#b45309" text-anchor="middle">用完立刻丢掉</text>
+  <text x="335.0" y="299.1" font-size="12" fill="#b45309" text-anchor="middle">腾出显存给别的东西</text>
+  <rect x="25" y="342" width="620" height="63" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="335.0" y="369.1" font-size="14" fill="#9d174d" text-anchor="middle">反向再广播一次</text>
+  <text x="335.0" y="387.1" font-size="12" fill="#9d174d" text-anchor="middle">所以通信量比前两个阶段更高</text>
+</svg>

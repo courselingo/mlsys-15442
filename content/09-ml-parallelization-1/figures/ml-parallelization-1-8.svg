@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 706 308.0" width="706" height="308.0"
+     role="img" aria-labelledby="fig-ml-parallelization-1-8-title fig-ml-parallelization-1-8-desc">
+  <title id="fig-ml-parallelization-1-8-title">环形 AllReduce：把参数切成 N 片，分两步走</title>
+  <desc id="fig-ml-parallelization-1-8-desc">N 个工人围成一个环，M 个参数切成 N 片；第一步各发一片聚合，第二步各发一片广播，两步都重复 N 轮。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="706" height="308.0" fill="#ffffff"/>
+
+  <text x="355.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">环形 AllReduce：把参数切成 N 片，分两步走</text>
+  <rect x="25" y="70" width="660" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="355.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">环形 AllReduce：参数切成 N 片，工人围成一个环</text>
+  <rect x="25" y="137" width="660" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="355.0" y="166.7" font-size="15" fill="#b45309" text-anchor="middle">第一步 聚合</text>
+  <text x="355.0" y="184.7" font-size="12" fill="#b45309" text-anchor="middle">每轮每个工人把一片发给下一个，重复 N 轮</text>
+  <rect x="25" y="230" width="660" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="355.0" y="259.7" font-size="15" fill="#166534" text-anchor="middle">第二步 广播</text>
+  <text x="355.0" y="277.7" font-size="12" fill="#166534" text-anchor="middle">每轮每个工人把一片结果发给下一个，重复 N 轮</text>
+</svg>

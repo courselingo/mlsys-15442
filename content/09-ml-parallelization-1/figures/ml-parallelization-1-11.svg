@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 758 340.0" width="758" height="340.0"
+     role="img" aria-labelledby="fig-ml-parallelization-1-11-title fig-ml-parallelization-1-11-desc">
+  <title id="fig-ml-parallelization-1-11-title">数据并行的前提本身是个问题</title>
+  <desc id="fig-ml-parallelization-1-11-desc">每块卡都要存下一份完整的模型；课件把 Bert-Large、GPT-2、Turing 17.2 NLG、GPT-3 排在一起比参数量，趋势是越来越大。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="758" height="340.0" fill="#ffffff"/>
+
+  <text x="381.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">数据并行的前提本身是个问题</text>
+  <rect x="25" y="70" width="712" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="381.0" y="99.7" font-size="15" fill="#9d174d" text-anchor="middle">数据并行有一个前提</text>
+  <text x="381.0" y="117.7" font-size="12" fill="#9d174d" text-anchor="middle">每块卡都要存下一份完整的模型</text>
+  <rect x="25" y="166" width="340" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="195.0" y="195.7" font-size="15" fill="#1e40af" text-anchor="middle">课件举的例子</text>
+  <text x="195.0" y="213.7" font-size="12" fill="#1e40af" text-anchor="middle">Bert-Large、GPT-2、GPT-3 等</text>
+  <rect x="393" y="166" width="340" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.0" y="195.7" font-size="15" fill="#b45309" text-anchor="middle">趋势</text>
+  <text x="563.0" y="213.7" font-size="12" fill="#b45309" text-anchor="middle">模型参数量在快速增长</text>
+  <rect x="25" y="262" width="700" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="375.0" y="291.7" font-size="15" fill="#9d174d" text-anchor="middle">于是出现一个硬问题</text>
+  <text x="375.0" y="309.7" font-size="12" fill="#9d174d" text-anchor="middle">超过单卡显存的模型，数据并行训不了</text>
+</svg>

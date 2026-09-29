@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 666 404.0" width="666" height="404.0"
+     role="img" aria-labelledby="fig-ml-parallelization-1-2-title fig-ml-parallelization-1-2-desc">
+  <title id="fig-ml-parallelization-1-2-title">训练一次迭代的三个阶段</title>
+  <desc id="fig-ml-parallelization-1-2-desc">课件回顾的这三步是后面一切并行化的对象：前向传播算预测，反向传播算每个可训练权重的梯度，权重更新把参数改一步。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="666" height="404.0" fill="#ffffff"/>
+
+  <text x="335.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">训练一次迭代的三个阶段</text>
+  <rect x="25" y="70" width="620" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="335.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">前向传播（Forward）</text>
+  <text x="335.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">把一批样本喂进模型，算出预测</text>
+  <rect x="25" y="163" width="620" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="335.0" y="192.7" font-size="15" fill="#b45309" text-anchor="middle">反向传播（Backward）</text>
+  <text x="335.0" y="210.7" font-size="12" fill="#b45309" text-anchor="middle">倒着跑一遍，算出每个权重的梯度</text>
+  <rect x="25" y="256" width="620" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="335.0" y="285.7" font-size="15" fill="#166534" text-anchor="middle">权重更新（Update）</text>
+  <text x="335.0" y="303.7" font-size="12" fill="#166534" text-anchor="middle">按优化器把权重改一步</text>
+  <rect x="25" y="352" width="620" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="335.0" y="377.9" font-size="14" fill="#1e40af" text-anchor="middle">这三步要重复很多次</text>
+</svg>

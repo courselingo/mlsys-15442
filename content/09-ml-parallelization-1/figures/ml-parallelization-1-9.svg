@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 706 401.0" width="706" height="401.0"
+     role="img" aria-labelledby="fig-ml-parallelization-1-9-title fig-ml-parallelization-1-9-desc">
+  <title id="fig-ml-parallelization-1-9-title">树形 AllReduce：深度只有 log N</title>
+  <desc id="fig-ml-parallelization-1-9-desc">工人连成一棵树；第一步向上聚合，第二步向下广播，两步各重复 log N 轮，整体通信量是 2 乘 N 乘 M。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="706" height="401.0" fill="#ffffff"/>
+
+  <text x="355.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">树形 AllReduce：深度只有 log N</text>
+  <rect x="25" y="70" width="660" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="355.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">树形 AllReduce：工人连成一棵树</text>
+  <rect x="25" y="137" width="660" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="355.0" y="166.7" font-size="15" fill="#b45309" text-anchor="middle">第一步 向上聚合</text>
+  <text x="355.0" y="184.7" font-size="12" fill="#b45309" text-anchor="middle">每个工人把参数发给父节点，重复 log N 轮</text>
+  <rect x="25" y="230" width="660" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="355.0" y="259.7" font-size="15" fill="#166534" text-anchor="middle">第二步 向下广播</text>
+  <text x="355.0" y="277.7" font-size="12" fill="#166534" text-anchor="middle">每个工人把参数发给子节点，重复 log N 轮</text>
+  <rect x="25" y="323" width="660" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="355.0" y="352.7" font-size="15" fill="#6b21a8" text-anchor="middle">整体通信量 2 × N × M</text>
+  <text x="355.0" y="370.7" font-size="12" fill="#6b21a8" text-anchor="middle">与工人数成线性，比朴素做法好得多</text>
+</svg>
