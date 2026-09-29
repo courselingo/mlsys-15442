@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 23.0 612 340.0" width="612" height="340.0"
+     role="img" aria-labelledby="fig-introduction-to-mlsys-3-title fig-introduction-to-mlsys-3-desc">
+  <title id="fig-introduction-to-mlsys-3-title">自动微分：反向的计算图是自动搭出来的</title>
+  <desc id="fig-introduction-to-mlsys-3-desc">上面一排是前向计算，从左到右；下面一排是反向计算，从右到左。用户只写了前向，反向图由框架顺着程序结构生成。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="23.0" width="612" height="340.0" fill="#ffffff"/>
+
+  <text x="308.0" y="58" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">自动微分：反向的计算图是自动搭出来的</text>
+  <rect x="25" y="80" width="170" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="110.0" y="109.7" font-size="15" fill="#1e40af" text-anchor="middle">输入 x</text>
+  <text x="110.0" y="127.7" font-size="12" fill="#1e40af" text-anchor="middle">输入张量</text>
+  <rect x="223" y="80" width="170" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="308.0" y="109.7" font-size="15" fill="#b45309" text-anchor="middle">算子 f</text>
+  <text x="308.0" y="127.7" font-size="12" fill="#b45309" text-anchor="middle">前向计算</text>
+  <rect x="421" y="80" width="170" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="506.0" y="109.7" font-size="15" fill="#166534" text-anchor="middle">输出 y</text>
+  <text x="506.0" y="127.7" font-size="12" fill="#166534" text-anchor="middle">预测结果</text>
+  <rect x="421" y="176" width="170" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="506.0" y="205.7" font-size="15" fill="#166534" text-anchor="middle">∂L/∂y</text>
+  <text x="506.0" y="223.7" font-size="12" fill="#166534" text-anchor="middle">从损失出发</text>
+  <rect x="223" y="176" width="170" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="308.0" y="205.7" font-size="15" fill="#b45309" text-anchor="middle">反向算子 f′</text>
+  <text x="308.0" y="223.7" font-size="12" fill="#b45309" text-anchor="middle">链式法则回传</text>
+  <rect x="25" y="176" width="170" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="110.0" y="205.7" font-size="15" fill="#1e40af" text-anchor="middle">∂L/∂x</text>
+  <text x="110.0" y="223.7" font-size="12" fill="#1e40af" text-anchor="middle">一路传到输入</text>
+  <path d="M200,114 L212,114" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M398,114 L410,114" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M416,210 L404,210" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M218,210 L206,210" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="25" y="272" width="566" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="308.0" y="301.7" font-size="15" fill="#6b21a8" text-anchor="middle">这一层不用人写</text>
+  <text x="308.0" y="319.7" font-size="12" fill="#6b21a8" text-anchor="middle">只要前向是普通程序，反向图就能自动建出来</text>
+</svg>

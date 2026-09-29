@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 754 253.0" width="754" height="253.0"
+     role="img" aria-labelledby="fig-introduction-to-mlsys-13-title fig-introduction-to-mlsys-13-desc">
+  <title id="fig-introduction-to-mlsys-13-title">算子的内核从哪来：厂商手写，还是自动搜出来</title>
+  <desc id="fig-introduction-to-mlsys-13-desc">左边是厂商手写的算子库，一个新算子要等支持；右边是自动搜索出来的程序，新算子马上有实现，而且常常比手写的更快。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="754" height="253.0" fill="#ffffff"/>
+
+  <text x="379.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">算子的内核从哪来：厂商手写，还是自动搜出来</text>
+  <rect x="25" y="70" width="340" height="42" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="195.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">手写：厂商给的算子库</text>
+  <rect x="25" y="138" width="340" height="105" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="195.0" y="168.1" font-size="14" fill="#1e40af" text-anchor="middle">cuDNN、cuBLAS</text>
+  <text x="195.0" y="186.1" font-size="12" fill="#1e40af" text-anchor="middle">一个算子一个实现</text>
+  <text x="195.0" y="204.1" font-size="12" fill="#1e40af" text-anchor="middle">新算子要等厂商支持</text>
+  <text x="195.0" y="222.1" font-size="12" fill="#1e40af" text-anchor="middle">硬件变复杂后不再最优</text>
+  <rect x="393" y="70" width="340" height="42" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.0" y="95.9" font-size="14" fill="#166534" text-anchor="middle">自动：搜索出来的程序</text>
+  <rect x="393" y="138" width="340" height="105" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.0" y="168.1" font-size="14" fill="#166534" text-anchor="middle">针对每个算子去搜</text>
+  <text x="563.0" y="186.1" font-size="12" fill="#166534" text-anchor="middle">新算子马上有实现</text>
+  <text x="563.0" y="204.1" font-size="12" fill="#166534" text-anchor="middle">常常比手写的更快</text>
+  <text x="563.0" y="222.1" font-size="12" fill="#166534" text-anchor="middle">代价是搜索本身要花时间</text>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 858 148.0" width="858" height="148.0"
+     role="img" aria-labelledby="fig-introduction-to-mlsys-11-title fig-introduction-to-mlsys-11-desc">
+  <title id="fig-introduction-to-mlsys-11-title">把图优化本身自动化：生成候选、再验证等价</title>
+  <desc id="fig-introduction-to-mlsys-11-desc">流程是五步：从机器学习数学性质出发，让生成器提出候选变换，再让验证器证明候选与原因等价，只有验证通过的才交给图优化器落地。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="858" height="148.0" fill="#ffffff"/>
+
+  <text x="431.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">把图优化本身自动化：生成候选、再验证等价</text>
+  <rect x="25" y="70" width="140" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="95.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">数学性质</text>
+  <text x="95.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">能被证明的等式</text>
+  <rect x="193" y="70" width="140" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="263.0" y="99.7" font-size="15" fill="#b45309" text-anchor="middle">生成器</text>
+  <text x="263.0" y="117.7" font-size="12" fill="#b45309" text-anchor="middle">提出候选变换</text>
+  <rect x="361" y="70" width="140" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="431.0" y="99.7" font-size="15" fill="#b45309" text-anchor="middle">候选优化</text>
+  <text x="431.0" y="117.7" font-size="12" fill="#b45309" text-anchor="middle">一批待验证的图</text>
+  <rect x="529" y="70" width="140" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="599.0" y="99.7" font-size="15" fill="#9d174d" text-anchor="middle">验证器</text>
+  <text x="599.0" y="117.7" font-size="12" fill="#9d174d" text-anchor="middle">证明两张图等价</text>
+  <rect x="697" y="70" width="140" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="767.0" y="99.7" font-size="15" fill="#166534" text-anchor="middle">图优化器</text>
+  <text x="767.0" y="117.7" font-size="12" fill="#166534" text-anchor="middle">只应用验证过的</text>
+  <path d="M170,104 L182,104" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M338,104 L350,104" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M506,104 L518,104" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M674,104 L686,104" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+</svg>

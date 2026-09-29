@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 -1.0 758 339.0" width="758" height="339.0"
+     role="img" aria-labelledby="fig-introduction-to-mlsys-14-title fig-introduction-to-mlsys-14-desc">
+  <title id="fig-introduction-to-mlsys-14-title">显存为什么成了训练的天花板</title>
+  <desc id="fig-introduction-to-mlsys-14-desc">前向传播的每一层中间结果都要留到反向传播用，所以显存占用随模型变大而涨；能训多大的模型，直接由显存决定。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="-1.0" width="758" height="339.0" fill="#ffffff"/>
+
+  <text x="381.0" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">显存为什么成了训练的天花板</text>
+  <rect x="25" y="56" width="712" height="163" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-dasharray="6,4"/>
+  <text x="38" y="73.85" font-size="11" fill="#64748b">一块 GPU 的显存</text>
+  <rect x="45" y="95" width="672" height="39" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="381.0" y="119.0" font-size="13" fill="#b45309" text-anchor="middle">前向传播：每一层的中间结果都要留着</text>
+  <rect x="45" y="162" width="672" height="39" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="381.0" y="186.1" font-size="13" fill="#b45309" text-anchor="middle">反向传播：算梯度时要把它们再读一遍</text>
+  <rect x="25" y="247" width="712" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="381.0" y="276.7" font-size="15" fill="#9d174d" text-anchor="middle">能训多大的模型，由显存决定</text>
+  <text x="381.0" y="294.7" font-size="12" fill="#9d174d" text-anchor="middle">模型越大通常效果越好，于是这里成了瓶颈</text>
+</svg>

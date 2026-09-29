@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 770 244.0" width="770" height="244.0"
+     role="img" aria-labelledby="fig-introduction-to-mlsys-9-title fig-introduction-to-mlsys-9-desc">
+  <title id="fig-introduction-to-mlsys-9-title">课件在 ResNet 上做的一串图变换</title>
+  <desc id="fig-introduction-to-mlsys-9-desc">从原始残差块出发，先把小卷积放大，再把卷积拆开重新合并，最后把加法和卷积融在一起；课件在其中一步标了会掉性能。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="770" height="244.0" fill="#ffffff"/>
+
+  <text x="387.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">课件在 ResNet 上做的一串图变换</text>
+  <rect x="25" y="70" width="160" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="105.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">原始残差块</text>
+  <text x="105.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">两个卷积加跳连</text>
+  <rect x="213" y="70" width="160" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="293.0" y="99.7" font-size="15" fill="#b45309" text-anchor="middle">放大卷积</text>
+  <text x="293.0" y="117.7" font-size="12" fill="#b45309" text-anchor="middle">换成更大的卷积核</text>
+  <rect x="401" y="70" width="160" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="481.0" y="99.7" font-size="15" fill="#b45309" text-anchor="middle">拆分再融合</text>
+  <text x="481.0" y="117.7" font-size="12" fill="#b45309" text-anchor="middle">把卷积拆开重排</text>
+  <rect x="589" y="70" width="160" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="669.0" y="99.7" font-size="15" fill="#166534" text-anchor="middle">融合 conv 与 add</text>
+  <text x="669.0" y="117.7" font-size="12" fill="#166534" text-anchor="middle">把加法折进卷积</text>
+  <path d="M190,104 L202,104" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M378,104 L390,104" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M566,104 L578,104" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="25" y="166" width="724" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="387.0" y="195.7" font-size="15" fill="#9d174d" text-anchor="middle">课件标注：放大卷积这一步会掉性能</text>
+  <text x="387.0" y="213.7" font-size="12" fill="#9d174d" text-anchor="middle">变大的卷积核并不总是更快，它取决于硬件</text>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 756 244.0" width="756" height="244.0"
+     role="img" aria-labelledby="fig-introduction-to-mlsys-10-title fig-introduction-to-mlsys-10-desc">
+  <title id="fig-introduction-to-mlsys-10-title">同一张优化后的图，两块卡上结论相反</title>
+  <desc id="fig-introduction-to-mlsys-10-desc">课件给的实测结论是：最终的计算图在 V100 上快 30%，在 K80 上反而慢 10%。人写的规则很难同时照顾到这两块卡。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="756" height="244.0" fill="#ffffff"/>
+
+  <text x="380.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">同一张优化后的图，两块卡上结论相反</text>
+  <rect x="25" y="70" width="340" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="195.0" y="99.7" font-size="15" fill="#166534" text-anchor="middle">V100 上快 30%</text>
+  <text x="195.0" y="117.7" font-size="12" fill="#166534" text-anchor="middle">同一份优化后的图</text>
+  <rect x="393" y="70" width="340" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="563.0" y="99.7" font-size="15" fill="#9d174d" text-anchor="middle">K80 上慢 10%</text>
+  <text x="563.0" y="117.7" font-size="12" fill="#9d174d" text-anchor="middle">同一份优化后的图</text>
+  <rect x="25" y="166" width="710" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="380.0" y="195.7" font-size="15" fill="#6b21a8" text-anchor="middle">换一块卡，结论就反过来</text>
+  <text x="380.0" y="213.7" font-size="12" fill="#6b21a8" text-anchor="middle">规则是人写的，而硬件与模型都在变</text>
+</svg>
