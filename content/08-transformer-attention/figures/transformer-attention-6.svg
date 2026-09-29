@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 754 244.0" width="754" height="244.0"
      role="img" aria-labelledby="fig-transformer-attention-6-title fig-transformer-attention-6-desc">
   <title id="fig-transformer-attention-6-title">FlashAttention 的出发点：两级存储差了一个数量级</title>
-  <desc id="fig-transformer-attention-6-desc">课件给的两个数字是：每块的共享内存约 20 MB，带宽 19 TB/s；设备全局显存 80 GB 量级，带宽 1.5 TB/s。容量与带宽仍然是反向的。</desc>
+  <desc id="fig-transformer-attention-6-desc">课件给的两组数字是：共享内存约 20 MB、带宽 19 TB/s；设备全局显存 80 GB 量级、带宽 1.5 TB/s。容量与带宽仍然是反向的。要注明一处：课件把 20 MB 记在「每块共享内存」这一行，而它其实是整片 SRAM 的量级，单个块能用的共享内存在 192 KB 量级；本图照录课件的写法。</desc>
 
   <defs>
     <style>

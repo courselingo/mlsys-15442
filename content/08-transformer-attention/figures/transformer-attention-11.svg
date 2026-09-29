@@ -24,5 +24,5 @@
   <text x="563.0" y="117.7" font-size="12" fill="#166534" text-anchor="middle">各算各的，不用通信</text>
   <rect x="25" y="166" width="716" height="68" fill="#f3e8ff" stroke="#a855f7"/>
   <text x="383.0" y="195.7" font-size="15" fill="#6b21a8" text-anchor="middle">所以选沿查询切</text>
-  <text x="383.0" y="213.7" font-size="12" fill="#6b21a8" text-anchor="middle">课件给的收益是 2 到 4 倍加速、10 到 20 倍显存下降</text>
+  <text x="383.0" y="213.7" font-size="12" fill="#6b21a8" text-anchor="middle">收益在 FlashAttention 那一页单独给出，不属于这一步</text>
 </svg>
