@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 866 312.0" width="866" height="312.0"
+     role="img" aria-labelledby="fig-mega-kernel-13-title fig-mega-kernel-13-desc">
+  <title id="fig-mega-kernel-13-title">运行期：一个 SM 一个 worker，一个 warp 一个调度器</title>
+  <desc id="fig-mega-kernel-13-desc">课件的运行期由两类角色组成：worker 跑在一个 SM 上，scheduler 跑在一个 warp 上；每个 worker 反复做三件事：取一个任务、执行它、触发完成事件。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="866" height="312.0" fill="#ffffff"/>
+
+  <text x="435.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">运行期：一个 SM 一个 worker，一个 warp 一个调度器</text>
+  <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">任务制的并行运行期</text>
+  <rect x="25" y="138" width="340" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="195.0" y="167.7" font-size="15" fill="#1e40af" text-anchor="middle">角色</text>
+  <text x="195.0" y="185.7" font-size="12" fill="#1e40af" text-anchor="middle">worker 在一个 SM，scheduler 在一个 warp</text>
+  <rect x="393" y="138" width="340" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.0" y="167.7" font-size="15" fill="#b45309" text-anchor="middle">每个 worker 反复做</text>
+  <text x="563.0" y="185.7" font-size="12" fill="#b45309" text-anchor="middle">取任务、执行、触发完成事件</text>
+  <rect x="25" y="234" width="820" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="435.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">课件还用一组动画演示了事件驱动的执行过程</text>
+  <text x="435.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">它同时列出降低任务启动开销的几条手段：轻量角色、设备内存上的环形缓冲、原子操作、去中心化调度</text>
+</svg>

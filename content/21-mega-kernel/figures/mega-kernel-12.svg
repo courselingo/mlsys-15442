@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 856 312.0" width="856" height="312.0"
+     role="img" aria-labelledby="fig-mega-kernel-12-title fig-mega-kernel-12-desc">
+  <title id="fig-mega-kernel-12-title">第四步与第五步：归一化与线性化</title>
+  <desc id="fig-mega-kernel-12-desc">课件第四步把图规范成「每个任务至多依赖一个事件、至多触发一个事件」；第五步给同一个事件触发的任务分配连续下标，于是表示可以压成「第一个任务与最后一个任务」。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="856" height="312.0" fill="#ffffff"/>
+
+  <text x="430.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">第四步与第五步：归一化与线性化</text>
+  <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">把图规整到运行期好处理的形式</text>
+  <rect x="25" y="138" width="340" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="195.0" y="167.7" font-size="15" fill="#b45309" text-anchor="middle">第四步 归一化</text>
+  <text x="195.0" y="185.7" font-size="12" fill="#b45309" text-anchor="middle">每个任务最多一个入边一个出边</text>
+  <rect x="393" y="138" width="340" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.0" y="167.7" font-size="15" fill="#b45309" text-anchor="middle">第五步 线性化</text>
+  <text x="563.0" y="185.7" font-size="12" fill="#b45309" text-anchor="middle">同事件触发的任务给连续下标</text>
+  <rect x="25" y="234" width="810" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="430.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">两步合起来把表示压小了</text>
+  <text x="430.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">运行期只需要记「第一个任务」与「最后一个任务」</text>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 786 430.0" width="786" height="430.0"
+     role="img" aria-labelledby="fig-mega-kernel-5-title fig-mega-kernel-5-desc">
+  <title id="fig-mega-kernel-5-title">三个核心挑战</title>
+  <desc id="fig-mega-kernel-5-desc">课件列了三个问题：怎么管理依赖、怎么处理动态性、怎么把性能做上去。前两个是正确性问题，第三个是效率问题。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="786" height="430.0" fill="#ffffff"/>
+
+  <text x="395.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">三个核心挑战</text>
+  <rect x="25" y="70" width="620" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="335.0" y="99.7" font-size="15" fill="#9d174d" text-anchor="middle">挑战一</text>
+  <text x="335.0" y="117.7" font-size="12" fill="#9d174d" text-anchor="middle">怎么管理依赖</text>
+  <rect x="25" y="163" width="620" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="335.0" y="192.7" font-size="15" fill="#9d174d" text-anchor="middle">挑战二</text>
+  <text x="335.0" y="210.7" font-size="12" fill="#9d174d" text-anchor="middle">怎么处理动态性</text>
+  <rect x="25" y="256" width="620" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="335.0" y="285.7" font-size="15" fill="#9d174d" text-anchor="middle">挑战三</text>
+  <text x="335.0" y="303.7" font-size="12" fill="#9d174d" text-anchor="middle">怎么把性能做上去</text>
+  <rect x="25" y="352" width="740" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="395.0" y="381.7" font-size="15" fill="#6b21a8" text-anchor="middle">课件还补了一句：现有的编译器都是针对单个内核做的</text>
+  <text x="395.0" y="399.7" font-size="12" fill="#6b21a8" text-anchor="middle">而它举的动态性例子包括连续批处理、预填充与解码、分页与基数注意力、投机解码</text>
+</svg>
