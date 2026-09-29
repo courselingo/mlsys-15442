@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="17 23.0 702 244.0" width="702" height="244.0"
+     role="img" aria-labelledby="fig-why-ml-systems-1-title fig-why-ml-systems-1-desc">
+  <title id="fig-why-ml-systems-1-title">同一个任务被两个数字夹在中间</title>
+  <desc id="fig-why-ml-systems-1-desc">准确率 X% 属于模型侧，延迟 Y 毫秒属于系统侧；两个数字互相拉扯，一起决定这个任务能不能落地。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="17" y="23.0" width="702" height="244.0" fill="#ffffff"/>
+
+  <text x="368.0" y="58" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">同一个任务被两个数字夹在中间</text>
+  <rect x="40" y="80" width="200" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="140.0" y="109.7" font-size="15" fill="#9d174d" text-anchor="middle">准确率 X%</text>
+  <text x="140.0" y="127.7" font-size="12" fill="#9d174d" text-anchor="middle">模型更大，算得更多</text>
+  <rect x="268" y="80" width="200" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="368.0" y="109.7" font-size="15" fill="#1e40af" text-anchor="middle">同一个任务</text>
+  <text x="368.0" y="127.7" font-size="12" fill="#1e40af" text-anchor="middle">行人检测：X% × Y ms</text>
+  <rect x="496" y="80" width="200" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="596.0" y="109.7" font-size="15" fill="#166534" text-anchor="middle">延迟 Y 毫秒</text>
+  <text x="596.0" y="127.7" font-size="12" fill="#166534" text-anchor="middle">引擎更快，算得更少</text>
+  <rect x="40" y="176" width="656" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="368.0" y="205.7" font-size="15" fill="#6b21a8" text-anchor="middle">两个数字互相拉扯</text>
+  <text x="368.0" y="223.7" font-size="12" fill="#6b21a8" text-anchor="middle">要更准就要算更多，要更快就要算更少</text>
+  <path d="M245,114 L257,114" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M491,114 L479,114" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M368,153 L368,165" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+</svg>

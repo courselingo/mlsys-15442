@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 674 253.0" width="674" height="253.0"
+     role="img" aria-labelledby="fig-why-ml-systems-7-title fig-why-ml-systems-7-desc">
+  <title id="fig-why-ml-systems-7-title">同一个模型，两种做法的代价差了两个数量级</title>
+  <desc id="fig-why-ml-systems-7-desc">2010 年手写一个模型变体要 44k 行代码、六个月工程量，最后还没做成；今天用机器学习框架，100 行 Python、几小时就能改完。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="674" height="253.0" fill="#ffffff"/>
+
+  <text x="339.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">同一个模型，两种做法的代价差了两个数量级</text>
+  <rect x="25" y="70" width="300" height="42" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="175.0" y="95.9" font-size="14" fill="#9d174d" text-anchor="middle">手写：2010 年</text>
+  <rect x="353" y="70" width="300" height="42" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="503.0" y="95.9" font-size="14" fill="#166534" text-anchor="middle">框架：今天</text>
+  <rect x="25" y="138" width="300" height="105" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="175.0" y="168.1" font-size="14" fill="#9d174d" text-anchor="middle">44k 行代码</text>
+  <text x="175.0" y="186.1" font-size="12" fill="#9d174d" text-anchor="middle">含手写 CUDA 内核</text>
+  <text x="175.0" y="204.1" font-size="12" fill="#9d174d" text-anchor="middle">六个月的工程量</text>
+  <text x="175.0" y="222.1" font-size="12" fill="#9d174d" text-anchor="middle">最后没有做成</text>
+  <rect x="353" y="138" width="300" height="105" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="503.0" y="168.1" font-size="14" fill="#166534" text-anchor="middle">100 行 Python</text>
+  <text x="503.0" y="186.1" font-size="12" fill="#166534" text-anchor="middle">张量与自动微分</text>
+  <text x="503.0" y="204.1" font-size="12" fill="#166534" text-anchor="middle">几小时就改完</text>
+  <text x="503.0" y="222.1" font-size="12" fill="#166534" text-anchor="middle">换结构不用重写内核</text>
+</svg>

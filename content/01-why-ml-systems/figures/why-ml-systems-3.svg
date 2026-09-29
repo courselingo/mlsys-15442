@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 646 368.5" width="646" height="368.5"
+     role="img" aria-labelledby="fig-why-ml-systems-3-title fig-why-ml-systems-3-desc">
+  <title id="fig-why-ml-systems-3-title">2000 年之后，换掉的是数据与算力</title>
+  <desc id="fig-why-ml-systems-3-desc">研究期把算法基本备齐，数据期让标注变得便宜，算力期让矩阵乘加有了专用电路；三段推着模型变大。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="646" height="368.5" fill="#ffffff"/>
+
+  <text x="325.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">2000 年之后，换掉的是数据与算力</text>
+  <rect x="25" y="70" width="300" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="175.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">1958–2000 研究期</text>
+  <text x="175.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">算法这一段基本齐了</text>
+  <rect x="25" y="166" width="450" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="250.0" y="195.7" font-size="15" fill="#b45309" text-anchor="middle">2000–2010 数据期</text>
+  <text x="250.0" y="213.7" font-size="12" fill="#b45309" text-anchor="middle">数据成了模型的燃料</text>
+  <rect x="25" y="262" width="600" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="325.0" y="291.7" font-size="15" fill="#9d174d" text-anchor="middle">2006 至今 算力与规模</text>
+  <text x="325.0" y="309.7" font-size="12" fill="#9d174d" text-anchor="middle">算力曲线抬头，模型跟着变大</text>
+  <path d="M175,143 L175,155" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M250,239 L250,251" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="325" y="356" font-size="10" fill="#94a3b8" text-anchor="middle">（分期是课件时间轴的划分，年份取自课件）</text>
+</svg>

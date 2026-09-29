@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 -1.0 758 406.0" width="758" height="406.0"
+     role="img" aria-labelledby="fig-why-ml-systems-8-title fig-why-ml-systems-8-desc">
+  <title id="fig-why-ml-systems-8-title">ML 系统看的是三根支柱的整体</title>
+  <desc id="fig-why-ml-systems-8-desc">模型、数据、算力被同一个问题绑在一起；只优化其中一根，会被另外两根拖住，所以要整体看。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="-1.0" width="758" height="406.0" fill="#ffffff"/>
+
+  <text x="381.0" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">ML 系统看的是三根支柱的整体</text>
+  <rect x="25" y="56" width="712" height="230" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-dasharray="6,4"/>
+  <text x="38" y="73.85" font-size="11" fill="#64748b">ML 系统的整体视角</text>
+  <rect x="45" y="95" width="672" height="42" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="381.0" y="120.9" font-size="14" fill="#1e40af" text-anchor="middle">模型：网络结构与预训练权重</text>
+  <rect x="45" y="162" width="672" height="42" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="381.0" y="187.9" font-size="14" fill="#b45309" text-anchor="middle">数据：采集、标注与清洗</text>
+  <rect x="45" y="229" width="672" height="42" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="381.0" y="254.9" font-size="14" fill="#9d174d" text-anchor="middle">算力：GPU、内存带宽与互连</text>
+  <rect x="25" y="314" width="712" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="381.0" y="343.7" font-size="15" fill="#6b21a8" text-anchor="middle">整体视角才是这一层要解决的问题</text>
+  <text x="381.0" y="361.7" font-size="12" fill="#6b21a8" text-anchor="middle">单独优化任何一根支柱，都会被另外两根拖住</text>
+</svg>

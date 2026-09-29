@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 758 340.0" width="758" height="340.0"
+     role="img" aria-labelledby="fig-why-ml-systems-10-title fig-why-ml-systems-10-desc">
+  <title id="fig-why-ml-systems-10-title">课件给的三个理由</title>
+  <desc id="fig-why-ml-systems-10-desc">推动前沿 AI 应用需要整体视角，做机器学习工程需要系统侧的手艺，而亲手造出一个能跑的 ML 系统才算真的懂。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="758" height="340.0" fill="#ffffff"/>
+
+  <text x="381.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">课件给的三个理由</text>
+  <rect x="25" y="70" width="712" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="381.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">理由一：推动前沿 AI 应用，需要整体视角</text>
+  <text x="381.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">只懂模型或只懂系统，都会在某一步卡住</text>
+  <rect x="25" y="166" width="712" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="381.0" y="195.7" font-size="15" fill="#b45309" text-anchor="middle">理由二：为做机器学习工程做准备</text>
+  <text x="381.0" y="213.7" font-size="12" fill="#b45309" text-anchor="middle">这门课教的是系统侧的手艺</text>
+  <rect x="25" y="262" width="712" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="381.0" y="291.7" font-size="15" fill="#166534" text-anchor="middle">理由三：亲手造自己的机器学习系统</text>
+  <text x="381.0" y="309.7" font-size="12" fill="#166534" text-anchor="middle">能跑起来的东西才算真的懂</text>
+</svg>

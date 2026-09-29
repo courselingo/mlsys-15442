@@ -48,6 +48,30 @@ other = false      # 作业材料按学术诚信永久排除
 [output]
 default_mode = "explanation"   # explanation | transcript（transcript 需该 source_kind 已授权）
 
+# audit_content.py 的「点名具体对象」名单。
+# 脚本自带的默认名单偏分布式系统（GFS / Raft / Paxos…），
+# 对机器学习系统课几乎 0 命中，所以在这里按本课程域追加。
+# 判据是**子串**匹配，所以只写会被真正写进正文的对象名。
+[audit]
+named_systems_min = 5
+named_systems = [
+  # 框架与运行时
+  "PyTorch", "TensorFlow", "JAX", "MXNet", "Caffe", "ONNX", "TensorRT",
+  "TVM", "XLA", "Triton", "cuBLAS", "cuDNN", "NCCL", "DeepSpeed", "Megatron",
+  "vLLM", "FlashAttention", "PagedAttention", "TIRx", "OpenMP", "MPI",
+  # 硬件
+  "GPU", "TPU", "Tensor Core", "Blackwell", "Hopper", "Ampere", "Volta",
+  "GTX 580", "GTX 470", "A100", "H100", "HBM", "SM", "warp", "shared memory",
+  # 模型与数据集
+  "AlexNet", "ResNet", "Transformer", "BERT", "GPT", "ImageNet", "MoE",
+  "attention", "softmax", "batch norm", "dropout", "SGD", "Adam", "LoRA",
+  # 并行与内存
+  "ZeRO", "data parallelism", "pipeline parallelism", "tensor parallelism",
+  "gradient checkpointing", "rematerialization", "offload", "speculative decoding",
+  # 课程自身与评测
+  "MLPerf", "mlsyscourse.org", "MLSys",
+]
+
 # 站点（GitHub Pages）—— build_site.py 用这两项生成 MkDocs 的 repo_url / site_url。
 [site]
 repo = "courselingo/mlsys-15442"

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 777 232.0" width="777" height="232.0"
+     role="img" aria-labelledby="fig-why-ml-systems-9-title fig-why-ml-systems-9-desc">
+  <title id="fig-why-ml-systems-9-title">同一个目标，三种改法</title>
+  <desc id="fig-why-ml-systems-9-desc">ML 侧换更好的模型并用剪枝蒸馏压计算量，系统侧换更快的推理引擎，ML 系统侧把数据、硬件、模型与端到端一起动。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="777" height="232.0" fill="#ffffff"/>
+
+  <text x="390.5" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">同一个目标，三种改法</text>
+  <rect x="25" y="70" width="225" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="137.5" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">典型的 ML 改法</text>
+  <rect x="278" y="70" width="225" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="390.5" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">典型的系统改法</text>
+  <rect x="531" y="70" width="225" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="643.5" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">ML 系统改法</text>
+  <rect x="25" y="138" width="225" height="84" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="137.5" y="166.6" font-size="14" fill="#1e40af" text-anchor="middle">换一个更好的模型</text>
+  <text x="137.5" y="184.6" font-size="12" fill="#1e40af" text-anchor="middle">剪枝、蒸馏</text>
+  <text x="137.5" y="202.6" font-size="12" fill="#1e40af" text-anchor="middle">把计算量压下来</text>
+  <rect x="278" y="138" width="225" height="84" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="390.5" y="166.6" font-size="14" fill="#b45309" text-anchor="middle">换更快的推理引擎</text>
+  <text x="390.5" y="184.6" font-size="12" fill="#b45309" text-anchor="middle">算子融合、内存复用</text>
+  <text x="390.5" y="202.6" font-size="12" fill="#b45309" text-anchor="middle">同样的模型跑更快</text>
+  <rect x="531" y="138" width="225" height="84" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="643.5" y="166.6" font-size="14" fill="#166534" text-anchor="middle">几件事一起动</text>
+  <text x="643.5" y="184.6" font-size="12" fill="#166534" text-anchor="middle">数据、硬件、模型</text>
+  <text x="643.5" y="202.6" font-size="12" fill="#166534" text-anchor="middle">再加端到端系统</text>
+  <path d="M137.5,117 L137.5,127" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M390.5,117 L390.5,127" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M643.5,117 L643.5,127" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+</svg>

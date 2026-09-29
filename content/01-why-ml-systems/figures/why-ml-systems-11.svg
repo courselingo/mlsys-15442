@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 770 215.0" width="770" height="215.0"
+     role="img" aria-labelledby="fig-why-ml-systems-11-title fig-why-ml-systems-11-desc">
+  <title id="fig-why-ml-systems-11-title">这门课的四个组成部分</title>
+  <desc id="fig-why-ml-systems-11-desc">课堂讲座、个人编程作业、小组期末项目与 Piazza 讨论四块组成；评分里作业与项目各占 45%，课堂参与占 10%。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="770" height="215.0" fill="#ffffff"/>
+
+  <text x="387.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">这门课的四个组成部分</text>
+  <rect x="25" y="70" width="160" height="39" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="105.0" y="94.0" font-size="13" fill="#1e40af" text-anchor="middle">课堂讲座</text>
+  <rect x="213" y="70" width="160" height="39" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="293.0" y="94.0" font-size="13" fill="#1e40af" text-anchor="middle">个人编程作业</text>
+  <rect x="401" y="70" width="160" height="39" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="481.0" y="94.0" font-size="13" fill="#1e40af" text-anchor="middle">小组期末项目</text>
+  <rect x="589" y="70" width="160" height="39" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="669.0" y="94.0" font-size="13" fill="#1e40af" text-anchor="middle">Piazza 讨论</text>
+  <rect x="25" y="137" width="724" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="387.0" y="166.7" font-size="15" fill="#6b21a8" text-anchor="middle">评分：作业 45% + 小组项目 45% + 课堂参与 10%</text>
+  <text x="387.0" y="184.7" font-size="12" fill="#6b21a8" text-anchor="middle">先修：系统编程、线性代数、Python 与 C++</text>
+</svg>
