@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 666 335.0" width="666" height="335.0"
      role="img" aria-labelledby="fig-optimizing-linear-algebra-7-title fig-optimizing-linear-algebra-7-desc">
   <title id="fig-optimizing-linear-algebra-7-title">内存层级：越靠近计算越快，也越小</title>
-  <desc id="fig-optimizing-linear-algebra-7-desc">课件引的是那组经典的延迟数字：寄存器约 0.5 纳秒，L1 约 7 纳秒，L2 约 200 纳秒，再往外是 DRAM；每一级差一到两个数量级。</desc>
+  <desc id="fig-optimizing-linear-algebra-7-desc">课件引的是那组经典的延迟数字，并给出三条倍数：L1 约 0.5 纳秒，L2 约 7 纳秒且比 L1 慢 14 倍，DRAM 比 L2 慢约 20 倍、比 L1 慢约 200 倍；寄存器与 CPU 线程两级课件未给数字。</desc>
 
   <defs>
     <style>
@@ -17,11 +17,11 @@
 
   <text x="335.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">内存层级：越靠近计算越快，也越小</text>
   <rect x="25" y="70" width="200" height="45" fill="#dbeafe" stroke="#3b82f6"/>
-  <text x="125.0" y="97.8" font-size="15" fill="#1e40af" text-anchor="middle">寄存器 约 0.5 纳秒</text>
+  <text x="125.0" y="97.8" font-size="15" fill="#1e40af" text-anchor="middle">寄存器（课件未给数字）</text>
   <rect x="25" y="140" width="340" height="45" fill="#dbeafe" stroke="#3b82f6"/>
-  <text x="195.0" y="167.8" font-size="15" fill="#1e40af" text-anchor="middle">L1 缓存 约 7 纳秒</text>
+  <text x="195.0" y="167.8" font-size="15" fill="#1e40af" text-anchor="middle">L1 缓存 约 0.5 纳秒</text>
   <rect x="25" y="210" width="480" height="45" fill="#dbeafe" stroke="#3b82f6"/>
-  <text x="265.0" y="237.8" font-size="15" fill="#1e40af" text-anchor="middle">L2 缓存 约 200 纳秒</text>
+  <text x="265.0" y="237.8" font-size="15" fill="#1e40af" text-anchor="middle">L2 缓存 约 7 纳秒（14 倍 L1）</text>
   <rect x="25" y="280" width="620" height="45" fill="#dbeafe" stroke="#3b82f6"/>
-  <text x="335.0" y="307.8" font-size="15" fill="#1e40af" text-anchor="middle">DRAM 更慢，但容量大得多</text>
+  <text x="335.0" y="307.8" font-size="15" fill="#1e40af" text-anchor="middle">DRAM 比 L2 慢约 20 倍（比 L1 慢约 200 倍）</text>
 </svg>
