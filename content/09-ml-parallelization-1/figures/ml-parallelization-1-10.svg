@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 816 312.0" width="816" height="312.0"
      role="img" aria-labelledby="fig-ml-parallelization-1-10-title fig-ml-parallelization-1-10-desc">
   <title id="fig-ml-parallelization-1-10-title">同一口径下的通信量：朴素带 N 的平方，其余带 N</title>
-  <desc id="fig-ml-parallelization-1-10-desc">课件把参数服务器与四种 AllReduce 做法（朴素、环形、树形、蝶形）共五列放在一页上比较。这里统一用全体合计口径：朴素是 N(N−1)M，环形是 2MN，树形是 2NM，蝶形是 NM 乘 log N。换成每个工人口径后，环形的约 2M 才与工人数无关。</desc>
+  <desc id="fig-ml-parallelization-1-10-desc">课件把参数服务器与四种 AllReduce 做法（朴素、环形、树形、蝶形）共五列放在一页上比较。这里统一用全体合计口径：朴素是 N(N−1)M，环形是 2MN，树形是 2NM，蝶形是 NM 乘 log N。换成每个工人口径后，环形的约 2M 才几乎不随工人数变化。</desc>
 
   <defs>
     <style>
@@ -32,5 +32,5 @@
   <text x="704.0" y="185.7" font-size="12" fill="#b45309" text-anchor="middle">NM 乘 log N</text>
   <rect x="25" y="234" width="770" height="68" fill="#f3e8ff" stroke="#a855f7"/>
   <text x="410.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">差别在幂次：朴素带 N 的平方，其余带 N</text>
-  <text x="410.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">换成每个工人口径，环形的约 2M 才与工人数无关</text>
+  <text x="410.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">换成每个工人口径，环形的约 2M 才几乎不随工人数变化</text>
 </svg>

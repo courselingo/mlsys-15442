@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 762 312.0" width="762" height="312.0"
      role="img" aria-labelledby="fig-memory-optimization-9-title fig-memory-optimization-9-desc">
   <title id="fig-memory-optimization-9-title">allgather：把自己那一片发给所有人</title>
-  <desc id="fig-memory-optimization-9-desc">后半场沿同一个环继续走 N 轮，每台设备把自己负责的那一片传出去，走完之后所有设备都拿到了完整结果。</desc>
+  <desc id="fig-memory-optimization-9-desc">后半场沿同一个环继续走 N−1 轮，每台设备把自己负责的那一片传出去，走完之后所有设备都拿到了完整结果。</desc>
 
   <defs>
     <style>
@@ -26,5 +26,5 @@
   <text x="563.0" y="185.7" font-size="12" fill="#166534" text-anchor="middle">每台设备都有了完整结果</text>
   <rect x="25" y="234" width="716" height="68" fill="#f3e8ff" stroke="#a855f7"/>
   <text x="383.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">课件在这里问了一句：这个过程的复杂度是多少</text>
-  <text x="383.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">这一步走 N 轮，每轮一片 M/N，每台设备收发约 M</text>
+  <text x="383.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">这一步走 N−1 轮，每轮一片 M/N，每台设备收发约 M</text>
 </svg>

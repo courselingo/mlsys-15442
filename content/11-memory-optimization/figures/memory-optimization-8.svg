@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 782 312.0" width="782" height="312.0"
      role="img" aria-labelledby="fig-memory-optimization-8-title fig-memory-optimization-8-desc">
   <title id="fig-memory-optimization-8-title">reduce_scatter：一圈走完，每人负责一片</title>
-  <desc id="fig-memory-optimization-8-desc">沿着环做流式聚合，每台设备把收到的片段加起来再传给下一个；走完 N 轮之后，每台设备手上恰好有一片已经聚合好的完整结果。</desc>
+  <desc id="fig-memory-optimization-8-desc">沿着环做流式聚合，每台设备把收到的片段加起来再传给下一个；走完 N−1 轮之后，每台设备手上恰好有一片已经聚合好的完整结果。</desc>
 
   <defs>
     <style>

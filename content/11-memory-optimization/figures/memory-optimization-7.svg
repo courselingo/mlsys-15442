@@ -25,6 +25,6 @@
   <text x="563.0" y="167.7" font-size="15" fill="#166534" text-anchor="middle">后半 allgather</text>
   <text x="563.0" y="185.7" font-size="12" fill="#166534" text-anchor="middle">把各片凑齐成完整结果</text>
   <rect x="25" y="234" width="760" height="68" fill="#f3e8ff" stroke="#a855f7"/>
-  <text x="405.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">两个半场在环形上各走 N 轮</text>
+  <text x="405.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">两个半场在环形上各走 N−1 轮</text>
   <text x="405.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">这是上一讲那个 2M 的另一种数法</text>
 </svg>
