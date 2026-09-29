@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 766 312.0" width="766" height="312.0"
+     role="img" aria-labelledby="fig-cuda-programming-2-9b-title fig-cuda-programming-2-9b-desc">
+  <title id="fig-cuda-programming-2-9b-title">第三段：把跨步索引换成顺序寻址</title>
+  <desc id="fig-cuda-programming-2-9b-desc">课件在这一簇里其实给了三段代码，第三段把步长改成从一半开始逐轮减半，并直接用线程下标取址；相邻线程这才真正访问相邻地址。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="766" height="312.0" fill="#ffffff"/>
+
+  <text x="385.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">第三段：把跨步索引换成顺序寻址</text>
+  <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">课件把这一段也标成 Version 2</text>
+  <rect x="25" y="138" width="340" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="195.0" y="167.7" font-size="15" fill="#b45309" text-anchor="middle">改了什么</text>
+  <text x="195.0" y="185.7" font-size="12" fill="#b45309" text-anchor="middle">反转循环，直接用线程下标取址</text>
+  <rect x="393" y="138" width="340" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.0" y="167.7" font-size="15" fill="#166534" text-anchor="middle">换来了什么</text>
+  <text x="563.0" y="185.7" font-size="12" fill="#166534" text-anchor="middle">相邻线程访问相邻地址</text>
+  <rect x="25" y="234" width="720" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="385.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">于是「消除发散」与「合并访存」是两步，不是一步</text>
+  <text x="385.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">前一步让 warp 内不再交替真假，后一步才让访存连续</text>
+</svg>

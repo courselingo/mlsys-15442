@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 810 244.0" width="810" height="244.0"
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 808 244.0" width="808" height="244.0"
      role="img" aria-labelledby="fig-cuda-programming-2-12-title fig-cuda-programming-2-12-desc">
-  <title id="fig-cuda-programming-2-12-title">课件最后收回来的四个优化要点</title>
-  <desc id="fig-cuda-programming-2-12-desc">相干 warp、合并访存、共享内存 bank 冲突、warp 级优化。四个词分别对应这一讲里出现过的四种损失，也对应后面调内核时的四类检查。</desc>
+  <title id="fig-cuda-programming-2-12-title">课件最后收回来的五个要点</title>
+  <desc id="fig-cuda-programming-2-12-desc">课件最后一页平级列了五项：相干 warp、合并访存、共享内存 bank 冲突、warp 级优化，以及张量核心。前四项各对应一种损失，第五项属于硬件单元。</desc>
 
   <defs>
     <style>
@@ -13,22 +13,25 @@
     </marker>
   </defs>
 
-  <rect x="2" y="13.0" width="810" height="244.0" fill="#ffffff"/>
+  <rect x="2" y="13.0" width="808" height="244.0" fill="#ffffff"/>
 
-  <text x="407.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">课件最后收回来的四个优化要点</text>
-  <rect x="25" y="70" width="170" height="68" fill="#d1fae5" stroke="#22c55e"/>
-  <text x="110.0" y="99.7" font-size="15" fill="#166534" text-anchor="middle">相干 warp</text>
-  <text x="110.0" y="117.7" font-size="12" fill="#166534" text-anchor="middle">先看这一条</text>
-  <rect x="223" y="70" width="170" height="68" fill="#d1fae5" stroke="#22c55e"/>
-  <text x="308.0" y="99.7" font-size="15" fill="#166534" text-anchor="middle">合并访存</text>
-  <text x="308.0" y="117.7" font-size="12" fill="#166534" text-anchor="middle">先看这一条</text>
-  <rect x="421" y="70" width="170" height="68" fill="#d1fae5" stroke="#22c55e"/>
-  <text x="506.0" y="99.7" font-size="15" fill="#166534" text-anchor="middle">bank 冲突</text>
-  <text x="506.0" y="117.7" font-size="12" fill="#166534" text-anchor="middle">先看这一条</text>
-  <rect x="619" y="70" width="170" height="68" fill="#d1fae5" stroke="#22c55e"/>
-  <text x="704.0" y="99.7" font-size="15" fill="#166534" text-anchor="middle">warp 级优化</text>
-  <text x="704.0" y="117.7" font-size="12" fill="#166534" text-anchor="middle">先看这一条</text>
-  <rect x="25" y="166" width="764" height="68" fill="#f3e8ff" stroke="#a855f7"/>
-  <text x="407.0" y="195.7" font-size="15" fill="#6b21a8" text-anchor="middle">四个要点，对应四种损失</text>
-  <text x="407.0" y="213.7" font-size="12" fill="#6b21a8" text-anchor="middle">同一时刻有线程空等、访存被打散、同一块内存反复冲突、warp 内步调不一</text>
+  <text x="406.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">课件最后收回来的五个要点</text>
+  <rect x="25" y="70" width="130" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="90.0" y="99.7" font-size="15" fill="#166534" text-anchor="middle">相干 warp</text>
+  <text x="90.0" y="117.7" font-size="12" fill="#166534" text-anchor="middle">平级的一项</text>
+  <rect x="183" y="70" width="130" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="248.0" y="99.7" font-size="15" fill="#166534" text-anchor="middle">合并访存</text>
+  <text x="248.0" y="117.7" font-size="12" fill="#166534" text-anchor="middle">平级的一项</text>
+  <rect x="341" y="70" width="130" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="406.0" y="99.7" font-size="15" fill="#166534" text-anchor="middle">bank 冲突</text>
+  <text x="406.0" y="117.7" font-size="12" fill="#166534" text-anchor="middle">平级的一项</text>
+  <rect x="499" y="70" width="130" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="564.0" y="99.7" font-size="15" fill="#166534" text-anchor="middle">warp 级优化</text>
+  <text x="564.0" y="117.7" font-size="12" fill="#166534" text-anchor="middle">平级的一项</text>
+  <rect x="657" y="70" width="130" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="722.0" y="99.7" font-size="15" fill="#166534" text-anchor="middle">张量核心</text>
+  <text x="722.0" y="117.7" font-size="12" fill="#166534" text-anchor="middle">平级的一项</text>
+  <rect x="25" y="166" width="718" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="384.0" y="195.7" font-size="15" fill="#6b21a8" text-anchor="middle">五项平级，其中四项对应四种损失</text>
+  <text x="384.0" y="213.7" font-size="12" fill="#6b21a8" text-anchor="middle">有线程空等、访存被打散、内存反复冲突、warp 内步调不一；第五项是硬件单元</text>
 </svg>
