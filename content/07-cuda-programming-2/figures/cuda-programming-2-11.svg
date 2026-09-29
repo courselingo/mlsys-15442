@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 746 323.0" width="746" height="323.0"
+     role="img" aria-labelledby="fig-cuda-programming-2-11-title fig-cuda-programming-2-11-desc">
+  <title id="fig-cuda-programming-2-11-title">回到两个版本：发散之外，还有访存是否连续</title>
+  <desc id="fig-cuda-programming-2-11-desc">版本一的交错寻址让相邻线程访问的位置隔得很远，访存是次优的；版本二的顺序寻址让相邻线程访问相邻位置，是完全合并的。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="746" height="323.0" fill="#ffffff"/>
+
+  <text x="375.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">回到两个版本：发散之外，还有访存是否连续</text>
+  <rect x="25" y="70" width="700" height="42" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="375.0" y="95.9" font-size="14" fill="#9d174d" text-anchor="middle">版本一 交错寻址：访存次优</text>
+  <rect x="25" y="137" width="700" height="42" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="375.0" y="162.9" font-size="14" fill="#9d174d" text-anchor="middle">相邻线程访问的位置隔得很远</text>
+  <rect x="25" y="204" width="700" height="42" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="375.0" y="229.9" font-size="14" fill="#166534" text-anchor="middle">版本二 顺序寻址：完全合并</text>
+  <rect x="25" y="271" width="700" height="42" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="375.0" y="296.9" font-size="14" fill="#166534" text-anchor="middle">相邻线程访问相邻位置</text>
+</svg>

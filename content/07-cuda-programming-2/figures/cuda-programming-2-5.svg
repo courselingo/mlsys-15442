@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 777 312.0" width="777" height="312.0"
+     role="img" aria-labelledby="fig-cuda-programming-2-5-title fig-cuda-programming-2-5-desc">
+  <title id="fig-cuda-programming-2-5-title">案例二：并行归约，很多算子的公共步骤</title>
+  <desc id="fig-cuda-programming-2-5-desc">归约是把一批数压成一个数。归一化与 softmax 都要先做这件事，课件说它是很多机器学习系统算子的公共原语；块内用树形做法，每一步把规模减半。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="777" height="312.0" fill="#ffffff"/>
+
+  <text x="390.5" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">案例二：并行归约，很多算子的公共步骤</text>
+  <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">归约：把一个数组压成一个数</text>
+  <rect x="25" y="138" width="225" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="137.5" y="167.7" font-size="15" fill="#1e40af" text-anchor="middle">归一化要用</text>
+  <text x="137.5" y="185.7" font-size="12" fill="#1e40af" text-anchor="middle">先求均值与方差</text>
+  <rect x="278" y="138" width="225" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="390.5" y="167.7" font-size="15" fill="#b45309" text-anchor="middle">softmax 要用</text>
+  <text x="390.5" y="185.7" font-size="12" fill="#b45309" text-anchor="middle">先求指数和</text>
+  <rect x="531" y="138" width="225" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="643.5" y="167.7" font-size="15" fill="#166534" text-anchor="middle">求最值也要用</text>
+  <text x="643.5" y="185.7" font-size="12" fill="#166534" text-anchor="middle">先扫一遍</text>
+  <rect x="25" y="234" width="700" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="375.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">块内用树形做法</text>
+  <text x="375.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">每一步把参与的数减半</text>
+</svg>

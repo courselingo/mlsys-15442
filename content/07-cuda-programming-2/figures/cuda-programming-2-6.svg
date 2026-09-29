@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 714 244.0" width="714" height="244.0"
+     role="img" aria-labelledby="fig-cuda-programming-2-6-title fig-cuda-programming-2-6-desc">
+  <title id="fig-cuda-programming-2-6-title">归约的难点不在算法，在 CUDA 没有全局同步</title>
+  <desc id="fig-cuda-programming-2-6-desc">线程块可以任意顺序执行，块与块之间不能同步。课件解释了为什么不做：硬件成本高，而且块数超过同时能驻留的块数时可能死锁。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="714" height="244.0" fill="#ffffff"/>
+
+  <text x="359.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">归约的难点不在算法，在 CUDA 没有全局同步</text>
+  <rect x="25" y="70" width="300" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="175.0" y="99.7" font-size="15" fill="#9d174d" text-anchor="middle">问题</text>
+  <text x="175.0" y="117.7" font-size="12" fill="#9d174d" text-anchor="middle">块与块之间不能同步</text>
+  <rect x="25" y="163" width="300" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="175.0" y="192.7" font-size="15" fill="#9d174d" text-anchor="middle">为什么不做</text>
+  <text x="175.0" y="210.7" font-size="12" fill="#9d174d" text-anchor="middle">硬件成本高</text>
+  <rect x="353" y="70" width="340" height="164" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="523.0" y="138.7" font-size="15" fill="#6b21a8" text-anchor="middle">死锁什么时候发生</text>
+  <text x="523.0" y="156.7" font-size="12" fill="#6b21a8" text-anchor="middle">块数超过同时能驻留的块数</text>
+  <text x="523.0" y="174.7" font-size="12" fill="#6b21a8" text-anchor="middle">先开始的块在等后开始的块</text>
+</svg>

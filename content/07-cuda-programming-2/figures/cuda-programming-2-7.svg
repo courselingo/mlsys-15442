@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 806 312.0" width="806" height="312.0"
+     role="img" aria-labelledby="fig-cuda-programming-2-7-title fig-cuda-programming-2-7-desc">
+  <title id="fig-cuda-programming-2-7-title">解法：把计算拆成多次内核启动</title>
+  <desc id="fig-cuda-programming-2-7-desc">既然块之间不能同步，那就用内核启动本身当同步点；课件指出内核启动的软硬件开销都很低，所以这样做是划算的，而且每一级的代码是同一份。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="806" height="312.0" fill="#ffffff"/>
+
+  <text x="405.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">解法：把计算拆成多次内核启动</text>
+  <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">解法：拆成多次内核启动</text>
+  <rect x="25" y="138" width="340" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="195.0" y="167.7" font-size="15" fill="#1e40af" text-anchor="middle">分几级</text>
+  <text x="195.0" y="185.7" font-size="12" fill="#1e40af" text-anchor="middle">每一级处理上一层的结果</text>
+  <rect x="393" y="138" width="340" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.0" y="167.7" font-size="15" fill="#b45309" text-anchor="middle">每一级的代码相同</text>
+  <text x="563.0" y="185.7" font-size="12" fill="#b45309" text-anchor="middle">只是数据规模变小</text>
+  <rect x="25" y="234" width="760" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="405.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">内核启动本身就是一个全局同步点</text>
+  <text x="405.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">课件说它的软硬件开销都很低，所以可以这么用</text>
+</svg>

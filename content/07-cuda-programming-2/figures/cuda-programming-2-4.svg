@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 646 323.0" width="646" height="323.0"
+     role="img" aria-labelledby="fig-cuda-programming-2-4-title fig-cuda-programming-2-4-desc">
+  <title id="fig-cuda-programming-2-4-title">块里的数据由块内线程一起搬</title>
+  <desc id="fig-cuda-programming-2-4-desc">一个线程搬一整块太慢，做法是把这一块均分给块内所有线程，各搬一份；搬完必须同步一次，否则会有线程读到还没写好的数据。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="646" height="323.0" fill="#ffffff"/>
+
+  <text x="325.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">块里的数据由块内线程一起搬</text>
+  <rect x="25" y="70" width="600" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="325.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">为什么要协作加载</text>
+  <rect x="25" y="137" width="600" height="42" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="325.0" y="162.9" font-size="14" fill="#9d174d" text-anchor="middle">一个线程搬一整块，要搬很久</text>
+  <rect x="25" y="204" width="600" height="42" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="325.0" y="229.9" font-size="14" fill="#b45309" text-anchor="middle">做法：把这一块均分给块内所有线程</text>
+  <rect x="25" y="271" width="600" height="42" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="325.0" y="296.9" font-size="14" fill="#166534" text-anchor="middle">搬完同步一次，再开始算</text>
+</svg>

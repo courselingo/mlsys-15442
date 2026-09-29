@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 714 334.0" width="714" height="334.0"
+     role="img" aria-labelledby="fig-cuda-programming-2-2-title fig-cuda-programming-2-2-desc">
+  <title id="fig-cuda-programming-2-2-title">优化一：让一个线程一次算一小块</title>
+  <desc id="fig-cuda-programming-2-2-desc">把每个线程负责的输出从「一个元素」改成「一个 V 乘 V 的小方阵」；读进来的数据因此被复用 V 次，代价是每个线程要占更多寄存器。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="714" height="334.0" fill="#ffffff"/>
+
+  <text x="359.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">优化一：让一个线程一次算一小块</text>
+  <rect x="25" y="70" width="300" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="175.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">改法</text>
+  <text x="175.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">一个线程算 V×V 的一小块</text>
+  <rect x="25" y="163" width="300" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="175.0" y="192.7" font-size="15" fill="#166534" text-anchor="middle">收益</text>
+  <text x="175.0" y="210.7" font-size="12" fill="#166534" text-anchor="middle">读进来的数据被复用 V 次</text>
+  <rect x="25" y="256" width="300" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="175.0" y="285.7" font-size="15" fill="#9d174d" text-anchor="middle">代价</text>
+  <text x="175.0" y="303.7" font-size="12" fill="#9d174d" text-anchor="middle">每个线程要更多寄存器</text>
+  <rect x="353" y="70" width="340" height="164" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="523.0" y="138.7" font-size="15" fill="#6b21a8" text-anchor="middle">为什么这样能省</text>
+  <text x="523.0" y="156.7" font-size="12" fill="#6b21a8" text-anchor="middle">一次读入的 a 与 b</text>
+  <text x="523.0" y="174.7" font-size="12" fill="#6b21a8" text-anchor="middle">在寄存器里被反复用来做乘加</text>
+</svg>

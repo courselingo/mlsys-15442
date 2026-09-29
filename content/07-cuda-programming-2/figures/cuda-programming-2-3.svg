@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 -1.0 758 376.0" width="758" height="376.0"
+     role="img" aria-labelledby="fig-cuda-programming-2-3-title fig-cuda-programming-2-3-desc">
+  <title id="fig-cuda-programming-2-3-title">优化二：再把块搬到共享内存，两层分块叠起来</title>
+  <desc id="fig-cuda-programming-2-3-desc">外层把 A 与 B 的一块搬进共享内存，内层让块内每个线程用自己的寄存器再算一个小方阵；两级叠起来，全局内存的读取次数才真正降下来。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="-1.0" width="758" height="376.0" fill="#ffffff"/>
+
+  <text x="381.0" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">优化二：再把块搬到共享内存，两层分块叠起来</text>
+  <rect x="25" y="56" width="712" height="200" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-dasharray="6,4"/>
+  <text x="38" y="73.85" font-size="11" fill="#64748b">两级分块</text>
+  <rect x="45" y="95" width="672" height="56" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="381.0" y="127.9" font-size="14" fill="#b45309" text-anchor="middle">外层：把 A 与 B 的一块搬进共享内存</text>
+  <rect x="45" y="176" width="672" height="56" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="381.0" y="208.9" font-size="14" fill="#b45309" text-anchor="middle">内层：块内每个线程再算自己的小方阵</text>
+  <rect x="25" y="284" width="712" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="381.0" y="313.7" font-size="15" fill="#166534" text-anchor="middle">两级叠起来，全局内存的读取次数才降下来</text>
+  <text x="381.0" y="331.7" font-size="12" fill="#166534" text-anchor="middle">只做一层，数据还是要反复从全局内存取</text>
+</svg>
