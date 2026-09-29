@@ -220,16 +220,25 @@ def audit(path: Path, root: Path, systems: list[str] | None = None,
             )
 
     # ---- D. 图的上下文（引出句 + 解读句） ----
-    for m in imgs:
+    # ★★ 解读句必须**限定距离**（2026-09-29 修，由 cs168 作者用证据指出）
+    #   旧判据只看「图片之后下一个非空行」⇒ 删掉解读句后，「下一个非空行」是**后面的正文**
+    #   ⇒ 它照样通过 ⇒ 只在「图片后紧跟标题或文档结尾」时才报（= 各讲最后一张图）。
+    #   实测：临时删掉某页第一张图后的解读句，旧判据报 `ERROR 0 / WARN 0`。
+    #   新判据：图片行之后，到**下一个 `##` 标题或下一张图**之间的汉字数 < 6 ⇒ 报。
+    for _i, m in enumerate(imgs):
         before = body[: m.start()].rstrip()
-        after = body[m.end():].lstrip()
         before_line = before.split("\n")[-1].strip() if before else ""
-        after_line = after.split("\n")[0].strip() if after else ""
         name = m.group(1).split("/")[-1]
         if len(CJK.findall(before_line)) < 6 and not before_line.startswith("|"):
             warns.append(f"[图无引出] {name} 前面没有一句正文承接")
-        if len(CJK.findall(after_line)) < 6:
-            warns.append(f"[图无解读] {name} 后面没有一句正文解读")
+        # 解读句的**窗口**：本图结尾 → 下一个 ## 标题 或 下一张图（取较近者）
+        _seg_end = imgs[_i + 1].start() if _i + 1 < len(imgs) else len(body)
+        _nxt_h2 = re.search(r"^##\s+", body[m.end(): _seg_end], re.M)
+        if _nxt_h2:
+            _seg_end = m.end() + _nxt_h2.start()
+        _win = body[m.end(): _seg_end]
+        if len(CJK.findall(_win)) < 6:
+            warns.append(f"[图无解读] {name} 后面到下一节之间没有一句正文解读")
 
     # ---- E. 句子长度（可读性） ----
     ss = sentences(body)
