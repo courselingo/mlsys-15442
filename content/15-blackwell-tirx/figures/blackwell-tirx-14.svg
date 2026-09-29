@@ -22,8 +22,8 @@
   <text x="195.0" y="167.7" font-size="15" fill="#1e40af" text-anchor="middle">四步主要改动</text>
   <text x="195.0" y="185.7" font-size="12" fill="#1e40af" text-anchor="middle">TMA、张量内存、warp 专用化、双 SM 簇</text>
   <rect x="393" y="138" width="340" height="68" fill="#d1fae5" stroke="#22c55e"/>
-  <text x="563.0" y="167.7" font-size="15" fill="#166534" text-anchor="middle">最后一步的目标</text>
-  <text x="563.0" y="185.7" font-size="12" fill="#166534" text-anchor="middle">对齐 cuBLAS</text>
+  <text x="563.0" y="167.7" font-size="15" fill="#166534" text-anchor="middle">第 9 步的目标</text>
+  <text x="563.0" y="185.7" font-size="12" fill="#166534" text-anchor="middle">对齐 cuBLAS（不是第十步）</text>
   <rect x="25" y="234" width="830" height="68" fill="#f3e8ff" stroke="#a855f7"/>
   <text x="440.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">课件的下一步是让读者自己按十步走一遍</text>
   <text x="440.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">每一步都留了可运行的版本</text>

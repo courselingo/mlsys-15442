@@ -23,7 +23,7 @@
   <text x="195.0" y="185.7" font-size="12" fill="#9d174d" text-anchor="middle">加载与计算串行，硬件约一半时间空闲</text>
   <rect x="393" y="138" width="340" height="68" fill="#d1fae5" stroke="#22c55e"/>
   <text x="563.0" y="167.7" font-size="15" fill="#166534" text-anchor="middle">改之后</text>
-  <text x="563.0" y="185.7" font-size="12" fill="#166534" text-anchor="middle">TMA、矩阵乘、写回各由一组 warp 负责</text>
+  <text x="563.0" y="185.7" font-size="12" fill="#166534" text-anchor="middle">两个 warpgroup、三个 warp 分工</text>
   <rect x="25" y="234" width="810" height="68" fill="#f3e8ff" stroke="#a855f7"/>
   <text x="430.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">课件还列了四组屏障的职责</text>
   <text x="430.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">数据就绪、缓冲可复用、累加完成、读走完成，各由一种屏障承担</text>

@@ -26,5 +26,5 @@
   <text x="563.0" y="185.7" font-size="12" fill="#b45309" text-anchor="middle">N 四档，结果落在张量内存</text>
   <rect x="25" y="234" width="730" height="68" fill="#f3e8ff" stroke="#a855f7"/>
   <text x="390.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">张量内存要用 tmem.alloc 申请</text>
-  <text x="390.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">它解决的是寄存器压力问题，这一点在第 14 步的收益里会再提一次</text>
+  <text x="390.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">它解决的是寄存器压力问题，图 14 会再提一次</text>
 </svg>
