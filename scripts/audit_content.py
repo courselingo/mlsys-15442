@@ -82,11 +82,26 @@ def load_audit_config(root: Path) -> dict:
         return {}
 
 
-def systems_for(root: Path) -> tuple[list[str], int]:
+def systems_for(root: Path) -> tuple[list[str], list[str], int]:
+    """返回 (整个池, **本课追加的那部分**, 下限)。
+
+    ★ 为什么要把 `extra` 单独返回（2026-09-29 第 82 轮修，附录七十九）：
+    ```
+    原先是 `return DEFAULT_SYSTEMS + extra, minimum` —— 于是「本课追加」那一部分
+    **在调用点就被拼进整个池、再也分不出来** ⇒ 报错信息里能打印的只有整个池，
+    而整个池的**前 16 个全是 `DEFAULT_SYSTEMS` 的成员**（GFS/MapReduce/Raft/…）
+    ⇒ 于是四门课的作者看到的「池内前若干个」**都是 cs168 的那一份**。
+    ★ 一位作者的实验（不是判断）：按报错里那个池在页内检索命中 0 个，
+      而按 `course.toml` 的池命中 `TCP`；他按本课的池补了 IP/Linux/Wireshark/RFC 之后
+      那一讲从 ⚠️ 变成 ✅ ⇒ **计数一直在读本课的池，只有提示行指错。**
+    ⇒ 而这已经是我在同一个地方的第 **三** 次尝试：
+      前两次我改的都是「打印哪个变量」，而**没有查「那个变量装的是什么」**。
+    ```
+    """
     c = load_audit_config(root)
     extra = [str(x) for x in (c.get("named_systems") or [])]
     minimum = int(c.get("named_systems_min", MIN_NAMED_SYSTEMS))
-    return DEFAULT_SYSTEMS + extra, minimum
+    return DEFAULT_SYSTEMS + extra, extra, minimum
 
 
 def force_utf8() -> None:
@@ -111,8 +126,13 @@ def sentences(body: str) -> list[str]:
 
 
 def audit(path: Path, root: Path, systems: list[str] | None = None,
-          named_min: int = MIN_NAMED_SYSTEMS) -> tuple[list[str], list[str]]:
-    """返回 (errors, warnings)。"""
+          named_min: int = MIN_NAMED_SYSTEMS,
+          course_systems: list[str] | None = None) -> tuple[list[str], list[str]]:
+    """返回 (errors, warnings)。
+
+    `course_systems` = **本课在 `course.toml` 里追加的那部分**（不含 `DEFAULT_SYSTEMS`）。
+    ★ 它只用于**报错信息**：告诉作者「本课该点名哪些」（2026-09-29 第 82 轮修，附录七十九）。
+    """
     raw = path.read_text(encoding="utf-8")
     body = strip_fm(raw)
     rel = path.relative_to(root).as_posix()
@@ -285,18 +305,25 @@ def audit(path: Path, root: Path, systems: list[str] | None = None,
         #   一位作者补了七个**真实芯片名**（POWER6/Denver/ROCK/…）而计数仍是 2 ——
         #   因为判据数的是「命中 course.toml 的 named_systems 池几个」，
         #   不是「点了多少专有名词」。⇒ 把池子写进报错里，作者就不必去读源码。
-        # ★ 打印**本课**的池子，而不是那份默认池（2026-09-29 修）
-        #   起因：我上一版只打印 DEFAULT_SYSTEMS，而那是 cs168 的池子
-        #   ⇒ 对另外四门课的作者，那条提示**指向错误的池子**（比不说更糟）。
-        # ★★ 而这一行原先写的是 `extra` —— 那个名字**不在本函数作用域里**
-        #   （形参叫 `systems`，局部量叫 `pool`）⇒ 任何「点名不足」的页面都会
-        #   `NameError` 让整道闸门崩掉，而崩掉就报不出这条警告（附录七十五）。
-        _pool_show = "/".join(str(x) for x in ((systems or DEFAULT_SYSTEMS)[:16]))
+        # ★ 打印**本课在 course.toml 里追加的那部分**，而不是整个拼接池（2026-09-29 第 82 轮修）
+        #   起因：`systems_for()` 返回的是 `DEFAULT_SYSTEMS + extra`，而**默认池排在前面**
+        #   ⇒ 打印 `systems[:16]` 得到的是 `GFS/MapReduce/Raft/Paxos/ZooKeeper/…`
+        #     —— **那是 cs168 的那一份**，而四门课的作者看到的都是它。
+        #   ★ 一位作者的实验（不是判断）：按报错里那个池在页内检索**命中 0 个**，
+        #     而按 `course.toml` 的池命中 `TCP`；他按本课的池补了 IP/Linux/Wireshark/RFC 之后
+        #     那一讲从 ⚠️ 变成 ✅ ⇒ **计数一直在读本课的池，只有这一行指错。**
+        #   ★★ 而这是我在同一个地方的第 **三** 次：前两次我改的都是「打印哪个变量」，
+        #     而**没有查「那个变量装的是什么」**（附录七十九）。
+        _course = course_systems or []
+        _pool_show = "/".join(str(x) for x in _course[:16]) if _course else \
+            "/".join(str(x) for x in DEFAULT_SYSTEMS[:14])
+        _pool_label = "本课在 course.toml 里登记的池" if _course else \
+            "内置默认池（本课的 course.toml 没有登记 named_systems）"
         warns.append(
             f"[点名不足] 只点到 {named} 个具体对象（建议 ≥{named_min}）"
             f" —— ★ 它数的是命中**池**里几个，不是「点了多少专有名词」；"
             f"补真实但不在池里的名字（如 POWER6/Denver）**一个都不算**。"
-            f"池内前若干个：{_pool_show} …"
+            f"{_pool_label}里有：{_pool_show} …"
             f"（完整池见 course.toml 的 named_systems；修法是自然地提到池内成员）"
         )
 
@@ -393,9 +420,9 @@ def main(argv: list[str] | None = None) -> int:
     print(f"内容审计：{len(files)} 篇")
     corpus_errs, corpus_warns = audit_layouts(root)
     n_err = n_warn = 0
-    pool, named_min = systems_for(root)
+    pool, course_pool, named_min = systems_for(root)
     for f in files:
-        errs, warns = audit(f, root, pool, named_min)
+        errs, warns = audit(f, root, pool, named_min, course_pool)
         rel = f.relative_to(root).as_posix()
         n_err += len(errs)
         n_warn += len(warns)
