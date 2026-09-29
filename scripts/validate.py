@@ -581,6 +581,8 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="CourseLingo 课程内容校验器")
     parser.add_argument("--root", default=".", help="课程仓库根目录（默认当前目录）")
     parser.add_argument("--quiet", action="store_true", help="只输出问题与结论")
+    parser.add_argument("--strict", action="store_true",
+                        help="警告也影响退出码（默认只看错误）")
     args = parser.parse_args(argv)
 
     root = Path(args.root).resolve()
@@ -694,7 +696,11 @@ def main(argv: list[str] | None = None) -> int:
                 )
     print(f"结果：{len(rep.errors)} 个错误，{len(rep.warns)} 个警告")
 
-    if rep.errors:
+    # ★ --strict：让**警告也影响退出码**（2026-09-29 加，起因见 quality-audit 附录五十七）
+    #   此前是 `if rep.errors: return 1` —— **警告完全不参与退出码**，
+    #   于是「退出码全 0」不等于「0 错误 0 警告」（实测：0 错误 8 警告 ⇒ exit=0）。
+    #   ⇒ 那让「六道全 0」这句话在报告里**吞掉**了全部警告。
+    if rep.errors or (getattr(args, "strict", False) and rep.warns):
         print("校验失败。授权与术语问题请勿绕过 —— 见 docs/content-policy.md")
         return 1
     print("校验通过 ✅")
