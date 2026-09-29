@@ -223,6 +223,10 @@ output_mode = "explanation"
 6. PagedAttention 从操作系统借了什么想法，它成立靠的是注意力的哪条性质。
 7. RadixAttention 用基数树解决了什么问题，为什么前缀能在树上被复用。
 
+## 脉络回顾
+
+训练那一侧的问题在前十几讲里基本处理完了，剩下的一半是模型训好之后同时被很多人使用。这一场景里最稀缺的资源是显存里的键值缓存，因为它在生成过程中一直长大，而会长到多大事先并不知道，按最大长度预留就等于把大部分显存空占着。转折在于解法不用自己发明，把操作系统那一套搬过来就够：分页让逻辑上的连续与物理上的连续分开，显存可以按需一块块给；前缀相同的请求在树上走同一条路径，那段键值只算一次。两件事的收益都来自不再按最坏情况预留。第 16 讲接着问解码本身为什么慢，第 17 讲则要点出提示变长在推理侧就是这块缓存变长。
+
 ## 溯源
 
 - 对应：CMU 15-442 / 15-642 Machine Learning Systems，LLM Serving Techniques Part 1: Continuous Batching, PagedAttention, RadixAttention（Tianqi Chen、Zhihao Jia 主讲）。
