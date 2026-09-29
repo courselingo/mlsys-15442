@@ -6,25 +6,25 @@
 # 命中每一段英文缩写，制造大量假警告。
 
 [[term]]
-key = "machine learning system"
+key = "machine-learning-system"
 zh = "机器学习系统"
 en = "machine learning system"
 note = "把模型、数据、算力放在一起看的那一层；关心的不是某个算法准不准，而是整条链路跑不跑得起来"
 
 [[term]]
-key = "automatic differentiation"
+key = "automatic-differentiation"
 zh = "自动微分"
 en = "automatic differentiation"
 note = "由程序结构本身推导梯度，而不是手写求导公式"
 
 [[term]]
-key = "computational graph"
+key = "computational-graph"
 zh = "计算图"
 en = "computational graph"
 note = "把计算表示成有向图，节点是算子、边是张量，反向传播沿图反向走"
 
 [[term]]
-key = "ml framework"
+key = "ml-framework"
 zh = "机器学习框架"
 en = "ML framework"
 note = "把算子、张量、自动微分与硬件调度包成一套接口的软件层，例如 PyTorch"
@@ -42,25 +42,25 @@ en = "compute"
 note = "单位时间能做多少次浮点运算；在 ML 系统里它和内存带宽是两个不同的瓶颈"
 
 [[term]]
-key = "hardware accelerator"
+key = "hardware-accelerator"
 zh = "硬件加速器"
 en = "hardware accelerator"
 note = "为特定计算模式特化的芯片，例如 GPU 与 TPU；换硬件常常比改模型更有效"
 
 [[term]]
-key = "tensor core"
+key = "tensor-core"
 zh = "张量核心"
 en = "Tensor Core"
 note = "GPU 上专门做小矩阵乘加的电路单元，是 2016 年后算力曲线抬头的直接原因"
 
 [[term]]
-key = "convolutional neural network"
+key = "convolutional-neural-network"
 zh = "卷积神经网络"
 en = "convolutional neural network"
 note = "用滑窗卷积提取局部特征的网络；AlexNet 就是它把 ImageNet 分类误差砍下来的"
 
 [[term]]
-key = "gradient descent"
+key = "gradient-descent"
 zh = "梯度下降"
 en = "gradient descent"
 note = "沿损失函数的负梯度方向更新参数；它的每一步都要求一次完整的反向传播"
@@ -72,13 +72,13 @@ en = "pruning"
 note = "把模型里贡献小的权重或通道去掉，用更少的计算换同一档准确率"
 
 [[term]]
-key = "knowledge distillation"
+key = "knowledge-distillation"
 zh = "知识蒸馏"
 en = "knowledge distillation"
 note = "让一个小模型去模仿大模型的输出分布，把大模型的能力压进小模型"
 
 [[term]]
-key = "inference engine"
+key = "inference-engine"
 zh = "推理引擎"
 en = "inference engine"
 note = "专门负责把训好的模型跑快的那一层：算子融合、内存复用、批处理调度都在这里"
@@ -102,7 +102,7 @@ en = "end-to-end"
 note = "把整条链路当成一个整体来优化，而不是逐段各自调到最好"
 
 [[term]]
-key = "data parallelism"
+key = "data-parallelism"
 zh = "数据并行"
 en = "data parallelism"
 note = "把同一份模型复制到多个设备，各自处理不同的数据分片"
@@ -114,7 +114,7 @@ en = "Zero Redundancy Optimizer"
 note = "把优化器状态、梯度、参数分片存放，消除数据并行中的冗余副本"
 
 [[term]]
-key = "KV cache"
+key = "KV-cache"
 zh = "KV 缓存"
 en = "KV cache"
 note = "自回归生成时缓存已算过的键值对，避免每步重算整个前缀"

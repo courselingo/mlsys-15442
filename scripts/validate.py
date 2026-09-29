@@ -675,6 +675,23 @@ def main(argv: list[str] | None = None) -> int:
         print(f"{icon} [{where}] {msg}")
 
     print("-" * 68)
+    # ★★ 术语键不得含空格（2026-09-29 加；起因见 quality-audit 附录四十八）
+    #   glossary.toml 里曾有 9 个 `key = "含 空格"`，而 [[term:xxx]] 只接受 [A-Za-z0-9_.-]
+    #   ⇒ 照抄 glossary 的键必然产生非法标记，而那种键**永远无法被引用**
+    #   ⇒ 所以在这里直接拦掉：**让这类键写不出来**（附录二十六）。
+    for _g in sorted(root.rglob("glossary.toml")):
+        try:
+            _txt = _g.read_text(encoding="utf-8")
+        except Exception:
+            continue
+        for _m in re.finditer(r'^\s*key\s*=\s*"([^"]*)"', _txt, re.M):
+            _k = _m.group(1)
+            if _k and not re.fullmatch(r"[A-Za-z0-9_.\-]+", _k):
+                rep.error(
+                    "glossary.toml",
+                    f"术语键非法：「{_k}」含 [[term:]] 无法表达的字符"
+                    f"（只允许字母/数字/_ . -）—— 这种键**永远引用不了**，请改成连字符形式",
+                )
     print(f"结果：{len(rep.errors)} 个错误，{len(rep.warns)} 个警告")
 
     if rep.errors:
