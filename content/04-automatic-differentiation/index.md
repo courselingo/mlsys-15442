@@ -75,7 +75,7 @@ output_mode = "explanation"
 
 要讲清楚第三条路，得先有一张图。课件在这里回顾了 [[term:computational-graph]]。
 
-![左列按拓扑序排出输入、两个中间变量与输出，右边一条说清节点与边的含义](figures/automatic-differentiation-5.svg)
+![中间一列按拓扑序排出输入、两个中间变量与输出，下面一条说清节点与边的含义](figures/automatic-differentiation-5.svg)
 
 节点是一次具体的计算，边表示谁的结果被谁用到。任何一个程序只要能写成这样一张图，求导就变成了在图上的一个机械过程：对每个节点，只需要知道它的局部导数，也就是输出随输入怎么变。
 
