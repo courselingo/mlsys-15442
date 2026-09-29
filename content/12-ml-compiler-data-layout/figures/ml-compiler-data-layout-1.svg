@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 746 244.0" width="746" height="244.0"
+     role="img" aria-labelledby="fig-ml-compiler-data-layout-1-title fig-ml-compiler-data-layout-1-desc">
+  <title id="fig-ml-compiler-data-layout-1-title">这一讲按「数据放在哪」分三层讲</title>
+  <desc id="fig-ml-compiler-data-layout-1-desc">课件的大纲是三条：分块与线程布局、分布式布局、swizzle 布局。前两条管数据放在哪一块存储、哪一块设备，第三条管同一块存储内部怎么摆才不打架。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="746" height="244.0" fill="#ffffff"/>
+
+  <text x="375.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">这一讲按「数据放在哪」分三层讲</text>
+  <rect x="25" y="70" width="210" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="130.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">分块与线程布局</text>
+  <text x="130.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">放在哪一级存储</text>
+  <rect x="263" y="70" width="210" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="368.0" y="99.7" font-size="15" fill="#b45309" text-anchor="middle">分布式布局</text>
+  <text x="368.0" y="117.7" font-size="12" fill="#b45309" text-anchor="middle">放在哪一块设备</text>
+  <rect x="501" y="70" width="210" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="606.0" y="99.7" font-size="15" fill="#166534" text-anchor="middle">swizzle 布局</text>
+  <text x="606.0" y="117.7" font-size="12" fill="#166534" text-anchor="middle">同一块存储里怎么摆</text>
+  <rect x="25" y="166" width="700" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="375.0" y="195.7" font-size="15" fill="#6b21a8" text-anchor="middle">三层问的其实是同一个问题</text>
+  <text x="375.0" y="213.7" font-size="12" fill="#6b21a8" text-anchor="middle">一个逻辑下标，最后落在哪里</text>
+</svg>

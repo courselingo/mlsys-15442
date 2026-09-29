@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 836 312.0" width="836" height="312.0"
+     role="img" aria-labelledby="fig-ml-compiler-data-layout-10-title fig-ml-compiler-data-layout-10-desc">
+  <title id="fig-ml-compiler-data-layout-10-title">一次冲突的例子：跨步访问</title>
+  <desc id="fig-ml-compiler-data-layout-10-desc">课件用四个 bank 举例：依次读地址 0、1、2、3 时，四次访问落在四个不同的 bank 上，可以并行；而读 0、4、8、12 时，四次都落在同一个 bank 上，只能排队。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="836" height="312.0" fill="#ffffff"/>
+
+  <text x="420.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">一次冲突的例子：跨步访问</text>
+  <rect x="25" y="70" width="760" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="405.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">同样是四次访问，结果差很多</text>
+  <rect x="25" y="138" width="360" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="205.0" y="167.7" font-size="15" fill="#166534" text-anchor="middle">读 0、1、2、3</text>
+  <text x="205.0" y="185.7" font-size="12" fill="#166534" text-anchor="middle">落在四个不同 bank，可并行</text>
+  <rect x="413" y="138" width="360" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="593.0" y="167.7" font-size="15" fill="#9d174d" text-anchor="middle">读 0、4、8、12</text>
+  <text x="593.0" y="185.7" font-size="12" fill="#9d174d" text-anchor="middle">落在同一个 bank，只能排队</text>
+  <rect x="25" y="234" width="790" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="420.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">第二种形状在矩阵运算里非常常见</text>
+  <text x="420.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">按列访问一个行优先的矩阵，就会变成这样</text>
+</svg>

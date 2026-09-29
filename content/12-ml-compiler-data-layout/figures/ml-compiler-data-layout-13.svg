@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 866 430.0" width="866" height="430.0"
+     role="img" aria-labelledby="fig-ml-compiler-data-layout-13-title fig-ml-compiler-data-layout-13-desc">
+  <title id="fig-ml-compiler-data-layout-13-title">用 swizzle 的正确姿势：交给硬件</title>
+  <desc id="fig-ml-compiler-data-layout-13-desc">课件给的三条建议是：它是硬件施加的隐式重映射，打开即可；把已经 swizzle 过的地址传进去，并在各算子之间保持一致的模式；不要自己算 swizzle。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="866" height="430.0" fill="#ffffff"/>
+
+  <text x="435.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">用 swizzle 的正确姿势：交给硬件</text>
+  <rect x="25" y="70" width="620" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="335.0" y="99.7" font-size="15" fill="#166534" text-anchor="middle">第一条</text>
+  <text x="335.0" y="117.7" font-size="12" fill="#166534" text-anchor="middle">它是硬件做的隐式重映射，打开就行</text>
+  <rect x="25" y="163" width="620" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="335.0" y="192.7" font-size="15" fill="#b45309" text-anchor="middle">第二条</text>
+  <text x="335.0" y="210.7" font-size="12" fill="#b45309" text-anchor="middle">传进去的地址要按同一套模式处理</text>
+  <rect x="25" y="256" width="620" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="335.0" y="285.7" font-size="15" fill="#b45309" text-anchor="middle">第三条</text>
+  <text x="335.0" y="303.7" font-size="12" fill="#b45309" text-anchor="middle">不要自己算 swizzle</text>
+  <rect x="25" y="352" width="820" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="435.0" y="381.7" font-size="15" fill="#9d174d" text-anchor="middle">一个算子按 A 模式写、另一个按 B 模式读，结果就错了</text>
+  <text x="435.0" y="399.7" font-size="12" fill="#9d174d" text-anchor="middle">而且这种错不会报错</text>
+</svg>

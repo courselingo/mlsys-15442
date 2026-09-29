@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 856 312.0" width="856" height="312.0"
+     role="img" aria-labelledby="fig-ml-compiler-data-layout-12-title fig-ml-compiler-data-layout-12-desc">
+  <title id="fig-ml-compiler-data-layout-12-title">课件给的实例：SWIZZLE_128B</title>
+  <desc id="fig-ml-compiler-data-layout-12-desc">课件说这个模式的收益是：fp16 下一次能无冲突地访问 8 行与 8 列。也就是说，原本只能顺序访问的列方向，被打开成了可以并行访问的形状。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="856" height="312.0" fill="#ffffff"/>
+
+  <text x="430.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">课件给的实例：SWIZZLE_128B</text>
+  <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">SWIZZLE_128B 的收益：一次无冲突读 8 行 8 列</text>
+  <rect x="25" y="138" width="340" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="195.0" y="167.7" font-size="15" fill="#9d174d" text-anchor="middle">原本</text>
+  <text x="195.0" y="185.7" font-size="12" fill="#9d174d" text-anchor="middle">按列访问会撞 bank</text>
+  <rect x="393" y="138" width="340" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.0" y="167.7" font-size="15" fill="#166534" text-anchor="middle">开启之后</text>
+  <text x="563.0" y="185.7" font-size="12" fill="#166534" text-anchor="middle">fp16 下 8 行 8 列并行无冲突</text>
+  <rect x="25" y="234" width="810" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="430.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">课件还指出一件事</text>
+  <text x="430.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">这个想法并不只属于 GPU 的共享内存</text>
+</svg>

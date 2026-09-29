@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 816 312.0" width="816" height="312.0"
+     role="img" aria-labelledby="fig-ml-compiler-data-layout-8-title fig-ml-compiler-data-layout-8-desc">
+  <title id="fig-ml-compiler-data-layout-8-title">复制：数据在多块设备上各留一份</title>
+  <desc id="fig-ml-compiler-data-layout-8-desc">课件用 R 表示复制的维度：R[2 : 1@gpuid_x] 的意思是这份数据在 gpuid_x 这个轴上有两份完全相同的副本，而不是被切开。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="816" height="312.0" fill="#ffffff"/>
+
+  <text x="410.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">复制：数据在多块设备上各留一份</text>
+  <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">复制维度 R：同一份数据在多个设备上各留一份</text>
+  <rect x="25" y="138" width="340" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="195.0" y="167.7" font-size="15" fill="#166534" text-anchor="middle">切分的部分</text>
+  <text x="195.0" y="185.7" font-size="12" fill="#166534" text-anchor="middle">每块设备拿不同的数据</text>
+  <rect x="393" y="138" width="340" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="563.0" y="167.7" font-size="15" fill="#9d174d" text-anchor="middle">复制的部分</text>
+  <text x="563.0" y="185.7" font-size="12" fill="#9d174d" text-anchor="middle">每块设备拿同一份数据</text>
+  <rect x="25" y="234" width="770" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="410.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">区分这两件事很要紧</text>
+  <text x="410.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">切分省显存但要通信，复制不省显存但不通信</text>
+</svg>
