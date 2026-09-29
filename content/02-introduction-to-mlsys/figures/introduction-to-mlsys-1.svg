@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 714 524.0" width="714" height="524.0"
      role="img" aria-labelledby="fig-introduction-to-mlsys-1-title fig-introduction-to-mlsys-1-desc">
-  <title id="fig-introduction-to-mlsys-1-title">课件给出的 ML 系统栈：七层，按底色分成三组</title>
-  <desc id="fig-introduction-to-mlsys-1-desc">左边是课件列出的七层，底色按 2、2、3 分成三组；右边三个跨行框与底色一一对应，讲清每一组由谁负责。</desc>
+  <title id="fig-introduction-to-mlsys-1-title">课件给出的 ML 系统栈：七格，按底色分成三组</title>
+  <desc id="fig-introduction-to-mlsys-1-desc">左边是课件列出的七格（从上到下：模型、网络、自动微分、图级优化、并行化、内核生成、显存优化），底色按 2、2、3 分成三组；右边三个跨行框与底色一一对应，讲清每一组由谁负责。</desc>
 
   <defs>
     <style>
@@ -15,7 +15,7 @@
 
   <rect x="2" y="13.0" width="714" height="524.0" fill="#ffffff"/>
 
-  <text x="359.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">课件给出的 ML 系统栈：七层，按底色分成三组</text>
+  <text x="359.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">课件给出的 ML 系统栈：七格，按底色分成三组</text>
   <rect x="25" y="70" width="340" height="42" fill="#dbeafe" stroke="#3b82f6"/>
   <text x="195.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">ML 模型（Model）</text>
   <rect x="25" y="137" width="340" height="42" fill="#dbeafe" stroke="#3b82f6"/>
@@ -31,12 +31,12 @@
   <rect x="25" y="472" width="340" height="42" fill="#f3e8ff" stroke="#a855f7"/>
   <text x="195.0" y="497.9" font-size="14" fill="#6b21a8" text-anchor="middle">显存优化（Memory Optimization）</text>
   <rect x="393" y="70" width="300" height="109" fill="#dbeafe" stroke="#3b82f6"/>
-  <text x="543.0" y="120.2" font-size="15" fill="#1e40af" text-anchor="middle">模型侧</text>
+  <text x="543.0" y="120.2" font-size="15" fill="#1e40af" text-anchor="middle">模型结构</text>
   <text x="543.0" y="138.2" font-size="12" fill="#1e40af" text-anchor="middle">写代码的人在这一层</text>
   <rect x="393" y="204" width="300" height="109" fill="#fef3c7" stroke="#f59e0b"/>
-  <text x="543.0" y="254.2" font-size="15" fill="#b45309" text-anchor="middle">求导与图改写</text>
+  <text x="543.0" y="254.2" font-size="15" fill="#b45309" text-anchor="middle">自动微分与图级优化</text>
   <text x="543.0" y="272.2" font-size="12" fill="#b45309" text-anchor="middle">框架在这一层改写计算</text>
   <rect x="393" y="338" width="300" height="176" fill="#f3e8ff" stroke="#a855f7"/>
-  <text x="543.0" y="421.7" font-size="15" fill="#6b21a8" text-anchor="middle">并行、内核与显存</text>
+  <text x="543.0" y="421.7" font-size="15" fill="#6b21a8" text-anchor="middle">并行化、内核生成与显存优化</text>
   <text x="543.0" y="439.7" font-size="12" fill="#6b21a8" text-anchor="middle">落到具体的硬件上</text>
 </svg>
