@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 816 312.0" width="816" height="312.0"
      role="img" aria-labelledby="fig-kernel-superoptimization-8-title fig-kernel-superoptimization-8-desc">
   <title id="fig-kernel-superoptimization-8-title">分层图：把「谁和谁能合并」写下来</title>
-  <desc id="fig-kernel-superoptimization-8-desc">课件的核心表示叫图，它是分层的：同一层的算子之间可以合并，而合并的边界由共享内存的容量决定。课件说现有系统因为放不下共享内存，只能启动两个内核。</desc>
+  <desc id="fig-kernel-superoptimization-8-desc">课件的核心表示叫 μGraph，它是分层的：同一层的算子之间可以合并。课件举的例子是 RMSNorm 与矩阵乘，它说现有系统之所以启动两个内核，是因为 RMSNorm 的那个缩放系数放不下共享内存。本图只在同一层内说合并，不声称跨层就要另起内核（那一条是我们的推断，课件没有给）。</desc>
 
   <defs>
     <style>
@@ -22,9 +22,9 @@
   <text x="195.0" y="167.7" font-size="15" fill="#166534" text-anchor="middle">同一层内</text>
   <text x="195.0" y="185.7" font-size="12" fill="#166534" text-anchor="middle">算子可以合并成一个内核</text>
   <rect x="393" y="138" width="340" height="68" fill="#fce7f3" stroke="#ec4899"/>
-  <text x="563.0" y="167.7" font-size="15" fill="#9d174d" text-anchor="middle">跨层之间</text>
-  <text x="563.0" y="185.7" font-size="12" fill="#9d174d" text-anchor="middle">需要启动不同的内核</text>
+  <text x="563.0" y="167.7" font-size="15" fill="#9d174d" text-anchor="middle">放不下的时候</text>
+  <text x="563.0" y="185.7" font-size="12" fill="#9d174d" text-anchor="middle">就只能分成两个内核（课件例）</text>
   <rect x="25" y="234" width="770" height="68" fill="#f3e8ff" stroke="#a855f7"/>
   <text x="410.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">课件举的例子是 RMSNorm 与矩阵乘</text>
-  <text x="410.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">现有系统因为共享内存放不下，只能分成两个内核</text>
+  <text x="410.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">放不下的是 RMSNorm 的缩放系数</text>
 </svg>
