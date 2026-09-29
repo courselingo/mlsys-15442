@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 782 244.0" width="782" height="244.0"
+     role="img" aria-labelledby="fig-cuda-programming-1-5-title fig-cuda-programming-1-5-desc">
+  <title id="fig-cuda-programming-1-5-title">线程数由程序决定，不由数据规模决定</title>
+  <desc id="fig-cuda-programming-1-5-desc">块的大小在程序里写死，块的个数按数据规模算出来；于是数据不是块大小整数倍时，多出来的那些线程要靠条件判断挡掉。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="782" height="244.0" fill="#ffffff"/>
+
+  <text x="393.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">线程数由程序决定，不由数据规模决定</text>
+  <rect x="25" y="70" width="340" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="195.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">线程块的大小</text>
+  <text x="195.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">程序里写死</text>
+  <rect x="393" y="70" width="340" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="563.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">块的个数</text>
+  <text x="563.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">按数据规模算出来</text>
+  <rect x="25" y="166" width="736" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="393.0" y="195.7" font-size="15" fill="#9d174d" text-anchor="middle">数据不是块大小的整数倍时</text>
+  <text x="393.0" y="213.7" font-size="12" fill="#9d174d" text-anchor="middle">多出来的线程要靠条件判断挡掉，不能让它写坏内存</text>
+</svg>

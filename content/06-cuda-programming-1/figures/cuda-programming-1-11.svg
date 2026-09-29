@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 796 244.0" width="796" height="244.0"
+     role="img" aria-labelledby="fig-cuda-programming-1-11-title fig-cuda-programming-1-11-desc">
+  <title id="fig-cuda-programming-1-11-title">一条决定了很多事的前提：线程块之间没有依赖</title>
+  <desc id="fig-cuda-programming-1-11-desc">课件把这条列为 CUDA 的主要假设：线程块可以按任意顺序执行，调度器自己决定先跑哪个。于是块与块之间不能同步，需要全局同步时只能靠多次启动内核。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="796" height="244.0" fill="#ffffff"/>
+
+  <text x="400.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">一条决定了很多事的前提：线程块之间没有依赖</text>
+  <rect x="25" y="70" width="340" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="195.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">核心假设</text>
+  <text x="195.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">线程块之间没有依赖</text>
+  <rect x="393" y="70" width="340" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.0" y="99.7" font-size="15" fill="#b45309" text-anchor="middle">于是可以任意顺序执行</text>
+  <text x="563.0" y="117.7" font-size="12" fill="#b45309" text-anchor="middle">调度器自己决定先后</text>
+  <rect x="25" y="166" width="750" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="400.0" y="195.7" font-size="15" fill="#6b21a8" text-anchor="middle">这条假设决定了后面很多事</text>
+  <text x="400.0" y="213.7" font-size="12" fill="#6b21a8" text-anchor="middle">块之间不能同步，需要全局同步时只能多启动几次内核</text>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 754 288.0" width="754" height="288.0"
+     role="img" aria-labelledby="fig-cuda-programming-1-4-title fig-cuda-programming-1-4-desc">
+  <title id="fig-cuda-programming-1-4-title">两块代码、两块地址空间，只能靠显式拷贝连起来</title>
+  <desc id="fig-cuda-programming-1-4-desc">主机侧是一段串行 C 代码，负责申请内存、拷数据、启动内核；设备侧是内核，以 SIMD 方式执行，只看得到设备内存。两边地址空间互不相通。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="754" height="288.0" fill="#ffffff"/>
+
+  <text x="379.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">两块代码、两块地址空间，只能靠显式拷贝连起来</text>
+  <rect x="25" y="70" width="340" height="110" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="195.0" y="111.7" font-size="15" fill="#1e40af" text-anchor="middle">主机侧：C 代码</text>
+  <text x="195.0" y="129.7" font-size="12" fill="#1e40af" text-anchor="middle">串行执行</text>
+  <text x="195.0" y="147.7" font-size="12" fill="#1e40af" text-anchor="middle">申请内存、拷数据、启动内核</text>
+  <rect x="393" y="70" width="340" height="110" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.0" y="111.7" font-size="15" fill="#166534" text-anchor="middle">设备侧：内核</text>
+  <text x="563.0" y="129.7" font-size="12" fill="#166534" text-anchor="middle">SIMD 执行</text>
+  <text x="563.0" y="147.7" font-size="12" fill="#166534" text-anchor="middle">只看得见设备内存</text>
+  <rect x="25" y="210" width="708" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="379.0" y="239.7" font-size="15" fill="#6b21a8" text-anchor="middle">两块地址空间互不相通</text>
+  <text x="379.0" y="257.7" font-size="12" fill="#6b21a8" text-anchor="middle">数据只能靠 cudaMemcpy 在两边显式搬运</text>
+</svg>

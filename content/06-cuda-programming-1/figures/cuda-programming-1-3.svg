@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 690 244.0" width="690" height="244.0"
+     role="img" aria-labelledby="fig-cuda-programming-1-3-title fig-cuda-programming-1-3-desc">
+  <title id="fig-cuda-programming-1-3-title">四个内建变量，把一个线程定位到具体的数据上</title>
+  <desc id="fig-cuda-programming-1-3-desc">gridDim 是网格的维度，blockIdx 是块在网格里的下标，blockDim 是块内维度，threadIdx 是线程在块里的下标；四者一起算出这个线程该处理哪份数据。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="690" height="244.0" fill="#ffffff"/>
+
+  <text x="347.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">四个内建变量，把一个线程定位到具体的数据上</text>
+  <rect x="25" y="70" width="140" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="95.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">gridDim</text>
+  <text x="95.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">网格的维度</text>
+  <rect x="193" y="70" width="140" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="263.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">blockIdx</text>
+  <text x="263.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">块的下标</text>
+  <rect x="361" y="70" width="140" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="431.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">blockDim</text>
+  <text x="431.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">块内维度</text>
+  <rect x="529" y="70" width="140" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="599.0" y="99.7" font-size="15" fill="#166534" text-anchor="middle">threadIdx</text>
+  <text x="599.0" y="117.7" font-size="12" fill="#166534" text-anchor="middle">线程下标</text>
+  <rect x="25" y="166" width="644" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="347.0" y="195.7" font-size="15" fill="#6b21a8" text-anchor="middle">四者一起算出这个线程负责的数据下标</text>
+  <text x="347.0" y="213.7" font-size="12" fill="#6b21a8" text-anchor="middle">下标最多可以是三维的</text>
+</svg>

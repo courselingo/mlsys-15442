@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 777 334.0" width="777" height="334.0"
+     role="img" aria-labelledby="fig-cuda-programming-1-6-title fig-cuda-programming-1-6-desc">
+  <title id="fig-cuda-programming-1-6-title">分支的代价：不该算的线程被屏蔽，而不是消失</title>
+  <desc id="fig-cuda-programming-1-6-desc">条件不成立的线程不会停机，它们的 ALU 输出被丢弃；同一段指令对所有线程都适用叫相干执行，只有一部分线程在做叫发散执行，后者要尽量少。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="777" height="334.0" fill="#ffffff"/>
+
+  <text x="390.5" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">分支的代价：不该算的线程被屏蔽，而不是消失</text>
+  <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">条件执行：把不该算的线程的输出屏蔽掉</text>
+  <rect x="25" y="138" width="225" height="90" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="137.5" y="169.7" font-size="15" fill="#166534" text-anchor="middle">相干执行</text>
+  <text x="137.5" y="187.7" font-size="12" fill="#166534" text-anchor="middle">同一段指令</text>
+  <text x="137.5" y="205.7" font-size="12" fill="#166534" text-anchor="middle">对所有线程都适用</text>
+  <rect x="278" y="138" width="225" height="90" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="390.5" y="169.7" font-size="15" fill="#9d174d" text-anchor="middle">发散执行</text>
+  <text x="390.5" y="187.7" font-size="12" fill="#9d174d" text-anchor="middle">同一条指令</text>
+  <text x="390.5" y="205.7" font-size="12" fill="#9d174d" text-anchor="middle">只有一部分线程在做</text>
+  <rect x="531" y="138" width="225" height="90" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="643.5" y="169.7" font-size="15" fill="#9d174d" text-anchor="middle">要尽量减少发散</text>
+  <text x="643.5" y="187.7" font-size="12" fill="#9d174d" text-anchor="middle">它是实打实的</text>
+  <text x="643.5" y="205.7" font-size="12" fill="#9d174d" text-anchor="middle">性能损失</text>
+  <rect x="25" y="256" width="731" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="390.5" y="285.7" font-size="15" fill="#6b21a8" text-anchor="middle">分支走完之后，全部线程恢复满速</text>
+  <text x="390.5" y="303.7" font-size="12" fill="#6b21a8" text-anchor="middle">所以代价发生在分支期间，而不是分支之后</text>
+</svg>

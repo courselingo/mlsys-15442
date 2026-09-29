@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 642 328.0" width="642" height="328.0"
+     role="img" aria-labelledby="fig-cuda-programming-1-1-title fig-cuda-programming-1-1-desc">
+  <title id="fig-cuda-programming-1-1-title">GPU 的算力来自「一条指令喂给很多个 ALU」</title>
+  <desc id="fig-cuda-programming-1-1-desc">单指令单数据是一条指令一个处理单元；单指令多数据把同一条指令广播给全部 ALU 并行执行，于是提升算力的办法是加 ALU。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="642" height="328.0" fill="#ffffff"/>
+
+  <text x="323.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">GPU 的算力来自「一条指令喂给很多个 ALU」</text>
+  <rect x="25" y="70" width="128" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="89.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">ALU 0</text>
+  <text x="89.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">同一条指令</text>
+  <rect x="181" y="70" width="128" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="245.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">ALU 1</text>
+  <text x="245.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">同一条指令</text>
+  <rect x="337" y="70" width="128" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="401.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">ALU 2</text>
+  <text x="401.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">同一条指令</text>
+  <rect x="493" y="70" width="128" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="557.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">ALU 3</text>
+  <text x="557.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">同一条指令</text>
+  <rect x="25" y="166" width="596" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="323.0" y="195.7" font-size="15" fill="#b45309" text-anchor="middle">单指令多数据</text>
+  <text x="323.0" y="213.7" font-size="12" fill="#b45309" text-anchor="middle">一条指令广播给全部 ALU，同时算完</text>
+  <rect x="25" y="262" width="596" height="56" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="323.0" y="294.9" font-size="14" fill="#166534" text-anchor="middle">提升算力的办法是加 ALU</text>
+</svg>

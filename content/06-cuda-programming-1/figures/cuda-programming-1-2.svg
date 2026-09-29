@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 776 244.0" width="776" height="244.0"
+     role="img" aria-labelledby="fig-cuda-programming-1-2-title fig-cuda-programming-1-2-desc">
+  <title id="fig-cuda-programming-1-2-title">CUDA 的设计目标是「保持低的抽象距离」</title>
+  <desc id="fig-cuda-programming-1-2-desc">课程在这句话上停了很久：如果语言的抽象离硬件很远，程序员就猜不到代码到底在做什么；CUDA 的抽象刻意贴近现代 GPU 的能力与性能特征。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="776" height="244.0" fill="#ffffff"/>
+
+  <text x="390.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">CUDA 的设计目标是「保持低的抽象距离」</text>
+  <rect x="25" y="70" width="340" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="195.0" y="99.7" font-size="15" fill="#9d174d" text-anchor="middle">抽象距离远</text>
+  <text x="195.0" y="117.7" font-size="12" fill="#9d174d" text-anchor="middle">说的和硬件做的对不上</text>
+  <rect x="393" y="70" width="340" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.0" y="99.7" font-size="15" fill="#166534" text-anchor="middle">抽象距离近</text>
+  <text x="563.0" y="117.7" font-size="12" fill="#166534" text-anchor="middle">抽象紧贴硬件的能力</text>
+  <rect x="25" y="166" width="730" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="390.0" y="195.7" font-size="15" fill="#6b21a8" text-anchor="middle">设计目标就写在课件上：maintain low abstraction distance</text>
+  <text x="390.0" y="213.7" font-size="12" fill="#6b21a8" text-anchor="middle">于是线程、内存、同步这些概念都直接对应硬件上的东西</text>
+</svg>

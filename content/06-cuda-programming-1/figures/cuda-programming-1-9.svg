@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 754 280.0" width="754" height="280.0"
+     role="img" aria-labelledby="fig-cuda-programming-1-9-title fig-cuda-programming-1-9-desc">
+  <title id="fig-cuda-programming-1-9-title">同步原语：共享内存带来的第一个麻烦</title>
+  <desc id="fig-cuda-programming-1-9-desc">共享内存是块内共享的，谁先写完、谁后读，必须排个序；__syncthreads() 等块内所有线程都到这一步，原子操作则让多个线程安全地改同一个地址。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="754" height="280.0" fill="#ffffff"/>
+
+  <text x="379.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">同步原语：共享内存带来的第一个麻烦</text>
+  <rect x="25" y="70" width="340" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="195.0" y="99.7" font-size="15" fill="#b45309" text-anchor="middle">__syncthreads()</text>
+  <text x="195.0" y="117.7" font-size="12" fill="#b45309" text-anchor="middle">等块内所有线程都到这一步</text>
+  <rect x="25" y="163" width="340" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="195.0" y="192.7" font-size="15" fill="#b45309" text-anchor="middle">原子操作</text>
+  <text x="195.0" y="210.7" font-size="12" fill="#b45309" text-anchor="middle">多个线程安全地改同一个地址</text>
+  <rect x="393" y="70" width="340" height="200" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="563.0" y="156.7" font-size="15" fill="#6b21a8" text-anchor="middle">为什么需要同步</text>
+  <text x="563.0" y="174.7" font-size="12" fill="#6b21a8" text-anchor="middle">共享内存是块内共享的</text>
+  <text x="563.0" y="192.7" font-size="12" fill="#6b21a8" text-anchor="middle">谁先写完谁后读，必须排序</text>
+</svg>

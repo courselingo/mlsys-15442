@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 754 340.0" width="754" height="340.0"
+     role="img" aria-labelledby="fig-cuda-programming-1-7-title fig-cuda-programming-1-7-desc">
+  <title id="fig-cuda-programming-1-7-title">内核能看到的三种内存，快慢差很多</title>
+  <desc id="fig-cuda-programming-1-7-desc">每线程私有的内存、每块共享的内存、设备全局内存；共享内存要程序员自己管，全局内存最慢也最大。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="754" height="340.0" fill="#ffffff"/>
+
+  <text x="379.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">内核能看到的三种内存，快慢差很多</text>
+  <rect x="25" y="70" width="300" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="175.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">每线程私有</text>
+  <text x="175.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">寄存器与本地内存</text>
+  <rect x="25" y="163" width="300" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="175.0" y="192.7" font-size="15" fill="#b45309" text-anchor="middle">每块共享</text>
+  <text x="175.0" y="210.7" font-size="12" fill="#b45309" text-anchor="middle">块内所有线程可读写</text>
+  <rect x="25" y="256" width="300" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="175.0" y="285.7" font-size="15" fill="#9d174d" text-anchor="middle">设备全局</text>
+  <text x="175.0" y="303.7" font-size="12" fill="#9d174d" text-anchor="middle">所有线程可见</text>
+  <rect x="353" y="70" width="380" height="260" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="543.0" y="186.7" font-size="15" fill="#6b21a8" text-anchor="middle">三者的快慢差别很大</text>
+  <text x="543.0" y="204.7" font-size="12" fill="#6b21a8" text-anchor="middle">共享内存要自己管</text>
+  <text x="543.0" y="222.7" font-size="12" fill="#6b21a8" text-anchor="middle">全局内存最慢也最大</text>
+</svg>
