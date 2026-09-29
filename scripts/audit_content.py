@@ -265,17 +265,33 @@ def audit(path: Path, root: Path, systems: list[str] | None = None,
             f"（下限 {MIN_NUM_PER_K}/千字）—— 多给数字、少下形容词"
         )
     pool = systems if systems is not None else DEFAULT_SYSTEMS
-    named = sum(1 for s in pool if s.lower() in body.lower())
+    # ★ 计数用**词边界**（2026-09-29 修，附录七十五）
+    #   起因：原先用 `s.lower() in body.lower()`（子串匹配）⇒ `Go` 命中 `goal`/`go through`、
+    #   `Raft` 命中 `draft`、`ThunderX` 命中 `ThunderX2` ⇒ 计数虚高，于是**真该报的页不报**。
+    #   ★ 对 ≤2 字符的名字再要求**大小写敏感**（`Go` 是语言，`go` 是动词；`R` 是语言，`r` 是被积变量）。
+    named_hits: list[str] = []
+    for s in pool:
+        if len(s) <= 2:
+            pat = r"(?<![A-Za-z0-9])" + re.escape(s) + r"(?![A-Za-z0-9])"
+            if re.search(pat, body):
+                named_hits.append(s)
+        else:
+            pat = r"(?<![A-Za-z0-9])" + re.escape(s) + r"(?![A-Za-z0-9])"
+            if re.search(pat, body, re.IGNORECASE):
+                named_hits.append(s)
+    named = len(named_hits)
     if named < named_min:
         # ★ 报错信息要说清「它数的到底是什么」（2026-09-29 修，附录五十四）
         #   一位作者补了七个**真实芯片名**（POWER6/Denver/ROCK/…）而计数仍是 2 ——
         #   因为判据数的是「命中 course.toml 的 named_systems 池几个」，
         #   不是「点了多少专有名词」。⇒ 把池子写进报错里，作者就不必去读源码。
-        # ★ 打印**本课**的池子（`extra`），而不是那份默认池（2026-09-29 修）
+        # ★ 打印**本课**的池子，而不是那份默认池（2026-09-29 修）
         #   起因：我上一版只打印 DEFAULT_SYSTEMS，而那是 cs168 的池子
         #   ⇒ 对另外四门课的作者，那条提示**指向错误的池子**（比不说更糟）。
-        _extra_show = "/".join(str(x) for x in (extra or [])[:16])
-        _pool_show = _extra_show if extra else "/".join(str(x) for x in DEFAULT_SYSTEMS[:14])
+        # ★★ 而这一行原先写的是 `extra` —— 那个名字**不在本函数作用域里**
+        #   （形参叫 `systems`，局部量叫 `pool`）⇒ 任何「点名不足」的页面都会
+        #   `NameError` 让整道闸门崩掉，而崩掉就报不出这条警告（附录七十五）。
+        _pool_show = "/".join(str(x) for x in ((systems or DEFAULT_SYSTEMS)[:16]))
         warns.append(
             f"[点名不足] 只点到 {named} 个具体对象（建议 ≥{named_min}）"
             f" —— ★ 它数的是命中**池**里几个，不是「点了多少专有名词」；"
