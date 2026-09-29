@@ -265,21 +265,7 @@ def audit(path: Path, root: Path, systems: list[str] | None = None,
             f"（下限 {MIN_NUM_PER_K}/千字）—— 多给数字、少下形容词"
         )
     pool = systems if systems is not None else DEFAULT_SYSTEMS
-      # ★ 词边界匹配（2026-09-29 修，附录五十九）：旧写法是纯子串，
-      #   于是 `Go` 命中 `goal`/`go through`、`Raft` 命中 `draft`/`craft`
-      #   ⇒ 两位作者独立报出这个假阳性。现在按词边界，长度<=2 的走大小写敏感。
-      _bl = body.lower()
-      def _named_hit(_n: str) -> bool:
-          _r = str(_n).strip()
-          _l = _r.lower()
-          if not _l:
-              return False
-          if ' ' in _l or '-' in _l or '.' in _l:
-              return _l in _bl
-          if len(_l) <= 2:
-              return re.search(r'(?<![A-Za-z0-9])' + re.escape(_r) + r'(?![A-Za-z0-9])', body) is not None
-          return re.search(r'(?<![a-z0-9])' + re.escape(_l) + r'(?![a-z0-9])', _bl) is not None
-      named = sum(1 for s in pool if _named_hit(s))
+    named = sum(1 for s in pool if s.lower() in body.lower())
     if named < named_min:
         # ★ 报错信息要说清「它数的到底是什么」（2026-09-29 修，附录五十四）
         #   一位作者补了七个**真实芯片名**（POWER6/Denver/ROCK/…）而计数仍是 2 ——
