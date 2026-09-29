@@ -130,7 +130,20 @@ def check(path: Path) -> list[str]:
 
     # emoji
     if EMOJI.search(plain):
-        problems.append("[emoji] 正文出现 emoji")
+        # ★ 报出到底是哪几个字符（含码位与上下文）——
+        #   起因：一位作者在 #52 报「清掉 ⇒ ✓ ／ 之后它仍然报，而报错行不给字符」
+        #   ⇒ 那种红**作者无法自查**（他看不到判定字符集）⇒ 所以这一条必须自己说出来。
+        hits: list[str] = []
+        seen: set[str] = set()
+        for m in EMOJI.finditer(plain):
+            ch = m.group(0)
+            if ch in seen:
+                continue
+            seen.add(ch)
+            a = max(0, m.start() - 12)
+            ctx = plain[a : m.end() + 12].replace("\n", " ")
+            hits.append(f"{ch!r}(U+{ord(ch):04X}) 上下文「…{ctx}…」")
+        problems.append("[emoji] 正文出现 emoji：" + " ｜ ".join(hits[:6]))
 
     # 超长段落
     long_paras = [i for i, p in enumerate(body.split("\n\n"), 1) if len(p.splitlines()) > 8
