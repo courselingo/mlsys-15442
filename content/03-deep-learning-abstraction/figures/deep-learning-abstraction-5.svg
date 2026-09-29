@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 774 244.0" width="774" height="244.0"
+     role="img" aria-labelledby="fig-deep-learning-abstraction-5-title fig-deep-learning-abstraction-5-desc">
+  <title id="fig-deep-learning-abstraction-5-title">卷积：把滤波器在图上滑一遍，每次做一次点积</title>
+  <desc id="fig-deep-learning-abstraction-5-desc">滤波器是一小块权重，它在图像上按位置滑动，每滑到一个位置就和那一小块做一次点积；一叠这样的层中间夹上池化、归一化与激活，就是卷积网络。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="774" height="244.0" fill="#ffffff"/>
+
+  <text x="389.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">卷积：把滤波器在图上滑一遍，每次做一次点积</text>
+  <rect x="25" y="70" width="350" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="200.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">输入图像</text>
+  <text x="200.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">滤波器在图上滑动，每处做一次点积</text>
+  <rect x="403" y="70" width="350" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="578.0" y="99.7" font-size="15" fill="#b45309" text-anchor="middle">滤波器</text>
+  <text x="578.0" y="117.7" font-size="12" fill="#b45309" text-anchor="middle">一小块权重，位置共享</text>
+  <rect x="25" y="166" width="728" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="389.0" y="195.7" font-size="15" fill="#166534" text-anchor="middle">卷积网络</text>
+  <text x="389.0" y="213.7" font-size="12" fill="#166534" text-anchor="middle">一叠卷积层，中间夹着池化、归一化与激活函数</text>
+</svg>

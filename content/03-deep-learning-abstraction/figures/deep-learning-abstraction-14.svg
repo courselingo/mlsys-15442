@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 -1.0 768 426.0" width="768" height="426.0"
+     role="img" aria-labelledby="fig-deep-learning-abstraction-14-title fig-deep-learning-abstraction-14-desc">
+  <title id="fig-deep-learning-abstraction-14-title">那张计算图是怎么一段一段长出来的</title>
+  <desc id="fig-deep-learning-abstraction-14-desc">课件分三段展示：先声明前向，再声明损失，最后用求导接口把反向图也接上去；三段加完，一张完整的训练图才成形。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="-1.0" width="768" height="426.0" fill="#ffffff"/>
+
+  <text x="386.0" y="34" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">那张计算图是怎么一段一段长出来的</text>
+  <rect x="25" y="56" width="722" height="96" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-dasharray="6,4"/>
+  <text x="38" y="73.85" font-size="11" fill="#64748b">第一段：声明前向</text>
+  <rect x="40" y="95" width="212" height="42" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="146.0" y="120.9" font-size="14" fill="#1e40af" text-anchor="middle">输入 x 与权重 W</text>
+  <rect x="280" y="95" width="212" height="42" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="386.0" y="120.9" font-size="14" fill="#1e40af" text-anchor="middle">matmul 与 softmax</text>
+  <rect x="520" y="95" width="212" height="42" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="626.0" y="120.9" font-size="14" fill="#1e40af" text-anchor="middle">得到预测 y</text>
+  <rect x="25" y="181" width="722" height="96" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-dasharray="6,4"/>
+  <text x="38" y="198.85" font-size="11" fill="#64748b">第二段：声明损失</text>
+  <rect x="40" y="220" width="212" height="42" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="146.0" y="245.9" font-size="14" fill="#1e40af" text-anchor="middle">标签 y_</text>
+  <rect x="280" y="220" width="212" height="42" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="386.0" y="245.9" font-size="14" fill="#1e40af" text-anchor="middle">log、mul、mean</text>
+  <rect x="520" y="220" width="212" height="42" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="626.0" y="245.9" font-size="14" fill="#1e40af" text-anchor="middle">得到 cross_entropy</text>
+  <rect x="25" y="306" width="722" height="96" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-dasharray="6,4"/>
+  <text x="38" y="323.85" font-size="11" fill="#64748b">第三段：接上反向</text>
+  <rect x="40" y="345" width="212" height="42" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="146.0" y="370.9" font-size="14" fill="#1e40af" text-anchor="middle">求导接口自动建图</text>
+  <rect x="280" y="345" width="212" height="42" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="386.0" y="370.9" font-size="14" fill="#1e40af" text-anchor="middle">log-grad 与 softmax-grad</text>
+  <rect x="520" y="345" width="212" height="42" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="626.0" y="370.9" font-size="14" fill="#1e40af" text-anchor="middle">assign 更新 W</text>
+</svg>

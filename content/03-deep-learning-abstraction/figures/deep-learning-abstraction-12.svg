@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 754 244.0" width="754" height="244.0"
+     role="img" aria-labelledby="fig-deep-learning-abstraction-12-title fig-deep-learning-abstraction-12-desc">
+  <title id="fig-deep-learning-abstraction-12-title">计算图抽象：节点是算子，边是数据依赖</title>
+  <desc id="fig-deep-learning-abstraction-12-desc">课件给的定义很短：节点代表计算，边代表算子之间的数据依赖；a 乘 b 再加 3 就是一张最小的计算图。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="754" height="244.0" fill="#ffffff"/>
+
+  <text x="379.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">计算图抽象：节点是算子，边是数据依赖</text>
+  <rect x="25" y="70" width="340" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="195.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">节点 = 算子</text>
+  <text x="195.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">一次具体的计算</text>
+  <rect x="25" y="166" width="340" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="195.0" y="195.7" font-size="15" fill="#b45309" text-anchor="middle">边 = 数据依赖</text>
+  <text x="195.0" y="213.7" font-size="12" fill="#b45309" text-anchor="middle">谁的结果被谁用到</text>
+  <rect x="393" y="70" width="340" height="138" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="563.0" y="125.7" font-size="15" fill="#6b21a8" text-anchor="middle">a * b + 3</text>
+  <text x="563.0" y="143.7" font-size="12" fill="#6b21a8" text-anchor="middle">三个节点：两次输入</text>
+  <text x="563.0" y="161.7" font-size="12" fill="#6b21a8" text-anchor="middle">一次乘法，一次加法</text>
+</svg>

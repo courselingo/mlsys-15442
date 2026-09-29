@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 831 244.0" width="831" height="244.0"
+     role="img" aria-labelledby="fig-deep-learning-abstraction-8-title fig-deep-learning-abstraction-8-desc">
+  <title id="fig-deep-learning-abstraction-8-title">注意力：把序列内部的并行打开</title>
+  <desc id="fig-deep-learning-abstraction-8-desc">每个位置各自发出一次查询，去读取同一组 values；位置之间不再互相等待，不能并行的算子数不随序列长度增长。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="831" height="244.0" fill="#ffffff"/>
+
+  <text x="417.5" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">注意力：把序列内部的并行打开</text>
+  <rect x="25" y="70" width="110" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="80.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">位置</text>
+  <text x="80.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">一次查询</text>
+  <rect x="160" y="70" width="110" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="215.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">位置</text>
+  <text x="215.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">一次查询</text>
+  <rect x="295" y="70" width="110" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="350.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">位置</text>
+  <text x="350.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">一次查询</text>
+  <rect x="430" y="70" width="110" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="485.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">位置</text>
+  <text x="485.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">一次查询</text>
+  <rect x="565" y="70" width="110" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="620.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">位置</text>
+  <text x="620.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">一次查询</text>
+  <rect x="700" y="70" width="110" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="755.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">位置</text>
+  <text x="755.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">一次查询</text>
+  <path d="M80,143 L80,155" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M215,143 L215,155" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M350,143 L350,155" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M485,143 L485,155" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M620,143 L620,155" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M755,143 L755,155" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="25" y="166" width="785" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="417.5" y="195.7" font-size="15" fill="#166534" text-anchor="middle">所有位置共享的一组 values</text>
+  <text x="417.5" y="213.7" font-size="12" fill="#166534" text-anchor="middle">不能并行的算子数不随序列长度增长</text>
+</svg>

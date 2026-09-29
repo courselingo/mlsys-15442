@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 754 323.0" width="754" height="323.0"
+     role="img" aria-labelledby="fig-deep-learning-abstraction-11-title fig-deep-learning-abstraction-11-desc">
+  <title id="fig-deep-learning-abstraction-11-title">这些配料都会反过来改变系统设计</title>
+  <desc id="fig-deep-learning-abstraction-11-desc">模型与架构、目标函数、正则与初始化、数据量，这四样都不是纯算法问题；课件要读者想一想它们各自会怎样改变机器学习框架的设计。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="754" height="323.0" fill="#ffffff"/>
+
+  <text x="379.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">这些配料都会反过来改变系统设计</text>
+  <rect x="25" y="70" width="340" height="42" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="195.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">模型与架构</text>
+  <rect x="25" y="137" width="340" height="42" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="195.0" y="162.9" font-size="14" fill="#1e40af" text-anchor="middle">目标函数与训练技巧</text>
+  <rect x="25" y="204" width="340" height="42" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="195.0" y="229.9" font-size="14" fill="#1e40af" text-anchor="middle">正则、归一化与初始化</text>
+  <rect x="25" y="271" width="340" height="42" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="195.0" y="296.9" font-size="14" fill="#1e40af" text-anchor="middle">足够多的数据</text>
+  <rect x="393" y="70" width="340" height="243" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="563.0" y="169.2" font-size="15" fill="#6b21a8" text-anchor="middle">四样都会落到系统上</text>
+  <text x="563.0" y="187.2" font-size="12" fill="#6b21a8" text-anchor="middle">归一化在推理时可以折进卷积</text>
+  <text x="563.0" y="205.2" font-size="12" fill="#6b21a8" text-anchor="middle">dropout 只在训练时打开</text>
+  <text x="563.0" y="223.2" font-size="12" fill="#6b21a8" text-anchor="middle">初始化决定数值范围</text>
+</svg>

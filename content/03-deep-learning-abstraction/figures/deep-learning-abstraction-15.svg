@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 734 257.0" width="734" height="257.0"
+     role="img" aria-labelledby="fig-deep-learning-abstraction-15-title fig-deep-learning-abstraction-15-desc">
+  <title id="fig-deep-learning-abstraction-15-title">两种构造方式：先建整张图，还是边算边建</title>
+  <desc id="fig-deep-learning-abstraction-15-desc">TF1 风格先把整张图建好再跑，能看到全局因而便于整体优化；PyTorch 风格边算边建图，写起来自由、好调试，代价是看不到全局。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="734" height="257.0" fill="#ffffff"/>
+
+  <text x="369.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">两种构造方式：先建整张图，还是边算边建</text>
+  <rect x="25" y="70" width="330" height="39" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="190.0" y="94.0" font-size="13" fill="#1e40af" text-anchor="middle">define then run（TF1 风格）</text>
+  <rect x="383" y="70" width="330" height="39" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="548.0" y="94.0" font-size="13" fill="#166534" text-anchor="middle">define and run（PyTorch 风格）</text>
+  <rect x="25" y="137" width="330" height="110" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="190.0" y="169.6" font-size="14" fill="#1e40af" text-anchor="middle">先建整张图</text>
+  <text x="190.0" y="187.6" font-size="12" fill="#1e40af" text-anchor="middle">再喂数据跑</text>
+  <text x="190.0" y="205.6" font-size="12" fill="#1e40af" text-anchor="middle">能看到全局，便于整体优化</text>
+  <text x="190.0" y="223.6" font-size="12" fill="#1e40af" text-anchor="middle">代价是调试不方便</text>
+  <rect x="383" y="137" width="330" height="110" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="548.0" y="169.6" font-size="14" fill="#166534" text-anchor="middle">边算边建图</text>
+  <text x="548.0" y="187.6" font-size="12" fill="#166534" text-anchor="middle">每一步立刻出结果</text>
+  <text x="548.0" y="205.6" font-size="12" fill="#166534" text-anchor="middle">写起来自由，好调试</text>
+  <text x="548.0" y="223.6" font-size="12" fill="#166534" text-anchor="middle">代价是看不到全局</text>
+</svg>

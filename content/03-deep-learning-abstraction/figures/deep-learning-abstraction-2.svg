@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 777 244.0" width="777" height="244.0"
+     role="img" aria-labelledby="fig-deep-learning-abstraction-2-title fig-deep-learning-abstraction-2-desc">
+  <title id="fig-deep-learning-abstraction-2-title">任何机器学习方法都由三样东西组成</title>
+  <desc id="fig-deep-learning-abstraction-2-desc">课件把机器学习拆成模型类、损失函数与训练方法三样：模型负责把输入映射成预测，损失负责打分，训练方法负责找一组让损失最小的参数。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="777" height="244.0" fill="#ffffff"/>
+
+  <text x="390.5" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">任何机器学习方法都由三样东西组成</text>
+  <rect x="25" y="70" width="225" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="137.5" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">模型类</text>
+  <text x="137.5" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">输入到预测的函数</text>
+  <rect x="278" y="70" width="225" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="390.5" y="99.7" font-size="15" fill="#b45309" text-anchor="middle">损失函数</text>
+  <text x="390.5" y="117.7" font-size="12" fill="#b45309" text-anchor="middle">给一组参数打分</text>
+  <rect x="531" y="70" width="225" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="643.5" y="99.7" font-size="15" fill="#166534" text-anchor="middle">训练方法</text>
+  <text x="643.5" y="117.7" font-size="12" fill="#166534" text-anchor="middle">找损失最小的参数</text>
+  <rect x="25" y="166" width="731" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="390.5" y="195.7" font-size="15" fill="#6b21a8" text-anchor="middle">课件举的例子：逻辑回归</text>
+  <text x="390.5" y="213.7" font-size="12" fill="#6b21a8" text-anchor="middle">逻辑回归模型 + 正则化损失 + 随机梯度下降</text>
+</svg>
