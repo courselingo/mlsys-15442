@@ -1,0 +1,72 @@
+# CourseLingo 论文登记表
+#
+# 为什么要单独一张表：**每篇论文的授权都不一样**（USENIX / ACM / IEEE / 技术报告），
+# 不能用课程级的一个布尔表示。翻译全文是「复制整篇表达」的衍生作品，
+# 风险与翻译逐字稿同级，因此必须**逐篇**核实。
+#
+# ★ 规则：
+#   - output_mode = "guide"        → 我们自己写的导读，任何时候都可以做
+#   - output_mode = "translation"  → 全文翻译，必须 verified = true **且** allows_translation = true
+#
+# 「网上能免费下载」≠「可以翻译」。作者把 PDF 挂在自己主页上，**没有授予任何许可**，
+# 法律状态仍是保留所有权利。只有明确的许可条款（例如 CC BY）或书面授权才算数。
+
+[[paper]]
+key = "mapreduce"
+title = "MapReduce: Simplified Data Processing on Large Clusters"
+authors = ["Jeffrey Dean", "Sanjay Ghemawat"]
+venue = "OSDI 2004"
+year = 2004
+publisher = "USENIX"
+url = "https://www.usenix.org/conference/osdi-04/mapreduce-simplified-data-processing-large-clusters"
+
+[paper.license]
+verified = false
+terms = ""
+evidence_url = ""
+checked_at = ""
+allows_translation = false
+allows_commercial = false
+share_alike = false
+redistribution = "unknown"
+notes = "未核实。核实方法与结论见 docs/paper-licensing.md"
+
+[[paper]]
+key = "gfs"
+title = "The Google File System"
+authors = ["Sanjay Ghemawat", "Howard Gobioff", "Shun-Tak Leung"]
+venue = "SOSP 2003"
+year = 2003
+publisher = "ACM"
+url = "https://dl.acm.org/doi/10.1145/945445.945450"
+
+[paper.license]
+verified = false
+terms = ""
+evidence_url = ""
+checked_at = ""
+allows_translation = false
+allows_commercial = false
+share_alike = false
+redistribution = "unknown"
+notes = "ACM 论文通常由 ACM 持有版权，翻译需走 ACM 的授权流程。见 docs/paper-licensing.md"
+
+[[paper]]
+key = "raft"
+title = "In Search of an Understandable Consensus Algorithm"
+authors = ["Diego Ongaro", "John Ousterhout"]
+venue = "USENIX ATC 2014"
+year = 2014
+publisher = "USENIX"
+url = "https://www.usenix.org/conference/atc14/technical-sessions/presentation/ongaro"
+
+[paper.license]
+verified = false
+terms = ""
+evidence_url = ""
+checked_at = ""
+allows_translation = false
+allows_commercial = false
+share_alike = false
+redistribution = "unknown"
+notes = "未核实。另注意其扩展版（技术报告）与会议版可能适用不同条款"

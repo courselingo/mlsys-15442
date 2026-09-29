@@ -1,0 +1,11 @@
+# 站点构建依赖 —— 全部钉死版本。
+#
+# 为什么要钉：Material 团队自己发了警告，MkDocs 2.0 会
+#   「所有插件失效、主题覆写全部断裂、没有迁移路径、目前未授权」。
+# 钉在 1.x 上，2.0 发布时不会因为 `pip install mkdocs-material` 把站点弄崩。
+# 升级必须是一次**有意的**决定，而不是某次 CI 顺手拉到新版。
+#
+# 安装： python -m pip install -r websrc/requirements.txt
+mkdocs==1.6.1
+mkdocs-material==9.7.7
+pymdown-extensions==12.1

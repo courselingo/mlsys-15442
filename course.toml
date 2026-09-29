@@ -1,0 +1,54 @@
+# CourseLingo 课程元数据
+
+[course]
+id = "mlsys-15442"
+title = "Machine Learning Systems"
+title_zh = "机器学习系统"
+institution = "Carnegie Mellon University"
+course_number = "15-442 / 15-642"
+homepage = "https://mlsyscourse.org/"
+source_language = "en"
+target_language = "zh"
+
+# ★ 授权闸门。逐页核实见平台仓库 docs/full-translation-scope.md，
+#   第二人独立复核（Lead 签字）见下方 evidence_url 与 notes。
+[license]
+verified = true
+terms = "CC BY-NC 4.0（仓库根 LICENSE，19,342 B；无 ShareAlike、无 NoDerivatives）"
+evidence_url = "https://github.com/mlsyscourse/mlsyscourse.github.io/blob/main/LICENSE"
+checked_at = "2026-09-29"
+allows_commercial = false
+allows_derivatives = true
+allows_translation = true
+share_alike = false
+redistribution = "allowed"
+notes = '''
+仓库根 `LICENSE` = **CC BY-NC 4.0**（全文 19,342 B，Attribution-NonCommercial 4.0 International）。
+课程站页面（index / schedule / materials）**0 命中** —— 唯一的有效授权声明就是这个仓库根 LICENSE。
+
+第二人独立复核（Lead 签字，2026-09-29）：`docs/audit/licence-mlsys-15442-second-review.md`
+实测字节数 19,342 B（与作者记录**同字节数**）、`ShareAlike`=0、`NoDerivatives`=0 ⇒ 复核通过。
+⇒ 翻译（衍生）被允许；**无 SA ⇒ 本仓产出不必以同协议发布**（四门里除 6.5840 外最宽松的一门）。
+
+⚠️ 排除项（不因授权通过而放开）：
+* `slides/` 里混放的三份第三方客座/业界演讲（ByteDance Seed / Tim Dettmers / Zihao Ye, UW & NVIDIA）；
+* 作业仓库：3 个 LICENSE 探针是 14 B 的 `404: Not Found` ⇒ 没有许可；
+  （assignment-tirx-gemm 是 Apache-2.0，但**仍属作业材料**，按学术诚信一并排除）
+* 不在 `_data/lectures.yml` 排期里的 PDF ⇒ 视为第三方遗留文件，不译。
+'''
+
+# 按材料类型逐项核实 —— 闸门只认这里（validate.py 的 license_allows()）。
+[license.materials]
+notes = false      # 网页文本无独立声明；本条以 slides 为准
+slides = true       # 课程自制讲义 PDF / 网页版讲义，与 LICENSE 同仓库
+video = false      # 视频另有平台条款
+textbook = false    # 无指定开放教材
+other = false      # 作业材料按学术诚信永久排除
+
+[output]
+default_mode = "explanation"   # explanation | transcript（transcript 需该 source_kind 已授权）
+
+# 站点（GitHub Pages）—— build_site.py 用这两项生成 MkDocs 的 repo_url / site_url。
+[site]
+repo = "courselingo/mlsys-15442"
+url = "https://courselingo.github.io/mlsys-15442/"

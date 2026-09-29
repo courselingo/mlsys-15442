@@ -1,0 +1,111 @@
+/* CourseLingo 逐段双语对照 */
+.bi {
+  margin: 1.6rem 0;
+}
+.bi-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 0.7rem;
+}
+.bi-switch {
+  display: inline-flex;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.bi-switch button {
+  border: 0;
+  background: transparent;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.72rem;
+  padding: 0.22rem 0.85rem;
+  cursor: pointer;
+}
+.bi-switch button.on {
+  background: var(--md-primary-fg-color);
+  color: #fff;
+}
+.bi-hint {
+  font-size: 0.7rem;
+  color: var(--md-default-fg-color--light);
+}
+.bi-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 1.4rem;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+  padding: 0.95rem 0;
+}
+.bi-row:first-of-type {
+  border-top: 0;
+}
+.bi-cell {
+  min-width: 0;
+  position: relative;
+}
+.bi-zh {
+  border-left: 3px solid var(--md-primary-fg-color);
+  padding-left: 0.9rem;
+}
+.bi-tag {
+  position: absolute;
+  top: -0.1rem;
+  font-size: 0.64rem;
+  letter-spacing: 0.06em;
+  color: var(--md-default-fg-color--light);
+  user-select: none;
+}
+.bi-zh .bi-tag {
+  left: -0.05rem;
+}
+.bi-en .bi-tag {
+  right: 0;
+}
+.bi-body > :first-child {
+  margin-top: 0;
+}
+.bi-body > :last-child {
+  margin-bottom: 0;
+}
+.bi-en .bi-body {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.94em;
+}
+.bi-body .bi-empty {
+  color: #b91c1c;
+  font-style: italic;
+}
+.bi-warn {
+  color: #b45309;
+  font-size: 0.8rem;
+}
+.bi-error {
+  color: #b91c1c;
+  font-weight: 600;
+}
+.bi-bad {
+  background: rgba(185, 28, 28, 0.06);
+}
+
+/* 三种视图 */
+.bi[data-view='zh'] .bi-en,
+.bi[data-view='en'] .bi-zh {
+  display: none;
+}
+.bi[data-view='zh'] .bi-row,
+.bi[data-view='en'] .bi-row {
+  grid-template-columns: 1fr;
+}
+
+@media (max-width: 860px) {
+  .bi-row {
+    grid-template-columns: 1fr;
+  }
+  .bi-zh {
+    border-left: 0;
+    padding-left: 0;
+    margin-bottom: 0.6rem;
+  }
+}

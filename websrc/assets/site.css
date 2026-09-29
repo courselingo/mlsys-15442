@@ -1,0 +1,103 @@
+/* CourseLingo 站点微调 */
+
+/* 配图：居中并限制不超过正文栏宽。
+   各图 viewBox 宽窄不一（有的图本身就是窄的表格/泳道），
+   居中能让「窄」看起来是有意为之，而不是排版失误。 */
+.md-typeset img {
+  display: block;
+  margin: 1.2rem auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 中文正文行高：比 Material 默认更松一点，长段落更好读 */
+.md-typeset {
+  line-height: 1.85;
+}
+.md-typeset p {
+  text-wrap: pretty;
+}
+
+/* 术语（由 [[term:key]] 转换而来） */
+.md-typeset abbr.term {
+  text-decoration: none;
+  border-bottom: 1px dashed var(--md-primary-fg-color);
+  cursor: help;
+  color: var(--md-primary-fg-color);
+}
+
+/* 授权提示条：让它在正文之前足够显眼 */
+.md-typeset .admonition.warning > .admonition-title,
+.md-typeset .admonition.danger > .admonition-title {
+  font-weight: 700;
+}
+
+/* 逐段双语对照（仅在授权允许转载原文时才会出现） */
+.bi {
+  margin: 1.6rem 0;
+}
+.bi-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 0.7rem;
+}
+.bi-switch {
+  display: inline-flex;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.bi-switch button {
+  border: 0;
+  background: transparent;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.72rem;
+  padding: 0.22rem 0.85rem;
+  cursor: pointer;
+}
+.bi-switch button.on {
+  background: var(--md-primary-fg-color);
+  color: #fff;
+}
+.bi-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 1.4rem;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+  padding: 0.95rem 0;
+}
+.bi-row:first-of-type {
+  border-top: 0;
+}
+.bi-cell {
+  min-width: 0;
+  position: relative;
+}
+.bi-zh {
+  border-left: 3px solid var(--md-primary-fg-color);
+  padding-left: 0.9rem;
+}
+.bi-en .bi-body {
+  color: var(--md-default-fg-color--light);
+  font-size: 0.94em;
+}
+.bi[data-view='zh'] .bi-en,
+.bi[data-view='en'] .bi-zh {
+  display: none;
+}
+.bi[data-view='zh'] .bi-row,
+.bi[data-view='en'] .bi-row {
+  grid-template-columns: 1fr;
+}
+@media (max-width: 860px) {
+  .bi-row {
+    grid-template-columns: 1fr;
+  }
+  .bi-zh {
+    border-left: 0;
+    padding-left: 0;
+    margin-bottom: 0.6rem;
+  }
+}

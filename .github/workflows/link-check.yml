@@ -1,0 +1,236 @@
+# link-check.yml — 每周检查讲座 source_url 是否失效
+#
+# 为什么需要它：spec §4 要求每个讲座都带 source_url（署名与可溯源）。
+# 这类链接会静默腐烂（课程改版、页面迁移、视频下架），而这正是本项目
+# "可溯源"承诺的地基。
+#
+# 设计约束：
+#   * 零依赖 —— 只用 Python 3.12 标准库（tomllib + urllib），不装任何包。
+#     逻辑内联在本文件里，不新增 scripts/ 下的脚本（spec 只定义 validate.py
+#     与 build.py）。
+#   * 失败时创建/更新一个 issue，而不是只让 CI 变红 —— 红叉会淹没在日常
+#     PR 通知里，issue 可以被指派、订阅、关闭。
+#   * 403 / 429 视为"需要人工确认"而不是失效：很多站点反爬或限流，
+#     机器人拿不到 200 并不代表链接坏了。
+
+name: Link check (source_url)
+
+on:
+  schedule:
+    # 每周一 02:00 UTC = 北京时间 10:00
+    - cron: "0 2 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: link-check
+  cancel-in-progress: false
+
+jobs:
+  link-check:
+    name: 检查 source_url
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v7
+
+      - name: 准备 Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      # ---- ① 抓取所有 source_url，逐一探测，写 link-report.md ----
+      - name: 探测 source_url
+        env:
+          LC_ALL: C.UTF-8
+          PYTHONIOENCODING: utf-8
+        run: |
+          python - <<'PY'
+          import concurrent.futures as futures
+          import pathlib
+          import sys
+          import time
+          import tomllib
+          import urllib.error
+          import urllib.request
+
+          TIMEOUT = 15.0
+          RETRIES = 3
+          WORKERS = 6
+          UA = "courselingo-link-check/1.0 (+https://github.com/courselingo)"
+          RETRYABLE_BLOCK = (403, 429)
+
+
+          def load_lectures():
+              """产出 (路径, 元数据, 错误说明)。"""
+              for path in sorted(pathlib.Path("content").glob("*/index.md")):
+                  text = path.read_text(encoding="utf-8")
+                  parts = text.split("+++", 2)
+                  if len(parts) < 3:
+                      yield path, {}, "缺少 +++ TOML front matter"
+                      continue
+                  try:
+                      meta = tomllib.loads(parts[1])
+                  except tomllib.TOMLDecodeError as exc:
+                      yield path, {}, f"front matter 无法解析：{exc}"
+                      continue
+                  yield path, meta, ""
+
+
+          def probe(url):
+              """返回 (level, detail)；level 为 ok / warn / fail。"""
+              last = "无响应"
+              for attempt in range(RETRIES):
+                  try:
+                      req = urllib.request.Request(
+                          url,
+                          headers={"User-Agent": UA, "Accept": "*/*", "Range": "bytes=0-0"},
+                      )
+                      with urllib.request.urlopen(req, timeout=TIMEOUT) as resp:
+                          return "ok", f"HTTP {resp.status}"
+                  except urllib.error.HTTPError as exc:
+                      code = exc.code
+                      if code < 400:
+                          return "ok", f"HTTP {code}"
+                      if code in RETRYABLE_BLOCK:
+                          return "warn", f"HTTP {code}（反爬或限流，需人工确认）"
+                      last = f"HTTP {code}"
+                      if code in (404, 410):
+                          return "fail", last
+                  except Exception as exc:
+                      last = f"{type(exc).__name__}"
+                  time.sleep(1.5 * (attempt + 1))
+              return "fail", last
+
+
+          def main():
+              targets = []
+              for path, meta, err in load_lectures():
+                  if err:
+                      targets.append((path, "", "fail", err))
+                      continue
+                  url = str(meta.get("source_url", "")).strip()
+                  if not url:
+                      targets.append((path, "", "fail", "source_url 缺失或为空（spec §4 要求必填）"))
+                      continue
+                  targets.append((path, url, "", ""))
+
+              urls = sorted({url for _, url, _, _ in targets if url})
+              if not urls:
+                  print("没有找到任何 source_url，跳过。")
+                  pathlib.Path("link-report.md").write_text("", encoding="utf-8")
+                  return 0
+
+              with futures.ThreadPoolExecutor(max_workers=WORKERS) as pool:
+                  results = dict(zip(urls, pool.map(probe, urls)))
+
+              bad = []
+              for path, url, level, detail in targets:
+                  if level == "fail":
+                      bad.append((str(path), url, "fail", detail))
+                  elif url:
+                      got_level, got_detail = results[url]
+                      if got_level != "ok":
+                          bad.append((str(path), url, got_level, got_detail))
+
+              print(f"共探测 {len(urls)} 个链接，可疑 {len(bad)} 个。")
+              for row in bad:
+                  print(f"  [{row[2]}] {row[0]}  {row[1] or '-'}  {row[3]}")
+
+              if not bad:
+                  pathlib.Path("link-report.md").write_text("", encoding="utf-8")
+                  return 0
+
+              hard = [row for row in bad if row[2] == "fail"]
+              lines = [
+                  "每周自动检查 `content/**/index.md` 的 `source_url`（见 `.github/workflows/link-check.yml`）。",
+                  "",
+                  f"本次可疑链接：**{len(bad)}** 个（其中判定失效 {len(hard)} 个，需人工确认 {len(bad) - len(hard)} 个）。",
+                  "",
+                  "| 状态 | 讲座 | source_url | 详情 |",
+                  "| --- | --- | --- | --- |",
+              ]
+              for path, url, level, detail in bad:
+                  lines.append(f"| {level} | `{path}` | {url or '（空）'} | {detail} |")
+              lines += [
+                  "",
+                  "处理建议：",
+                  "",
+                  "1. 链接已迁移 → 更新该讲座的 `source_url`（如需要，同时更新 `source_title`）。",
+                  "2. 原始材料已下架 → 这是**内容策略问题**，不只是改链接：确认我们是否仍有正当的引用/署名依据，必要时降级或下线该讲座。",
+                  "3. `warn`（403 / 429）通常是对方反爬或限流 → 人工在浏览器确认一次再决定，不要盲目删链接。",
+                  "",
+              ]
+              pathlib.Path("link-report.md").write_text("\n".join(lines), encoding="utf-8")
+              return 0 if not hard else 1
+
+
+          sys.exit(main())
+          PY
+
+      # ---- ② 只在①失败时创建/更新 issue（用链接检查的失败被动触发） ----
+      - name: 创建或更新 issue
+        if: failure()
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          PYTHONIOENCODING: utf-8
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import pathlib
+          import sys
+          import urllib.request
+
+          report = pathlib.Path("link-report.md")
+          if not report.is_file() or not report.read_text(encoding="utf-8").strip():
+              print("没有可用报告，跳过 issue 步骤。")
+              sys.exit(0)
+
+          token = os.environ["GITHUB_TOKEN"]
+          repo = os.environ["GITHUB_REPOSITORY"]
+          server = os.environ.get("GITHUB_SERVER_URL", "https://github.com")
+          run_id = os.environ.get("GITHUB_RUN_ID", "")
+          api = "https://api.github.com"
+          title = "[link-check] 失效的 source_url"
+          body = report.read_text(encoding="utf-8")
+          if run_id:
+              body += f"\n---\n\n本次运行日志：{server}/{repo}/actions/runs/{run_id}\n"
+
+
+          def call(method, path, payload=None):
+              data = json.dumps(payload).encode("utf-8") if payload is not None else None
+              req = urllib.request.Request(
+                  api + path,
+                  data=data,
+                  method=method,
+                  headers={
+                      "Authorization": f"Bearer {token}",
+                      "Accept": "application/vnd.github+json",
+                      "X-GitHub-Api-Version": "2022-11-28",
+                      "User-Agent": "courselingo-link-check",
+                      "Content-Type": "application/json",
+                  },
+              )
+              with urllib.request.urlopen(req, timeout=30) as resp:
+                  return json.loads(resp.read().decode("utf-8"))
+
+
+          open_issues = call("GET", f"/repos/{repo}/issues?state=open&per_page=100")
+          existing = [
+              item
+              for item in open_issues
+              if item.get("title") == title and "pull_request" not in item
+          ]
+
+          if existing:
+              number = existing[0]["number"]
+              call("PATCH", f"/repos/{repo}/issues/{number}", {"body": body})
+              print(f"已更新 issue #{number}")
+          else:
+              created = call("POST", f"/repos/{repo}/issues", {"title": title, "body": body})
+              print(f"已创建 issue #{created['number']}")
+          PY

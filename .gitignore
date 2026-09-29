@@ -1,0 +1,8 @@
+# 构建产物
+site/
+
+# MkDocs 产物与中间目录
+site-mkdocs/
+websrc/docs/
+websrc/mkdocs.yml
+__pycache__/

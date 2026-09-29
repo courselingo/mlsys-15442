@@ -1,0 +1,42 @@
+# 内容授权 · Content License
+
+**本仓库的代码**（`scripts/`、`.github/`）采用 [MIT License](./LICENSE)。
+
+**本仓库的原创内容**（讲解、导读、术语表、配图）默认采用
+**CC BY 4.0**：可自由共享与改编（含商用），只需署名并说明是否修改。
+全文：<https://creativecommons.org/licenses/by/4.0/>
+
+## ★ 课程规定优先（重要）
+
+**上面只是默认。本课程自己的规定更严格时，以课程为准。**
+
+这一点由 `course.toml` 与 `papers.toml` 里的授权字段控制，并由 `validate.py` / `build.py` 强制：
+
+| `course.toml` 里的情况 | 我们怎么做 |
+| --- | --- |
+| `[license.materials].<类型> = true` | 可以为该类型材料产出翻译（如逐字稿） |
+| 全部为 `false` 或未核实 | 只发布我们自己撰写的讲解（`explanation` / `guide`） |
+| 课程是 CC BY-NC-SA 类 | 本仓库产出**必须**同样以 CC BY-NC-SA 发布，且**不得商用** |
+| **`[license].redistribution = "forbidden"`** | ⛔ **拒绝执行**：`validate.py` / `build.py` 以退出码 **3** 明确拒绝，不产出任何内容 |
+
+**最后一档是政策性拒绝。** 如果课程不允许传播，CourseLingo 不会为它产出或发布任何东西 ——
+不是「小心一点继续做」，而是明确不做。
+
+论文同理，且**逐篇**判定：见 `papers.toml` 中每篇的 `[paper.license]`。
+论文的版权通常在出版社手里，与课程授权无关。
+说明见 <https://github.com/courselingo/courselingo/blob/main/docs/paper-licensing.md>。
+
+## 必须保留的上游署名
+
+凡基于某个课程或论文的产出，文件头部都要有：原始作者与名称、原文链接、
+上游许可名称与链接、以及我们做了哪些修改。
+
+示例：
+
+```markdown
+> 来源：MIT 6.5840 / 6.824 Distributed Systems（Robert Morris 及 MIT PDOS）
+> 原文：https://pdos.csail.mit.edu/6.824/
+> 上游许可：CC BY 3.0 US — https://creativecommons.org/licenses/by/3.0/us/
+> 本文由 CourseLingo 翻译并改写；如与原文有出入，以原文为准。
+> 非官方材料，与 MIT 无隶属关系。
+```

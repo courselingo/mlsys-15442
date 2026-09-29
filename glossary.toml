@@ -1,0 +1,38 @@
+# CourseLingo 术语表 · CMU Machine Learning Systems
+# 格式见平台仓库 docs/pipeline-spec.md。术语一致率由 validate.py 校验。
+
+[[term]]
+key = "automatic differentiation"
+zh = "自动微分"
+en = "automatic differentiation"
+note = "由程序结构本身推导梯度，而不是手写求导公式"
+
+[[term]]
+key = "computational graph"
+zh = "计算图"
+en = "computational graph"
+note = "把计算表示成有向图，节点是算子、边是张量，反向传播沿图反向走"
+
+[[term]]
+key = "kernel"
+zh = "内核（GPU 核函数）"
+en = "kernel"
+note = "在 GPU 上并行执行的一段函数；注意与操作系统内核同名但不同义"
+
+[[term]]
+key = "data parallelism"
+zh = "数据并行"
+en = "data parallelism"
+note = "把同一份模型复制到多个设备，各自处理不同的数据分片"
+
+[[term]]
+key = "ZeRO"
+zh = "零冗余优化器"
+en = "Zero Redundancy Optimizer"
+note = "把优化器状态、梯度、参数分片存放，消除数据并行中的冗余副本"
+
+[[term]]
+key = "KV cache"
+zh = "KV 缓存"
+en = "KV cache"
+note = "自回归生成时缓存已算过的键值对，避免每步重算整个前缀"

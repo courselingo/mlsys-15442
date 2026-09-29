@@ -1,0 +1,81 @@
+# validate.yml — 每个 push / PR 都跑内容校验
+#
+# 契约：docs/pipeline-spec.md §6（退出码）与 §8（CI 契约）
+#   exit 0 = 通过（可能带 WARN）
+#   exit 1 = 有 ERROR（授权闸门 / 术语 / front matter / 原文转载探测）
+#   exit 2 = 用法或 IO 错误
+# 任何非 0 退出码都会让本 job 失败，PR 上会显示红叉。
+
+name: Validate
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+# 只读仓库即可；validate.py 不联网、不写仓库
+permissions:
+  contents: read
+
+# 同一分支/PR 的新提交取消上一次仍在跑的校验，省 CI 额度
+concurrency:
+  group: validate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: 内容校验
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v7
+
+      - name: 准备 Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      # 零依赖：不装任何 pip 包。脚本只用 Python 标准库（tomllib）。
+      - name: 运行 scripts/validate.py
+        run: python scripts/validate.py
+
+      # 文风机检：反 AI 味不是靠自觉，是靠阈值。
+      # 破折号 / 加粗 / 设问密度、禁用词、脉络锚点，超阈值即失败。
+      # 规范见 docs/writing-style.md
+      - name: 文风机检
+        run: python scripts/check_style.py --root .
+
+      # 内容审计：查「该有的有没有」—— 配图密度与分布、每个小节是否配图、
+      # 连续无图缺口、句子长度、具体性、结构完整性。
+      # 背景：第一轮把「≥3 幅图」当配额，结果每篇都恰好 3 幅，
+      # 而 65 个二级小节里有 44 个讲着机制却没有图。
+      # 判断依据见 docs/figure-audit.md 与 docs/quality-audit.md
+      - name: 内容审计
+        run: python scripts/audit_content.py --root . --strict
+
+      # 配图房规检查：调用 vendor 进来的 tools/svg-lint（Node，零依赖）。
+      # 房规要求 0 error 且 0 warning，--strict 让 warning 也拦下来。
+      # ubuntu-latest 自带 Node；仍显式 setup 以钉住版本。
+      - name: 准备 Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+
+      - name: 配图房规检查
+        run: python scripts/check_figures.py --strict
+
+      # reviewed 前置条件：**声称通过审核的页面，必须拿得出审核的证据。**
+      #
+      # validate.py 的 VALID_STATUS 里**有** reviewed，但它不为这个值检查任何东西 ——
+      # 也就是说「reviewed」这个标签一度完全靠人自觉。
+      # 本步判的不是「内容对不对」（那机器判不了，归两道人工闸门），
+      # 而是「有没有走完流程并留下证据」：
+      #   · 自称 reviewed ⇒ 必须有对应它的审核记录
+      #   · 记录里必须写明透镜 3（陌生读者测试，两道人工闸门之一）
+      #   · 记录里必须钉住 SHA256 —— 否则「当时为什么绿」不可复现
+      #     （判据本身也会变：见 docs/quality-audit.md 附录七）
+      #   · 该页配图不得有未处理的「有错误 / 需小修」复核结论
+      # draft 页只提示不报错（它们本来就还没做完）。
+      - name: reviewed 前置条件
+        run: python scripts/check_reviewed.py --root .
+
