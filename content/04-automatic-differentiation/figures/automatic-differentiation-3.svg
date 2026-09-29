@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 754 340.0" width="754" height="340.0"
+     role="img" aria-labelledby="fig-automatic-differentiation-3-title fig-automatic-differentiation-3-desc">
+  <title id="fig-automatic-differentiation-3-title">数值微分不能用来训练，但能当尺子</title>
+  <desc id="fig-automatic-differentiation-3-desc">课件说它有数值误差、算起来也慢，所以不用来训练；但它是检查自动微分实现的很强工具，在单元测试里拿它比对。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="754" height="340.0" fill="#ffffff"/>
+
+  <text x="379.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">数值微分不能用来训练，但能当尺子</text>
+  <rect x="25" y="70" width="340" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="195.0" y="99.7" font-size="15" fill="#9d174d" text-anchor="middle">数值微分</text>
+  <text x="195.0" y="117.7" font-size="12" fill="#9d174d" text-anchor="middle">用两点差分近似导数</text>
+  <rect x="25" y="163" width="340" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="195.0" y="192.7" font-size="15" fill="#9d174d" text-anchor="middle">问题一</text>
+  <text x="195.0" y="210.7" font-size="12" fill="#9d174d" text-anchor="middle">差分本身带数值误差</text>
+  <rect x="25" y="256" width="340" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="195.0" y="285.7" font-size="15" fill="#9d174d" text-anchor="middle">问题二</text>
+  <text x="195.0" y="303.7" font-size="12" fill="#9d174d" text-anchor="middle">每个参数都要单独算一遍</text>
+  <rect x="393" y="70" width="340" height="260" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.0" y="186.7" font-size="15" fill="#166534" text-anchor="middle">但它有一个正经用途</text>
+  <text x="563.0" y="204.7" font-size="12" fill="#166534" text-anchor="middle">梯度检查</text>
+  <text x="563.0" y="222.7" font-size="12" fill="#166534" text-anchor="middle">拿差分的结果当尺子，去验自动微分的实现</text>
+</svg>

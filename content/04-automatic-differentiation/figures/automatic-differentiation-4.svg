@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 776 340.0" width="776" height="340.0"
+     role="img" aria-labelledby="fig-automatic-differentiation-4-title fig-automatic-differentiation-4-desc">
+  <title id="fig-automatic-differentiation-4-title">符号微分：公式是对的，代价是重复计算</title>
+  <desc id="fig-automatic-differentiation-4-desc">把公式写出来，用和、积、链式法则求导；朴素做法会让同一个子表达式被反复展开，课件给的代价是算全部偏导要 O(n²) 次乘法。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="776" height="340.0" fill="#ffffff"/>
+
+  <text x="390.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">符号微分：公式是对的，代价是重复计算</text>
+  <rect x="25" y="70" width="430" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="240.0" y="99.7" font-size="15" fill="#b45309" text-anchor="middle">符号微分</text>
+  <text x="240.0" y="117.7" font-size="12" fill="#b45309" text-anchor="middle">写公式，按和、积、链式法则求导</text>
+  <rect x="25" y="163" width="430" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="240.0" y="192.7" font-size="15" fill="#9d174d" text-anchor="middle">朴素做法的问题</text>
+  <text x="240.0" y="210.7" font-size="12" fill="#9d174d" text-anchor="middle">同一个子表达式被反复展开</text>
+  <rect x="25" y="256" width="430" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="240.0" y="285.7" font-size="15" fill="#9d174d" text-anchor="middle">课件给的代价</text>
+  <text x="240.0" y="303.7" font-size="12" fill="#9d174d" text-anchor="middle">算全部偏导要 O(n²) 次乘法</text>
+  <rect x="483" y="70" width="272" height="260" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="619.0" y="186.7" font-size="15" fill="#6b21a8" text-anchor="middle">一个具体的例子</text>
+  <text x="619.0" y="204.7" font-size="12" fill="#6b21a8" text-anchor="middle">f 里出现了 x1 与 x2</text>
+  <text x="619.0" y="222.7" font-size="12" fill="#6b21a8" text-anchor="middle">两个偏导中都含重复项</text>
+</svg>

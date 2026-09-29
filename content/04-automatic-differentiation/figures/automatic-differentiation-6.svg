@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 604 311.0" width="604" height="311.0"
+     role="img" aria-labelledby="fig-automatic-differentiation-6-title fig-automatic-differentiation-6-desc">
+  <title id="fig-automatic-differentiation-6-title">前向模式：把切线跟着值一起往前推</title>
+  <desc id="fig-automatic-differentiation-6-desc">左边是原来的值，右边是每个值对输入的导数（切线）；两者一起沿正向拓扑序往下走，一遍就能拿到所有中间变量对某个输入的导数。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="604" height="311.0" fill="#ffffff"/>
+
+  <text x="304.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">前向模式：把切线跟着值一起往前推</text>
+  <rect x="25" y="70" width="250" height="39" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="150.0" y="94.0" font-size="13" fill="#1e40af" text-anchor="middle">v1 = x1</text>
+  <rect x="25" y="134" width="250" height="39" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="150.0" y="158.1" font-size="13" fill="#1e40af" text-anchor="middle">v2 = x2</text>
+  <rect x="25" y="198" width="250" height="39" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="150.0" y="222.1" font-size="13" fill="#1e40af" text-anchor="middle">v3 = v1 × v2</text>
+  <rect x="25" y="262" width="250" height="39" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="150.0" y="286.1" font-size="13" fill="#1e40af" text-anchor="middle">v4 = exp(v1)</text>
+  <rect x="303" y="70" width="280" height="39" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="443.0" y="94.0" font-size="13" fill="#b45309" text-anchor="middle">∂v1/∂x = 1</text>
+  <rect x="303" y="134" width="280" height="39" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="443.0" y="158.1" font-size="13" fill="#b45309" text-anchor="middle">∂v2/∂x = 0</text>
+  <rect x="303" y="198" width="280" height="39" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="443.0" y="222.1" font-size="13" fill="#b45309" text-anchor="middle">∂v3/∂x = ∂v1/∂x·v2 + v1·∂v2/∂x</text>
+  <rect x="303" y="262" width="280" height="39" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="443.0" y="286.1" font-size="13" fill="#b45309" text-anchor="middle">∂v4/∂x = exp(v1)·∂v1/∂x</text>
+</svg>

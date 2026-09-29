@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 754 244.0" width="754" height="244.0"
+     role="img" aria-labelledby="fig-automatic-differentiation-7-title fig-automatic-differentiation-7-desc">
+  <title id="fig-automatic-differentiation-7-title">前向模式的天花板：输入一多就要跑很多遍</title>
+  <desc id="fig-automatic-differentiation-7-desc">课件给的判断是：对 n 个输入就要 n 遍前向才能拿全梯度，而我们关心的情况恰恰是输出只有一个、输入有几百万个。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="754" height="244.0" fill="#ffffff"/>
+
+  <text x="379.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">前向模式的天花板：输入一多就要跑很多遍</text>
+  <rect x="25" y="70" width="340" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="195.0" y="99.7" font-size="15" fill="#9d174d" text-anchor="middle">要算对每个输入的偏导</text>
+  <text x="195.0" y="117.7" font-size="12" fill="#9d174d" text-anchor="middle">n 个输入就要 n 遍前向</text>
+  <rect x="393" y="70" width="340" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="563.0" y="99.7" font-size="15" fill="#9d174d" text-anchor="middle">而我们关心的情况</text>
+  <text x="563.0" y="117.7" font-size="12" fill="#9d174d" text-anchor="middle">输出一个，输入几百万个</text>
+  <rect x="25" y="166" width="708" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="379.0" y="195.7" font-size="15" fill="#166534" text-anchor="middle">所以需要另一种模式</text>
+  <text x="379.0" y="213.7" font-size="12" fill="#166534" text-anchor="middle">它应该一遍就拿到对所有输入的梯度</text>
+</svg>

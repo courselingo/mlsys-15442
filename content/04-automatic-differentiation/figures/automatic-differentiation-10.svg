@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 777 244.0" width="777" height="244.0"
+     role="img" aria-labelledby="fig-automatic-differentiation-10-title fig-automatic-differentiation-10-desc">
+  <title id="fig-automatic-differentiation-10-title">反向 AD 的算法骨架：三步循环</title>
+  <desc id="fig-automatic-differentiation-10-desc">先把输出的伴随量记为 1，再按逆拓扑序逐个处理节点，把算出来的部分伴随量追加给它的每个输入；同一节点的几份到齐后求和。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="777" height="244.0" fill="#ffffff"/>
+
+  <text x="390.5" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">反向 AD 的算法骨架：三步循环</text>
+  <rect x="25" y="70" width="225" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="137.5" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">第一步 起点</text>
+  <text x="137.5" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">输出的伴随量记为 1</text>
+  <rect x="278" y="70" width="225" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="390.5" y="99.7" font-size="15" fill="#b45309" text-anchor="middle">第二步 逆序走</text>
+  <text x="390.5" y="117.7" font-size="12" fill="#b45309" text-anchor="middle">按逆拓扑序逐个处理</text>
+  <rect x="531" y="70" width="225" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="643.5" y="99.7" font-size="15" fill="#166534" text-anchor="middle">第三步 往下传</text>
+  <text x="643.5" y="117.7" font-size="12" fill="#166534" text-anchor="middle">把部分伴随量追加给输入</text>
+  <rect x="25" y="166" width="731" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="390.5" y="195.7" font-size="15" fill="#6b21a8" text-anchor="middle">到齐之后求和</text>
+  <text x="390.5" y="213.7" font-size="12" fill="#6b21a8" text-anchor="middle">一个节点的伴随量要等它全体下游都处理完才算得出来</text>
+</svg>

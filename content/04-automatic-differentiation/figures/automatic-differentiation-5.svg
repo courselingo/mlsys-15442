@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 754 392.0" width="754" height="392.0"
+     role="img" aria-labelledby="fig-automatic-differentiation-5-title fig-automatic-differentiation-5-desc">
+  <title id="fig-automatic-differentiation-5-title">把计算写成图：中间变量是节点，依赖是边</title>
+  <desc id="fig-automatic-differentiation-5-desc">课件回顾了计算图：输入、若干中间变量、一个输出；图按拓扑序排列，前向与反向的模式差别就在于沿哪个方向走。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="754" height="392.0" fill="#ffffff"/>
+
+  <text x="379.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">把计算写成图：中间变量是节点，依赖是边</text>
+  <rect x="25" y="70" width="340" height="42" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="195.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">输入 x1 与 x2</text>
+  <rect x="25" y="137" width="340" height="42" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="195.0" y="162.9" font-size="14" fill="#b45309" text-anchor="middle">中间变量 v1 = x1 × x2</text>
+  <rect x="25" y="204" width="340" height="42" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="195.0" y="229.9" font-size="14" fill="#b45309" text-anchor="middle">中间变量 v2 = exp(x1)</text>
+  <rect x="25" y="271" width="340" height="42" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="195.0" y="296.9" font-size="14" fill="#166534" text-anchor="middle">输出 v3 = v1 + v2</text>
+  <path d="M195,117 L195,126" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M195,184 L195,193" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M195,251 L195,260" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="393" y="70" width="340" height="312" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="563.0" y="212.7" font-size="15" fill="#6b21a8" text-anchor="middle">节点与边</text>
+  <text x="563.0" y="230.7" font-size="12" fill="#6b21a8" text-anchor="middle">节点是一次具体的计算</text>
+  <text x="563.0" y="248.7" font-size="12" fill="#6b21a8" text-anchor="middle">边表示谁的结果被谁用到</text>
+</svg>

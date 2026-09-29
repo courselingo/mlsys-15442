@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 777 237.0" width="777" height="237.0"
+     role="img" aria-labelledby="fig-automatic-differentiation-2-title fig-automatic-differentiation-2-desc">
+  <title id="fig-automatic-differentiation-2-title">求梯度有三条路，代价各不相同</title>
+  <desc id="fig-automatic-differentiation-2-desc">数值微分按定义做差分，符号微分把公式展开，自动微分一边算一边记；课件把前两条的问题讲清楚之后，才引出第三条。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="777" height="237.0" fill="#ffffff"/>
+
+  <text x="390.5" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">求梯度有三条路，代价各不相同</text>
+  <rect x="25" y="70" width="225" height="45" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="137.5" y="97.8" font-size="15" fill="#9d174d" text-anchor="middle">数值微分</text>
+  <rect x="278" y="70" width="225" height="45" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="390.5" y="97.8" font-size="15" fill="#9d174d" text-anchor="middle">符号微分</text>
+  <rect x="531" y="70" width="225" height="45" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="643.5" y="97.8" font-size="15" fill="#166534" text-anchor="middle">自动微分</text>
+  <rect x="25" y="143" width="225" height="84" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="137.5" y="171.6" font-size="14" fill="#9d174d" text-anchor="middle">按定义做差分</text>
+  <text x="137.5" y="189.6" font-size="12" fill="#9d174d" text-anchor="middle">有数值误差</text>
+  <text x="137.5" y="207.6" font-size="12" fill="#9d174d" text-anchor="middle">每个参数都要重算</text>
+  <rect x="278" y="143" width="225" height="84" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="390.5" y="171.6" font-size="14" fill="#9d174d" text-anchor="middle">写公式再求导</text>
+  <text x="390.5" y="189.6" font-size="12" fill="#9d174d" text-anchor="middle">子表达式反复展开</text>
+  <text x="390.5" y="207.6" font-size="12" fill="#9d174d" text-anchor="middle">代价随规模爆炸</text>
+  <rect x="531" y="143" width="225" height="84" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="643.5" y="171.6" font-size="14" fill="#166534" text-anchor="middle">对计算图求导</text>
+  <text x="643.5" y="189.6" font-size="12" fill="#166534" text-anchor="middle">一遍拿到全部梯度</text>
+  <text x="643.5" y="207.6" font-size="12" fill="#166534" text-anchor="middle">数值上精确</text>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 758 312.0" width="758" height="312.0"
+     role="img" aria-labelledby="fig-automatic-differentiation-1-title fig-automatic-differentiation-1-desc">
+  <title id="fig-automatic-differentiation-1-title">机器学习里最常做的一件事：算梯度</title>
+  <desc id="fig-automatic-differentiation-1-desc">课件先回顾三要素，然后点出结论：算损失对模型参数的梯度，是机器学习里最常发生的运算，所以它值一整讲。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="758" height="312.0" fill="#ffffff"/>
+
+  <text x="381.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">机器学习里最常做的一件事：算梯度</text>
+  <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">课件的一句话：算梯度是最常用的运算</text>
+  <rect x="25" y="138" width="712" height="68" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="381.0" y="167.7" font-size="15" fill="#9d174d" text-anchor="middle">要求的东西</text>
+  <text x="381.0" y="185.7" font-size="12" fill="#9d174d" text-anchor="middle">损失函数对模型参数的偏导</text>
+  <rect x="25" y="234" width="210" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="130.0" y="263.7" font-size="15" fill="#1e40af" text-anchor="middle">模型类</text>
+  <text x="130.0" y="281.7" font-size="12" fill="#1e40af" text-anchor="middle">带参数的函数</text>
+  <rect x="263" y="234" width="210" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="368.0" y="263.7" font-size="15" fill="#b45309" text-anchor="middle">损失函数</text>
+  <text x="368.0" y="281.7" font-size="12" fill="#b45309" text-anchor="middle">给这组参数打分</text>
+  <rect x="501" y="234" width="210" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="606.0" y="263.7" font-size="15" fill="#166534" text-anchor="middle">训练方法</text>
+  <text x="606.0" y="281.7" font-size="12" fill="#166534" text-anchor="middle">沿梯度找更小的损失</text>
+</svg>

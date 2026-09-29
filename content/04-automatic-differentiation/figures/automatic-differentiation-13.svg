@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 754 244.0" width="754" height="244.0"
+     role="img" aria-labelledby="fig-automatic-differentiation-13-title fig-automatic-differentiation-13-desc">
+  <title id="fig-automatic-differentiation-13-title">张量上的反向：形状要对得上</title>
+  <desc id="fig-automatic-differentiation-13-desc">课件把伴随量从标量推广到张量：前向是矩阵乘，反向就是与转置相乘，输出的形状才对得上输入。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="754" height="244.0" fill="#ffffff"/>
+
+  <text x="379.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">张量上的反向：形状要对得上</text>
+  <rect x="25" y="70" width="340" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="195.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">前向：标量输出、矩阵输入</text>
+  <text x="195.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">Y = XW</text>
+  <rect x="25" y="163" width="340" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="195.0" y="192.7" font-size="15" fill="#b45309" text-anchor="middle">反向：矩阵形式</text>
+  <text x="195.0" y="210.7" font-size="12" fill="#b45309" text-anchor="middle">X 的伴随与 W 的转置相乘</text>
+  <rect x="393" y="70" width="340" height="164" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="563.0" y="138.7" font-size="15" fill="#6b21a8" text-anchor="middle">为什么是转置</text>
+  <text x="563.0" y="156.7" font-size="12" fill="#6b21a8" text-anchor="middle">前向把两个矩阵乘起来</text>
+  <text x="563.0" y="174.7" font-size="12" fill="#6b21a8" text-anchor="middle">反向要把形状换回去</text>
+</svg>

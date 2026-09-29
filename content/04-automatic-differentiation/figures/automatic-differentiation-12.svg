@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 774 257.0" width="774" height="257.0"
+     role="img" aria-labelledby="fig-automatic-differentiation-12-title fig-automatic-differentiation-12-desc">
+  <title id="fig-automatic-differentiation-12-title">反向传播与反向 AD：同一件事的两种实现</title>
+  <desc id="fig-automatic-differentiation-12-desc">反向传播在正向那张图上倒着跑，不新建节点，第一代框架这么做；反向 AD 为伴随量单独建节点，现代框架这么做，好处是反向过程也可以再求导。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="774" height="257.0" fill="#ffffff"/>
+
+  <text x="389.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">反向传播与反向 AD：同一件事的两种实现</text>
+  <rect x="25" y="70" width="350" height="39" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="200.0" y="94.0" font-size="13" fill="#9d174d" text-anchor="middle">反向传播（Backprop）</text>
+  <rect x="403" y="70" width="350" height="39" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="578.0" y="94.0" font-size="13" fill="#166534" text-anchor="middle">反向 AD 建图</text>
+  <rect x="25" y="137" width="350" height="110" fill="#fce7f3" stroke="#ec4899"/>
+  <text x="200.0" y="169.6" font-size="14" fill="#9d174d" text-anchor="middle">在正向那张图上倒着跑</text>
+  <text x="200.0" y="187.6" font-size="12" fill="#9d174d" text-anchor="middle">不新建节点</text>
+  <text x="200.0" y="205.6" font-size="12" fill="#9d174d" text-anchor="middle">第一代框架这么做</text>
+  <text x="200.0" y="223.6" font-size="12" fill="#9d174d" text-anchor="middle">caffe、cuda-convnet</text>
+  <rect x="403" y="137" width="350" height="110" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="578.0" y="169.6" font-size="14" fill="#166534" text-anchor="middle">为伴随量单独建节点</text>
+  <text x="578.0" y="187.6" font-size="12" fill="#166534" text-anchor="middle">反向本身也是一张图</text>
+  <text x="578.0" y="205.6" font-size="12" fill="#166534" text-anchor="middle">现代框架这么做</text>
+  <text x="578.0" y="223.6" font-size="12" fill="#166534" text-anchor="middle">好处是可以再求导</text>
+</svg>

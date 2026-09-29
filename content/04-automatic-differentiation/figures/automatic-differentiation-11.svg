@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 810 220.0" width="810" height="220.0"
+     role="img" aria-labelledby="fig-automatic-differentiation-11-title fig-automatic-differentiation-11-desc">
+  <title id="fig-automatic-differentiation-11-title">把反向过程也建成一张图</title>
+  <desc id="fig-automatic-differentiation-11-desc">上排是正向的节点，下排是为伴随量单独建的节点；两张图并排存在，于是反向过程本身也是一张可以被继续求导的图。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="810" height="220.0" fill="#ffffff"/>
+
+  <text x="407.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">把反向过程也建成一张图</text>
+  <rect x="25" y="70" width="150" height="56" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="100.0" y="102.5" font-size="13" fill="#1e40af" text-anchor="middle">正向节点 v1</text>
+  <rect x="203" y="70" width="150" height="56" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="278.0" y="102.5" font-size="13" fill="#1e40af" text-anchor="middle">v2</text>
+  <rect x="381" y="70" width="150" height="56" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="456.0" y="102.5" font-size="13" fill="#1e40af" text-anchor="middle">v3</text>
+  <rect x="559" y="70" width="150" height="56" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="634.0" y="102.5" font-size="13" fill="#1e40af" text-anchor="middle">v4</text>
+  <path d="M180,98 L192,98" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M358,98 L370,98" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M536,98 L548,98" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="25" y="154" width="170" height="56" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="110.0" y="186.6" font-size="13" fill="#6b21a8" text-anchor="middle">伴随 ∂y/∂v1</text>
+  <rect x="223" y="154" width="170" height="56" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="308.0" y="186.6" font-size="13" fill="#6b21a8" text-anchor="middle">∂y/∂v2</text>
+  <rect x="421" y="154" width="170" height="56" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="506.0" y="186.6" font-size="13" fill="#6b21a8" text-anchor="middle">∂y/∂v3</text>
+  <rect x="619" y="154" width="170" height="56" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="704.0" y="186.6" font-size="13" fill="#6b21a8" text-anchor="middle">∂y/∂v4 = 1</text>
+  <path d="M218,182 L206,182" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M416,182 L404,182" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M614,182 L602,182" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+</svg>

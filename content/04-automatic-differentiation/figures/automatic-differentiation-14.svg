@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 758 232.0" width="758" height="232.0"
+     role="img" aria-labelledby="fig-automatic-differentiation-14-title fig-automatic-differentiation-14-desc">
+  <title id="fig-automatic-differentiation-14-title">两个延伸话题：伴随量的类型，与梯度的梯度</title>
+  <desc id="fig-automatic-differentiation-14-desc">伴随量通常用和正向值一样的数据类型，只要定义好传播规则算法就能用；而反向的结果本身还是图，所以可以再对它求一次导。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="758" height="232.0" fill="#ffffff"/>
+
+  <text x="381.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">两个延伸话题：伴随量的类型，与梯度的梯度</text>
+  <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">课件在最后留了两个延伸</text>
+  <rect x="25" y="138" width="340" height="84" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="195.0" y="166.6" font-size="14" fill="#1e40af" text-anchor="middle">伴随量的类型</text>
+  <text x="195.0" y="184.6" font-size="12" fill="#1e40af" text-anchor="middle">和正向值一样就行</text>
+  <text x="195.0" y="202.6" font-size="12" fill="#1e40af" text-anchor="middle">关键是定义好传播规则</text>
+  <rect x="393" y="138" width="340" height="84" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.0" y="166.6" font-size="14" fill="#166534" text-anchor="middle">梯度的梯度</text>
+  <text x="563.0" y="184.6" font-size="12" fill="#166534" text-anchor="middle">反向的结果还是一张图</text>
+  <text x="563.0" y="202.6" font-size="12" fill="#166534" text-anchor="middle">可以再对它求一次导</text>
+</svg>
