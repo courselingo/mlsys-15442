@@ -285,6 +285,25 @@ def audit(path: Path, root: Path, systems: list[str] | None = None,
             f"（下限 {MIN_NUM_PER_K}/千字）—— 多给数字、少下形容词"
         )
     pool = systems if systems is not None else DEFAULT_SYSTEMS
+    # ★★ 去重（2026-09-29 第 108 轮修，附录八十三）
+    #   起因：一位作者在读源码时发现 `pool = DEFAULT_SYSTEMS + extra`，
+    #   而**同一个名字可能同时出现在两边** ⇒ 而下面的循环是 `for s in pool:`
+    #   ⇒ **命中一次却 append 两次** ⇒ `named` 加 2。
+    #   ★ 实测五仓的重复条数：cs168 **3**（HTTP/Linux/TCP）｜ mit-6.006 **1**（Python）
+    #     ｜ eth-ca 0 ｜ mlsys 0 ｜ mit-6.5840 0。
+    #   ⇒ 所以那条判据比它看起来**松**：一个对象能顶两条。
+    #   ★ 修法是**让计数数「不同的对象」**，而不是「命中的池条目」——
+    #     也就是按**小写**去重（与下面词边界匹配的大小写口径一致），并保留首次出现。
+    #   ★ 而它与「词边界」那次是**同一个方向**：都是**判据比它该有的松**，
+    #     而修完之后会有一批页掉到线下 —— 而那是**真欠账**，不是回归。
+    _seen: set[str] = set()
+    pool_dedup: list[str] = []
+    for _s in pool:
+        _k = str(_s).lower()
+        if _k not in _seen:
+            _seen.add(_k)
+            pool_dedup.append(_s)
+    pool = pool_dedup
     # ★ 计数用**词边界**（2026-09-29 修，附录七十五）
     #   起因：原先用 `s.lower() in body.lower()`（子串匹配）⇒ `Go` 命中 `goal`/`go through`、
     #   `Raft` 命中 `draft`、`ThunderX` 命中 `ThunderX2` ⇒ 计数虚高，于是**真该报的页不报**。
