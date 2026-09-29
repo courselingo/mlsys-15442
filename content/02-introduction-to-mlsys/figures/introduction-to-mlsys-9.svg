@@ -32,6 +32,6 @@
   <path d="M378,104 L390,104" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
   <path d="M566,104 L578,104" fill="none" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
   <rect x="25" y="166" width="724" height="68" fill="#fce7f3" stroke="#ec4899"/>
-  <text x="387.0" y="195.7" font-size="15" fill="#9d174d" text-anchor="middle">课件标注：放大卷积这一步会掉性能</text>
-  <text x="387.0" y="213.7" font-size="12" fill="#9d174d" text-anchor="middle">变大的卷积核并不总是更快，它取决于硬件</text>
+  <text x="387.0" y="195.7" font-size="15" fill="#9d174d" text-anchor="middle">课件在这一串变换里标了会掉性能</text>
+  <text x="387.0" y="213.7" font-size="12" fill="#9d174d" text-anchor="middle">具体标在哪一步，文字层里无法唯一定位</text>
 </svg>
