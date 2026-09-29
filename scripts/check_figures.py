@@ -53,24 +53,38 @@ def report_missing_figures(root: Path) -> int:
     ★ 判据的误报率**可证明为 0**：引用了不存在的文件永远是缺陷，没有例外。
     """
     missing: list[str] = []
+    orphans: list[str] = []
     for md in sorted(root.glob("content/**/index.md")):
         text = md.read_text(encoding="utf-8", errors="replace")
         refs = re.findall(r"\]\((?:\.\./)*figures/([^)\s]+)\)", text)
-        if not refs:
-            continue
         fdir = md.parent / "figures"
         present = {p.name for p in fdir.glob("*")} if fdir.is_dir() else set()
         rel = md.relative_to(root).as_posix()
         for name in dict.fromkeys(refs):
             if name not in present:
                 missing.append(f"{rel}: 引用了 figures/{name}，而它不在磁盘上")
+        # ★★ 反向：磁盘上有、而正文没引用（孤儿图）—— 2026-09-29 补。
+        #   起因：两位作者各撞了一次 —— 一位写好 `bitcoin-11.svg` 后**漏跑插入引用的脚本**，
+        #   而另一位的生成器在「引了没构建器」时才报错；**而这里原本只查 引用→文件 这一个方向**
+        #   ⇒ 于是孤儿图**落在每一道门的视野之外**，而它同时会把密度算低（因为图不计入引用数）。
+        #   ★ 误报率为 0：`figures/` 目录里没被任何一节引用的图，永远是缺陷（要么漏引用、要么多余）。
+        if refs:
+            for name in sorted(present):
+                if name not in refs:
+                    orphans.append(f"{rel}: figures/{name} 在磁盘上而正文没有引用它（孤儿图）")
     if missing:
         print("\n❌ 引用了而磁盘上不存在的图：")
         for m in missing:
             print(f"   {m}")
         print(f"   ⇒ 共 {len(missing)} 处。读者会看到破图图标。")
+    if orphans:
+        print("\n❌ 磁盘上有而正文没引用的图（孤儿图）：")
+        for o in orphans:
+            print(f"   {o}")
+        print(f"   ⇒ 共 {len(orphans)} 处。它不显示给读者，而会让密度偏低、并让差集两向失去意义。")
+    if missing or orphans:
         return 1
-    print("✅ 图片引用与磁盘一致（无缺文件）")
+    print("✅ 图片引用与磁盘一致（两个方向都查了：无缺文件、无孤儿图）")
     return 0
 
 
@@ -99,41 +113,16 @@ def main(argv: list[str] | None = None) -> int:
         return 0
 
     print(f"配图房规检查：{len(figures)} 张图")
-
-    # ★★ 必须**分批**调用 linter。**不要把所有路径塞进一个 argv。**
-    #
-    # 起因（2026-09-29，`mlsys` 第 21 讲交付时作者报的）：
-    #   这门课的图从 46 张长到 **291 张**，而 `argv` 的总长度有上限
-    #   （Windows 上 `CreateProcess` 约 32 KB）⇒ 直接抛：
-    #       FileNotFoundError: [WinError 206] 文件名或扩展名太长。
-    #   **⇒ 第 4 道门禁不是「判了不合格」，而是「自己挂了」。**
-    #
-    # ★ 而它最阴的地方是**它随规模悄悄失效**：
-    #   图少的时候这一行跑得好好的（本会话此前跑这门课它一直是 exit 0），
-    #   图多到某个数之后它才第一次抛异常 —— 而抛异常**看起来像门的判定**。
-    #   ⇒ 若作者没有用「同一个 linter、同一个 --strict、只改分批」的等价方法复验，
-    #     他会以为「配图不合规」，而真相是**闸门本身坏了**。
-    #
-    # ⇒ 分批大小取得保守（60），并把每批的 error/warning 行数**相加**
-    #   —— 语义与一次性调用完全一致（linter 逐文件独立判定，批次之间无耦合）。
-    BATCH = 60
-    outs: list[str] = []
-    errors = 0
-    warnings = 0
-    for i in range(0, len(figures), BATCH):
-        chunk = figures[i:i + BATCH]
-        proc = subprocess.run(
-            [node, str(linter), *[str(f) for f in chunk]],
-            capture_output=True, text=True, encoding="utf-8",
-        )
-        part = ((proc.stdout or "") + (proc.stderr or "")).strip()
-        outs.append(part)
-        errors += len([ln for ln in part.splitlines() if " error " in ln])
-        warnings += len([ln for ln in part.splitlines() if " warning " in ln])
-
-    out = "\n".join(outs).strip()
+    proc = subprocess.run(
+        [node, str(linter), *[str(f) for f in figures]],
+        capture_output=True, text=True, encoding="utf-8",
+    )
+    out = ((proc.stdout or "") + (proc.stderr or "")).strip()
     # 只保留结论行，避免刷屏；完整输出在有错时打印
     tail = [ln for ln in out.splitlines() if "file(s)" in ln or "WARNINGS" in ln]
+
+    errors = len([ln for ln in out.splitlines() if " error " in ln])
+    warnings = len([ln for ln in out.splitlines() if " warning " in ln])
 
     if errors or (args.strict and warnings):
         print(out)
