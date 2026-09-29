@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 876 312.0" width="876" height="312.0"
+     role="img" aria-labelledby="fig-blackwell-tirx-14-title fig-blackwell-tirx-14-desc">
+  <title id="fig-blackwell-tirx-14-title">十步走完的收益</title>
+  <desc id="fig-blackwell-tirx-14-desc">课件给的总结是：从每秒 0.02 万亿次浮点运算到 1322 万亿次，一共十步；它还把四处关键改动各自的价值列了出来。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="876" height="312.0" fill="#ffffff"/>
+
+  <text x="440.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">十步走完的收益</text>
+  <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">从 0.02 到 1322 TFLOP/s，十步</text>
+  <rect x="25" y="138" width="340" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="195.0" y="167.7" font-size="15" fill="#1e40af" text-anchor="middle">四步主要改动</text>
+  <text x="195.0" y="185.7" font-size="12" fill="#1e40af" text-anchor="middle">TMA、张量内存、warp 专用化、双 SM 簇</text>
+  <rect x="393" y="138" width="340" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.0" y="167.7" font-size="15" fill="#166534" text-anchor="middle">最后一步的目标</text>
+  <text x="563.0" y="185.7" font-size="12" fill="#166534" text-anchor="middle">对齐 cuBLAS</text>
+  <rect x="25" y="234" width="830" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="440.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">课件的下一步是让读者自己按十步走一遍</text>
+  <text x="440.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">每一步都留了可运行的版本</text>
+</svg>

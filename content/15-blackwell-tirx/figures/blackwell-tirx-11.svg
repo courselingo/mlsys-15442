@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 846 312.0" width="846" height="312.0"
+     role="img" aria-labelledby="fig-blackwell-tirx-11-title fig-blackwell-tirx-11-desc">
+  <title id="fig-blackwell-tirx-11-title">第 4 步：把搬数据交给 TMA</title>
+  <desc id="fig-blackwell-tirx-11-desc">课件给的改动是把加载与写回都换成 TMA 异步版本；课件的总结里说这一处的收益是「让硬件去做，解放 127 个线程」。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="846" height="312.0" fill="#ffffff"/>
+
+  <text x="425.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">第 4 步：把搬数据交给 TMA</text>
+  <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">第 4 步：加载与写回都走 TMA 异步</text>
+  <rect x="25" y="138" width="340" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="195.0" y="167.7" font-size="15" fill="#b45309" text-anchor="middle">改了什么</text>
+  <text x="195.0" y="185.7" font-size="12" fill="#b45309" text-anchor="middle">搬数据不再由线程逐元素做</text>
+  <rect x="393" y="138" width="340" height="68" fill="#d1fae5" stroke="#22c55e"/>
+  <text x="563.0" y="167.7" font-size="15" fill="#166534" text-anchor="middle">收益</text>
+  <text x="563.0" y="185.7" font-size="12" fill="#166534" text-anchor="middle">解放出来的线程可以去做别的</text>
+  <rect x="25" y="234" width="800" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="425.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">异步意味着要能回答「数据到了没有」</text>
+  <text x="425.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">这就把前一节的屏障机制引了出来</text>
+</svg>

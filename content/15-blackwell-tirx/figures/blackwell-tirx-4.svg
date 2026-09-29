@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 776 312.0" width="776" height="312.0"
+     role="img" aria-labelledby="fig-blackwell-tirx-4-title fig-blackwell-tirx-4-desc">
+  <title id="fig-blackwell-tirx-4-title">tcgen05 与张量内存</title>
+  <desc id="fig-blackwell-tirx-4-desc">课件给的形状是：M 固定为 128，N 可以是 16、32、64、128，K 是 16；A 与 B 来自共享内存，结果 C 落在张量内存里，按 128 条通道（对应 M）与若干列（对应 N）分配。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="776" height="312.0" fill="#ffffff"/>
+
+  <text x="390.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">tcgen05 与张量内存</text>
+  <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">第五代矩阵乘加的形状</text>
+  <rect x="25" y="138" width="340" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="195.0" y="167.7" font-size="15" fill="#1e40af" text-anchor="middle">M 与 K</text>
+  <text x="195.0" y="185.7" font-size="12" fill="#1e40af" text-anchor="middle">M 固定 128，K 是 16</text>
+  <rect x="393" y="138" width="340" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.0" y="167.7" font-size="15" fill="#b45309" text-anchor="middle">N 与输出位置</text>
+  <text x="563.0" y="185.7" font-size="12" fill="#b45309" text-anchor="middle">N 四档，结果落在张量内存</text>
+  <rect x="25" y="234" width="730" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="390.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">张量内存要用 tmem.alloc 申请</text>
+  <text x="390.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">它解决的是寄存器压力问题，这一点在第 14 步的收益里会再提一次</text>
+</svg>

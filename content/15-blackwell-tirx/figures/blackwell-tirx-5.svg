@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 786 312.0" width="786" height="312.0"
+     role="img" aria-labelledby="fig-blackwell-tirx-5-title fig-blackwell-tirx-5-desc">
+  <title id="fig-blackwell-tirx-5-title">共享内存描述符：几个字段拼成一件事</title>
+  <desc id="fig-blackwell-tirx-5-desc">课件给的描述符是 base_addr、leading_byte_offset、stride_byte_offset 与 start_addr_off 几项按位拼起来的；它描述的是共享内存里那一块的布局，而不是数据本身。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="786" height="312.0" fill="#ffffff"/>
+
+  <text x="395.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">共享内存描述符：几个字段拼成一件事</text>
+  <rect x="25" y="70" width="712" height="39" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="381.0" y="94.0" font-size="13" fill="#1e40af" text-anchor="middle">smem_desc = 基址 | 前导字节偏移 | 跨步字节偏移 | 起始偏移</text>
+  <rect x="25" y="138" width="340" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="195.0" y="167.7" font-size="15" fill="#1e40af" text-anchor="middle">它描述什么</text>
+  <text x="195.0" y="185.7" font-size="12" fill="#1e40af" text-anchor="middle">共享内存里那一块的布局</text>
+  <rect x="393" y="138" width="340" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.0" y="167.7" font-size="15" fill="#b45309" text-anchor="middle">它不描述什么</text>
+  <text x="563.0" y="185.7" font-size="12" fill="#b45309" text-anchor="middle">数值本身</text>
+  <rect x="25" y="234" width="740" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="395.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">课件给的 PTX 是 tcgen05.mma，一条指令带几个描述符</text>
+  <text x="395.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">这也回到第 6 讲那句话：抽象距离要短</text>
+</svg>

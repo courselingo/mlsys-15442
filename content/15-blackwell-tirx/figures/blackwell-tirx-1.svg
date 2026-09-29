@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 754 244.0" width="754" height="244.0"
+     role="img" aria-labelledby="fig-blackwell-tirx-1-title fig-blackwell-tirx-1-desc">
+  <title id="fig-blackwell-tirx-1-title">这一讲分两半：新硬件与新语言</title>
+  <desc id="fig-blackwell-tirx-1-desc">前半讲 Blackwell 这一代 GPU 的编程模型，后半讲 TIRx 这套语言怎么把它写出来；中间用一条十步的 GEMM 优化路径把它们连起来。</desc>
+
+  <defs>
+    <style>
+      text { font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', system-ui, sans-serif; }
+    </style>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="2" refY="4"
+            orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L8,4 L0,8 L2,4 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect x="2" y="13.0" width="754" height="244.0" fill="#ffffff"/>
+
+  <text x="379.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">这一讲分两半：新硬件与新语言</text>
+  <rect x="25" y="70" width="340" height="68" fill="#dbeafe" stroke="#3b82f6"/>
+  <text x="195.0" y="99.7" font-size="15" fill="#1e40af" text-anchor="middle">前半</text>
+  <text x="195.0" y="117.7" font-size="12" fill="#1e40af" text-anchor="middle">Blackwell 的编程模型</text>
+  <rect x="393" y="70" width="340" height="68" fill="#fef3c7" stroke="#f59e0b"/>
+  <text x="563.0" y="99.7" font-size="15" fill="#b45309" text-anchor="middle">后半</text>
+  <text x="563.0" y="117.7" font-size="12" fill="#b45309" text-anchor="middle">TIRx 与十步优化路径</text>
+  <rect x="25" y="166" width="700" height="68" fill="#f3e8ff" stroke="#a855f7"/>
+  <text x="375.0" y="195.7" font-size="15" fill="#6b21a8" text-anchor="middle">两半的关系是「硬件提供了什么」与「怎么用它」</text>
+  <text x="375.0" y="213.7" font-size="12" fill="#6b21a8" text-anchor="middle">十步路径就是这条关系的具体展开</text>
+</svg>
