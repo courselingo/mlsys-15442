@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="2 13.0 866 312.0" width="866" height="312.0"
      role="img" aria-labelledby="fig-mixture-of-experts-13-title fig-mixture-of-experts-13-desc">
-  <title id="fig-mixture-of-experts-13-title">课件留下的两道讨论题</title>
-  <desc id="fig-mixture-of-experts-13-desc">课件在这一讲里留了两道讨论题：加速专家层的机会与挑战是什么，以及并行化专家层的机会与挑战是什么。两页都只有问题，没有答案。</desc>
+  <title id="fig-mixture-of-experts-13-title">课件一共留了四处只提问不给答案的地方</title>
+  <desc id="fig-mixture-of-experts-13-desc">三页标题就叫 Discussions（混合专家与线性层的优劣、加速的机会与挑战、并行的机会与挑战），加上一处行内提问（怎么从已有数据得到下标数组）；四处都只有问题，没有答案。</desc>
 
   <defs>
     <style>
@@ -15,16 +15,16 @@
 
   <rect x="2" y="13.0" width="866" height="312.0" fill="#ffffff"/>
 
-  <text x="435.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">课件留下的两道讨论题</text>
+  <text x="435.0" y="48" font-size="16" font-weight="600" fill="#1f2937" text-anchor="middle">课件一共留了四处只提问不给答案的地方</text>
   <rect x="25" y="70" width="712" height="42" fill="#eff6ff" stroke="#3b82f6"/>
-  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">课件留了两道讨论题，都没有给答案</text>
+  <text x="381.0" y="95.9" font-size="14" fill="#1e40af" text-anchor="middle">三页 Discussions 加一处行内提问，都没有给答案</text>
   <rect x="25" y="138" width="340" height="68" fill="#fce7f3" stroke="#ec4899"/>
-  <text x="195.0" y="167.7" font-size="15" fill="#9d174d" text-anchor="middle">第一道</text>
-  <text x="195.0" y="185.7" font-size="12" fill="#9d174d" text-anchor="middle">加速专家层的机会与挑战</text>
+  <text x="195.0" y="167.7" font-size="15" fill="#9d174d" text-anchor="middle">两页讨论题</text>
+  <text x="195.0" y="185.7" font-size="12" fill="#9d174d" text-anchor="middle">加速的机会与挑战、并行的机会与挑战</text>
   <rect x="393" y="138" width="340" height="68" fill="#fce7f3" stroke="#ec4899"/>
-  <text x="563.0" y="167.7" font-size="15" fill="#9d174d" text-anchor="middle">第二道</text>
-  <text x="563.0" y="185.7" font-size="12" fill="#9d174d" text-anchor="middle">并行化专家层的机会与挑战</text>
+  <text x="563.0" y="167.7" font-size="15" fill="#9d174d" text-anchor="middle">另两处</text>
+  <text x="563.0" y="185.7" font-size="12" fill="#9d174d" text-anchor="middle">专家与线性层的优劣、怎么得到下标数组</text>
   <rect x="25" y="234" width="820" height="68" fill="#f3e8ff" stroke="#a855f7"/>
-  <text x="435.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">两道题问的其实是同一件事的两面</text>
+  <text x="435.0" y="263.7" font-size="15" fill="#6b21a8" text-anchor="middle">前两页问的其实是同一件事的两面</text>
   <text x="435.0" y="281.7" font-size="12" fill="#6b21a8" text-anchor="middle">单卡上怎么把稀疏算满，多卡上怎么把不均衡摊平</text>
 </svg>
