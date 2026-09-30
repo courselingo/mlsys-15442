@@ -361,6 +361,8 @@ theme:
   # 课程归属信息放到右上角的仓库链接里，见下面的 repo_url / repo_name。
   favicon: assets/favicon.png
   features:
+    # 顶层项不可折叠（子项直接平铺）—— 见 figure-spec 那类「每次点开太麻烦」的反馈。
+    - navigation.sections
     - navigation.instant
     - navigation.tracking
     - navigation.top
